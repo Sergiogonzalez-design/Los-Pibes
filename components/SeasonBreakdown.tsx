@@ -1,41 +1,52 @@
+const GMU_ROSTER =
+  "https://gomason.com/sports/mens-soccer/roster/sergio-gonzalez-fernandez/9251";
+const IONA_ROSTER =
+  "https://ionagaels.com/sports/mens-soccer/roster/sergio-gonzalez-fernandez/7622";
+
 const seasons = [
   {
-    year: "2024–25",
+    year: "2025",
     school: "George Mason",
+    schoolUrl: GMU_ROSTER,
     conf: "A-10",
-    apps: "—",
-    goals: "—",
-    ast: "—",
-    note: "Graduate season (MBA)",
+    apps: "13",
+    goals: "0",
+    ast: "5",
+    note:
+      "Graduate student · MBA (Business Analytics) · 8 starts · 5 pts · per GMU 2025 game-by-game stats",
+  },
+  {
+    year: "2024",
+    school: "Iona",
+    schoolUrl: IONA_ROSTER,
+    conf: "MAAC",
+    apps: "18",
+    goals: "9",
+    ast: "3",
+    note:
+      "Started all 18 · 21 pts (led team) · MAAC Championship MVP · All-MAAC First Team · All-ECAC First Team",
   },
   {
     year: "2023",
     school: "Iona",
+    schoolUrl: IONA_ROSTER,
     conf: "MAAC",
-    apps: "20",
-    goals: "4",
-    ast: "5",
-    note: "MAAC Championship MVP",
+    apps: "16",
+    goals: "1",
+    ast: "0",
+    note: "12 starts · All-MAAC Second Team · MAAC All-Academic",
   },
   {
     year: "2022",
     school: "Iona",
-    conf: "MAAC",
-    apps: "18",
-    goals: "3",
-    ast: "4",
-    note: "All-MAAC",
-  },
-  {
-    year: "2021",
-    school: "Iona",
+    schoolUrl: IONA_ROSTER,
     conf: "MAAC",
     apps: "17",
     goals: "2",
-    ast: "3",
-    note: "Starter",
+    ast: "5",
+    note: "Started all 17 · Led team in assists (5) · All-MAAC Second Team",
   },
-];
+] as const;
 
 export default function SeasonBreakdown() {
   return (
@@ -44,8 +55,27 @@ export default function SeasonBreakdown() {
         <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
           Season breakdown
         </h2>
-        <p className="mt-2 font-body text-secondary-foreground">
-          Career numbers by year — update with official NCAA stats as needed.
+        <p className="mt-2 max-w-3xl font-body text-secondary-foreground">
+          Numbers from official Iona seasons (2022–2024) and George Mason 2025
+          game-by-game totals. Click a school name for the live roster page:{" "}
+          <a
+            href={GMU_ROSTER}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline-offset-2 hover:underline"
+          >
+            George Mason
+          </a>
+          {" · "}
+          <a
+            href={IONA_ROSTER}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline-offset-2 hover:underline"
+          >
+            Iona
+          </a>
+          .
         </p>
         <div className="mt-10 overflow-x-auto rounded-xl border border-white/10">
           <table className="w-full min-w-[640px] text-left text-sm">
@@ -71,14 +101,21 @@ export default function SeasonBreakdown() {
             <tbody>
               {seasons.map((s) => (
                 <tr
-                  key={s.year}
+                  key={`${s.year}-${s.school}`}
                   className="border-b border-white/5 last:border-0 hover:bg-white/[0.02]"
                 >
                   <td className="px-4 py-3 font-medium text-foreground">
                     {s.year}
                   </td>
                   <td className="px-4 py-3 text-secondary-foreground">
-                    {s.school}
+                    <a
+                      href={s.schoolUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-primary underline-offset-2 hover:underline"
+                    >
+                      {s.school}
+                    </a>
                   </td>
                   <td className="px-4 py-3 text-secondary-foreground">
                     {s.conf}

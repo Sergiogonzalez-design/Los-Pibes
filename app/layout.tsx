@@ -18,9 +18,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sergio Gonzalez | Midfielder",
+  title: {
+    default: "Onix Media",
+    template: "%s | Onix Media",
+  },
   description:
-    "Spanish midfielder — Iona & George Mason. Career stats, highlights, and bio.",
+    "Onix Media builds custom sites for athletes in the Americas—stats, video, and story in one place.",
+  icons: {
+    icon: "/futbol-media-logo.png",
+  },
 };
 
 export default function RootLayout({

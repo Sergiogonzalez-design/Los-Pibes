@@ -1,8 +1,8 @@
 const items = [
-  { k: "Height", v: "5'10\" (178 cm)" },
+  { k: "Height", v: "5'9\"" },
+  { k: "Weight", v: "150 lbs" },
   { k: "Position", v: "Midfielder" },
-  { k: "Foot", v: "Right" },
-  { k: "Hometown", v: "Villanueva del Pardillo, Madrid" },
+  { k: "Hometown", v: "Villanueva del Pardillo, Spain" },
 ];
 
 export default function PlayerInfoBar() {

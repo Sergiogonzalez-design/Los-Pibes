@@ -1,13 +1,13 @@
 const clips = [
   {
-    title: "MAAC tournament — MVP moments",
-    href: "https://www.youtube.com/results?search_query=iona+soccer+maac",
-    desc: "Replace with your highlight reel or game film.",
+    title: "Iona highlights",
+    href: "https://www.youtube.com/watch?v=MXZNl4Gz4sM",
+    desc: "College film from Iona — NCAA Division I MAAC.",
   },
   {
-    title: "George Mason — Season highlights",
-    href: "https://gomason.com/sports/mens-soccer",
-    desc: "Link to official page or Hudl when ready.",
+    title: "George Mason highlights",
+    href: "https://www.youtube.com/watch?v=b5gVntwOK_Q",
+    desc: "George Mason Patriots — Atlantic 10.",
   },
 ];
 
@@ -22,7 +22,7 @@ export default function Highlights() {
           Highlights
         </h2>
         <p className="mt-2 font-body text-secondary-foreground">
-          Drop in YouTube or Hudl links — these are placeholders you can swap.
+          Official YouTube reels — Iona and George Mason.
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {clips.map((c) => (
@@ -40,7 +40,7 @@ export default function Highlights() {
                 {c.desc}
               </p>
               <span className="mt-4 inline-block font-body text-sm font-medium text-primary">
-                Open link →
+                Watch on YouTube →
               </span>
             </a>
           ))}

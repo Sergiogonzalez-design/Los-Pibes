@@ -15,14 +15,12 @@ export default function Footer() {
         </div>
         <div className="font-body text-sm text-secondary-foreground">
           <p className="font-semibold text-foreground">Contact</p>
-          <p className="mt-2">
-            Replace with your email or recruiting contact.
-          </p>
+          <p className="mt-2">Recruiting and inquiries.</p>
           <a
-            href="mailto:hello@example.com"
-            className="mt-2 inline-block text-primary hover:underline"
+            href="mailto:sergiogonzalez.usa@icloud.com"
+            className="mt-2 inline-block break-all text-primary hover:underline"
           >
-            hello@example.com
+            sergiogonzalez.usa@icloud.com
           </a>
         </div>
         <div className="flex flex-wrap gap-4 font-body text-sm">
@@ -41,6 +39,14 @@ export default function Footer() {
             className="text-secondary-foreground hover:text-primary"
           >
             George Mason
+          </a>
+          <a
+            href="https://www.transfermarkt.es/sergio/profil/spieler/956804"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary-foreground hover:text-primary"
+          >
+            Transfermarkt
           </a>
         </div>
       </div>

@@ -1,100 +1,121 @@
-import Image from "next/image";
-import CareerTimeline from "@/components/CareerTimeline";
-import Footer from "@/components/Footer";
-import Gallery from "@/components/Gallery";
-import Highlights from "@/components/Highlights";
-import Navbar from "@/components/Navbar";
-import PlayerInfoBar from "@/components/PlayerInfoBar";
-import SeasonBreakdown from "@/components/SeasonBreakdown";
-import StatsCard from "@/components/StatsCard";
+import Link from "next/link";
+import LosPibesFooter from "@/components/LosPibesFooter";
+import LosPibesNavbar from "@/components/LosPibesNavbar";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Onix Media",
+  },
+  description:
+    "Custom websites for athletes in the Americas—stats, highlights, and your story in one site.",
+};
+
+const dashboards = [
+  {
+    href: "/mission",
+    title: "Mission",
+    description: "Why we exist and where we’re headed—with athletes at the center.",
+  },
+  {
+    href: "/values",
+    title: "Values",
+    description: "How we work with players who want a real online home.",
+  },
+  {
+    href: "/audience",
+    title: "Audience",
+    description:
+      "Athletes who want stats, video, and story on one custom site.",
+  },
+  {
+    href: "/examples",
+    title: "Examples",
+    description: "Player sites that show the full format in action.",
+  },
+] as const;
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <LosPibesNavbar />
 
-      {/* Hero Section */}
-      <section className="relative flex min-h-screen items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/sergio-action.jpg"
-            alt="Sergio Gonzalez Fernandez in action at George Mason"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-hero" />
-        </div>
-
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-8">
-          <div className="flex items-end">
-            <div className="max-w-xl">
-              <div className="mb-4">
-                <span className="font-heading block text-5xl font-bold leading-none text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
-                  Sergio
-                </span>
-                <span className="font-heading block text-5xl font-bold leading-none text-gradient-gold sm:text-6xl md:text-7xl lg:text-8xl">
-                  Gonzalez
-                </span>
-              </div>
-
-              <p className="font-body mb-6 text-sm uppercase tracking-[0.3em] text-primary">
-                Midfielder · #6 · NCAA Division I
-              </p>
-
-              <p className="font-body mb-8 max-w-xl text-base leading-relaxed text-secondary-foreground md:text-lg">
-                Spanish midfielder from Villanueva del Pardillo, Madrid.
-                Three-year starter at Iona University and 2024 MAAC Championship
-                MVP. Currently pursuing his MBA as a graduate student at George
-                Mason University.
-              </p>
-
-              <div className="mb-10 flex flex-wrap gap-3">
-                <a
-                  href="https://ionagaels.com/sports/mens-soccer/roster/sergio-gonzalez-fernandez/7622"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  Iona Profile
-                </a>
-                <a
-                  href="https://gomason.com/sports/mens-soccer/roster/sergio-gonzalez-fernandez/9251"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-                >
-                  George Mason Profile
-                </a>
-                <a
-                  href="#contact"
-                  className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-                >
-                  Contact
-                </a>
-              </div>
-
-              <div
-                id="hero-stats"
-                className="grid grid-cols-2 gap-3 sm:grid-cols-4"
-              >
-                <StatsCard value="64" label="Games Played" />
-                <StatsCard value="12" label="Career Goals" />
-                <StatsCard value="13" label="Career Assists" />
-                <StatsCard value="MVP" label="MAAC Championship" />
-              </div>
-            </div>
+      <section className="relative overflow-hidden border-b border-white/10 pt-28 pb-16 sm:pt-32 sm:pb-20">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.12]"
+          style={{
+            backgroundImage:
+              "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 175, 55, 0.35), transparent 55%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="font-body mb-4 text-xs uppercase tracking-[0.35em] text-primary">
+            Onix Media
+          </p>
+          <h1 className="font-heading max-w-3xl text-4xl font-bold leading-tight text-foreground sm:text-5xl md:text-6xl">
+            Websites built for{" "}
+            <span className="text-gradient-gold">athletes</span>—stats, video,
+            and story in one place.
+          </h1>
+          <p className="font-body mt-4 max-w-2xl text-lg font-medium text-foreground md:text-xl">
+            Your game. Your numbers. Your highlights.
+          </p>
+          <p className="font-body mt-6 max-w-2xl text-lg leading-relaxed text-secondary-foreground md:text-xl">
+            We help players stand out with custom sites that show who you are,
+            where you’ve played, and what you can do—so coaches, scouts, and
+            fans get the full picture.{" "}
+            <span className="text-foreground">
+              We operate in the Americas
+            </span>{" "}
+            and work with athletes ready to own their presence online.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link
+              href="/examples"
+              className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              View examples
+            </Link>
+            <Link
+              href="/mission"
+              className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
+            >
+              Our mission
+            </Link>
           </div>
         </div>
       </section>
 
-      <PlayerInfoBar />
-      <SeasonBreakdown />
-      <Highlights />
-      <Gallery />
-      <CareerTimeline />
-      <Footer />
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 className="font-heading text-xl font-bold text-foreground sm:text-2xl">
+          Explore
+        </h2>
+        <p className="font-body mt-2 max-w-2xl text-sm text-secondary-foreground">
+          Mission, values, who we serve, and examples—each on its own page.
+        </p>
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {dashboards.map((d) => (
+            <li key={d.href}>
+              <Link
+                href={d.href}
+                className="group block h-full rounded-xl border border-white/10 bg-black/25 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
+              >
+                <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary">
+                  {d.title}
+                </h3>
+                <p className="font-body mt-2 text-sm leading-relaxed text-secondary-foreground">
+                  {d.description}
+                </p>
+                <span className="font-body mt-4 inline-block text-sm font-medium text-primary">
+                  Open →
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <LosPibesFooter />
     </div>
   );
 }

@@ -1,23 +1,23 @@
 const milestones = [
   {
-    year: "2024",
+    year: "2025",
     title: "George Mason — Graduate year",
-    body: "MBA coursework while competing in the A-10.",
+    body: "MBA in Business Analytics while competing in the Atlantic 10. Roster and bio on the official athletics site.",
   },
   {
-    year: "2023",
-    title: "MAAC Championship MVP",
-    body: "Key performances in the conference tournament run.",
+    year: "2024",
+    title: "MAAC Championship MVP — Iona",
+    body: "Junior season: 9 goals and 21 points in 18 starts; three assists in the win at Niagara; All-MAAC First Team and All-ECAC First Team.",
   },
   {
-    year: "2021–23",
-    title: "Iona — Three-year starter",
-    body: "Consistent minutes in midfield with goals and assists in MAAC play.",
+    year: "2022–23",
+    title: "Iona — All-MAAC honors",
+    body: "Sophomore and freshman campaigns with full-time minutes: from first collegiate goal (PK vs LIU) to All-MAAC Second Team selections.",
   },
   {
-    year: "Earlier",
-    title: "Spain → US college path",
-    body: "Development in Madrid area before NCAA Division I.",
+    year: "Before Iona",
+    title: "Spain — SEK El Castillo & Getafe CF",
+    body: "Prep at SEK El Castillo (Madrid); club experience with Getafe CF before NCAA Division I.",
   },
 ];
 
@@ -29,11 +29,11 @@ export default function CareerTimeline() {
           Career timeline
         </h2>
         <p className="mt-2 font-body text-secondary-foreground">
-          Highlights along the journey — edit dates and copy to match your story.
+          Key stops aligned with official Iona and George Mason roster bios.
         </p>
         <ol className="relative mt-12 space-y-8 border-l border-primary/40 pl-8">
           {milestones.map((m) => (
-            <li key={m.year} className="relative">
+            <li key={m.title} className="relative">
               <span className="absolute -left-[39px] top-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-primary bg-background text-[10px] font-bold text-primary">
                 ●
               </span>
