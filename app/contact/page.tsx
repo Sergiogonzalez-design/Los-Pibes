@@ -6,10 +6,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Onix Media—reach Matias Morales Albil at Onix Media.",
+    "Contact Onix Media—company inbox and Matias Morales Albil.",
 };
 
+const COMPANY_EMAIL = "Onixfutbolmedia@gmail.com";
 const MATIAS_EMAIL = "matumorales17@gmail.com";
+const companyMailto = `mailto:${COMPANY_EMAIL.toLowerCase()}`;
 
 const ONIX_INSTAGRAM = "https://www.instagram.com/onixmediafutbol/";
 
@@ -54,19 +56,28 @@ export default function ContactPage() {
                       how they play.
                     </p>
                     <p className="font-body mt-6 text-xs font-semibold uppercase tracking-wider text-zinc-500">
-                      Email
+                      Company email
                     </p>
                     <a
-                      href={`mailto:${MATIAS_EMAIL}`}
+                      href={companyMailto}
                       className="font-body mt-2 block max-w-full break-all text-lg font-medium text-primary underline-offset-2 hover:underline"
                     >
-                      {MATIAS_EMAIL}
+                      {COMPANY_EMAIL}
                     </a>
                     <a
-                      href={`mailto:${MATIAS_EMAIL}`}
+                      href={companyMailto}
                       className="font-body mt-4 inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                     >
                       Open mail app
+                    </a>
+                    <p className="font-body mt-8 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                      Direct (Matias Morales Albil)
+                    </p>
+                    <a
+                      href={`mailto:${MATIAS_EMAIL}`}
+                      className="font-body mt-2 block max-w-full break-all text-base font-medium text-primary/90 underline-offset-2 hover:underline"
+                    >
+                      {MATIAS_EMAIL}
                     </a>
                   </div>
                 </div>
@@ -89,9 +100,21 @@ export default function ContactPage() {
                 <p className="font-body mt-1 text-xs text-secondary-foreground">
                   Onix Media
                 </p>
+                <p className="font-body mt-4 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                  Company
+                </p>
+                <a
+                  href={companyMailto}
+                  className="font-body mt-2 block max-w-full break-all text-base font-medium text-primary underline-offset-2 hover:underline"
+                >
+                  {COMPANY_EMAIL}
+                </a>
+                <p className="font-body mt-4 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                  Direct
+                </p>
                 <a
                   href={`mailto:${MATIAS_EMAIL}`}
-                  className="font-body mt-3 block max-w-full break-all text-base font-medium text-primary underline-offset-2 hover:underline"
+                  className="font-body mt-2 block max-w-full break-all text-base font-medium text-primary/90 underline-offset-2 hover:underline"
                 >
                   {MATIAS_EMAIL}
                 </a>

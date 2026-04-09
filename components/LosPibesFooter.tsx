@@ -24,6 +24,17 @@ export default function LosPibesFooter() {
               </Link>
             </li>
             <li>
+              <span className="text-foreground">Onix Media</span>
+            </li>
+            <li className="max-w-[min(100%,20rem)] break-all">
+              <a
+                href="mailto:onixfutbolmedia@gmail.com"
+                className="text-foreground underline decoration-primary/60 underline-offset-2 hover:text-primary"
+              >
+                Onixfutbolmedia@gmail.com
+              </a>
+            </li>
+            <li className="mt-2">
               <span className="text-foreground">Matias Morales Albil</span>
             </li>
             <li className="max-w-[min(100%,20rem)] break-all">

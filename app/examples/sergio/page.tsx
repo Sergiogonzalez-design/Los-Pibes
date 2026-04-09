@@ -23,13 +23,13 @@ export default function SergioExamplePage() {
       <section className="relative flex min-h-screen items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/sergio-profile.png"
-            alt="Sergio Gonzalez Fernandez in George Mason kit on the pitch"
+            src="/sergio-hero.png"
+            alt="Sergio Gonzalez dribbling in a night match, George Mason green kit"
             fill
             priority
             quality={92}
             sizes="100vw"
-            className="object-cover object-[50%_12%] sm:object-[50%_16%] lg:object-[50%_18%]"
+            className="object-cover object-[52%_32%] sm:object-[50%_28%] lg:object-[48%_26%]"
           />
           <div
             className="absolute inset-0 bg-gradient-to-t from-[#0c1117]/[0.96] via-[#0c1117]/40 to-transparent"
