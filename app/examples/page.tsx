@@ -37,14 +37,14 @@ export default function ExamplesIndexPage() {
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">
                 NCAA Division I
               </p>
-              <h2 className="font-heading mt-2 text-xl font-semibold text-foreground group-hover:text-primary">
+              <h2 className="font-heading mt-2 text-xl font-semibold capitalize text-foreground group-hover:text-primary">
                 Sergio Gonzalez
               </h2>
-              <p className="font-body mt-2 text-sm text-secondary-foreground">
+              <p className="font-body mt-2 text-sm capitalize text-secondary-foreground">
                 Midfielder · Iona & George Mason · Full profile, stats, and
                 media
               </p>
-              <span className="font-body mt-4 inline-block text-sm font-medium text-primary">
+              <span className="font-body mt-4 inline-block text-sm font-medium capitalize text-primary">
                 View example →
               </span>
             </Link>
@@ -57,14 +57,33 @@ export default function ExamplesIndexPage() {
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">
                 NCAA Division I
               </p>
-              <h2 className="font-heading mt-2 text-xl font-semibold text-foreground group-hover:text-primary">
+              <h2 className="font-heading mt-2 text-xl font-semibold capitalize text-foreground group-hover:text-primary">
                 Thiago Cagna
               </h2>
-              <p className="font-body mt-2 text-sm text-secondary-foreground">
+              <p className="font-body mt-2 text-sm capitalize text-secondary-foreground">
                 Midfielder · Iona · Buenos Aires — stats, timeline, and
                 highlights
               </p>
-              <span className="font-body mt-4 inline-block text-sm font-medium text-primary">
+              <span className="font-body mt-4 inline-block text-sm font-medium capitalize text-primary">
+                View example →
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/examples/agostina"
+              className="group block rounded-xl border border-white/10 bg-black/25 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
+            >
+              <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">
+                Argentina · Primera
+              </p>
+              <h2 className="font-heading mt-2 text-xl font-semibold capitalize text-foreground group-hover:text-primary">
+                Agostina Holzheier
+              </h2>
+              <p className="font-body mt-2 text-sm capitalize text-secondary-foreground">
+                Forward · Racing Club — club stats, timeline, and links
+              </p>
+              <span className="font-body mt-4 inline-block text-sm font-medium capitalize text-primary">
                 View example →
               </span>
             </Link>
