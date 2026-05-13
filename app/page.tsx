@@ -40,7 +40,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <LosPibesNavbar />
 
-      <section className="relative overflow-hidden border-b border-white/10 pt-28 pb-16 sm:pt-32 sm:pb-20">
+      <section className="relative overflow-hidden border-b border-white/10 pt-36 pb-16 sm:pt-40 sm:pb-20">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.12]"
           style={{
@@ -81,6 +81,12 @@ export default function Home() {
               className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
             >
               Our mission
+            </Link>
+            <Link
+              href="/contact"
+              className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
+            >
+              Contact
             </Link>
           </div>
         </div>

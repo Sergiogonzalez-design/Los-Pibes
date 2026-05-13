@@ -1,7 +1,9 @@
 import LosPibesFooter from "@/components/LosPibesFooter";
 import LosPibesNavbar from "@/components/LosPibesNavbar";
+import InquiryForm from "@/components/InquiryForm";
 import Image from "next/image";
 import type { Metadata } from "next";
+
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -9,8 +11,8 @@ export const metadata: Metadata = {
     "Contact Onix Media—company inbox and Matias Morales Albil.",
 };
 
-const COMPANY_EMAIL = "Onixfutbolmedia@gmail.com";
-const MATIAS_EMAIL = "matumorales17@gmail.com";
+const COMPANY_EMAIL = "contact@onixmedia.agency";
+const MATIAS_EMAIL = "matiasmorales@onixmedia.agency";
 const companyMailto = `mailto:${COMPANY_EMAIL.toLowerCase()}`;
 
 const ONIX_INSTAGRAM = "https://www.instagram.com/onixmediafutbol/";
@@ -20,7 +22,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       <LosPibesNavbar />
 
-      <section className="mx-auto max-w-7xl border-b border-white/10 px-4 pt-28 pb-16 sm:px-6 sm:pt-32 lg:px-8">
+      <section className="mx-auto max-w-7xl border-b border-white/10 px-4 pt-36 pb-16 sm:px-6 sm:pt-40 lg:px-8">
         <h1 className="sr-only">Contact</h1>
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-8">
@@ -137,6 +139,18 @@ export default function ContactPage() {
               </div>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 className="font-heading text-2xl font-bold text-foreground">
+          Request information
+        </h2>
+        <p className="font-body mt-2 max-w-xl text-sm text-secondary-foreground">
+          Tell us about yourself and we'll get back to you within 24–48 hours.
+        </p>
+        <div className="mt-8 max-w-2xl">
+          <InquiryForm />
         </div>
       </section>
 

@@ -28,10 +28,10 @@ export default function LosPibesFooter() {
             </li>
             <li className="max-w-[min(100%,20rem)] break-all">
               <a
-                href="mailto:onixfutbolmedia@gmail.com"
+                href="mailto:contact@onixmedia.agency"
                 className="text-foreground underline decoration-primary/60 underline-offset-2 hover:text-primary"
               >
-                Onixfutbolmedia@gmail.com
+                contact@onixmedia.agency
               </a>
             </li>
             <li className="mt-2">
@@ -39,10 +39,10 @@ export default function LosPibesFooter() {
             </li>
             <li className="max-w-[min(100%,20rem)] break-all">
               <a
-                href="mailto:matumorales17@gmail.com"
+                href="mailto:matiasmorales@onixmedia.agency"
                 className="text-foreground underline decoration-primary/60 underline-offset-2 hover:text-primary"
               >
-                matumorales17@gmail.com
+                matiasmorales@onixmedia.agency
               </a>
             </li>
           </ul>
