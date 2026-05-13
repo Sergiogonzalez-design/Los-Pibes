@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function MissionPage() {
   return (
     <OnixPageShell>
-      <header className="border-b border-white/10 pt-28 pb-12 sm:pt-32">
+      <header className="border-b border-white/10 pt-36 pb-12 sm:pt-40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
             Onix Media
