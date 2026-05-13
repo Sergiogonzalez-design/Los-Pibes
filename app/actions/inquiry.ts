@@ -30,11 +30,5 @@ export async function submitInquiry(
     return { status: "error", message: "Something went wrong. Please try again." };
   }
 
-  await fetch("https://hook.us2.make.com/pknucvupuod7f38lb7pvmdfaepve", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, sport, country, phone, message }),
-  }).catch(() => {});
-
   return { status: "success" };
 }
