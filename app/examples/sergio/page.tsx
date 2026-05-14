@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CareerTimeline from "@/components/CareerTimeline";
 import Footer from "@/components/Footer";
 import Highlights from "@/components/Highlights";
@@ -21,21 +20,13 @@ export default function SergioExamplePage() {
 
       {/* Hero Section */}
       <section className="relative flex min-h-screen items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/sergio-hero.png"
-            alt="Sergio Gonzalez dribbling in a night match, George Mason green kit"
-            fill
-            priority
-            quality={92}
-            sizes="100vw"
-            className="object-cover object-[52%_32%] sm:object-[50%_28%] lg:object-[48%_26%]"
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-t from-[#0c1117]/[0.96] via-[#0c1117]/40 to-transparent"
-            aria-hidden
-          />
-        </div>
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 60% at 20% 0%, rgba(34,197,94,0.10), transparent 55%), radial-gradient(ellipse 60% 50% at 80% 10%, rgba(212,175,55,0.13), transparent 50%)",
+          }}
+        />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-8">
           <div className="flex items-end">
@@ -76,15 +67,15 @@ export default function SergioExamplePage() {
                   rel="noopener noreferrer"
                   className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
                 >
-                  Iona (2022–2024)
+                  Iona Roster
                 </a>
                 <a
-                  href="https://www.transfermarkt.es/sergio/profil/spieler/956804"
+                  href="https://www.instagram.com/sergigonzalez6/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
                 >
-                  Transfermarkt
+                  Instagram
                 </a>
                 <a
                   href="#contact"
@@ -112,6 +103,32 @@ export default function SergioExamplePage() {
       <SeasonBreakdown />
       <Highlights />
       <CareerTimeline />
+
+      <section id="contact" className="border-t border-white/10 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
+            Contact
+          </h2>
+          <p className="font-body mt-2 text-secondary-foreground">
+            Recruiting and media inquiries.
+          </p>
+          <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
+            <p className="font-heading text-xl font-semibold text-foreground">
+              Sergio Gonzalez Fernandez
+            </p>
+            <p className="font-body mt-1 text-sm text-secondary-foreground">
+              Midfielder · #6 · NCAA Division I
+            </p>
+            <a
+              href="mailto:sergiogonzalez.usa@icloud.com"
+              className="font-body mt-4 block text-primary underline-offset-2 hover:underline"
+            >
+              sergiogonzalez.usa@icloud.com
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

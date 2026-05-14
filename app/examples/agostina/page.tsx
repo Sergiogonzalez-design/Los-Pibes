@@ -113,6 +113,32 @@ export default function AgostinaExamplePage() {
       <AgostinaSeasonBreakdown />
       <AgostinaHighlights />
       <AgostinaCareerTimeline />
+
+      <section id="contact" className="border-t border-white/10 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
+            Contact
+          </h2>
+          <p className="font-body mt-2 text-secondary-foreground">
+            Recruiting and media inquiries.
+          </p>
+          <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
+            <p className="font-heading text-xl font-semibold text-foreground">
+              Agostina Holzheier
+            </p>
+            <p className="font-body mt-1 text-sm text-secondary-foreground">
+              Forward · Racing Club · Argentina
+            </p>
+            <a
+              href="mailto:contact@onixmedia.agency"
+              className="font-body mt-4 block text-primary underline-offset-2 hover:underline"
+            >
+              contact@onixmedia.agency
+            </a>
+          </div>
+        </div>
+      </section>
+
       <AgostinaFooter />
     </div>
   );
