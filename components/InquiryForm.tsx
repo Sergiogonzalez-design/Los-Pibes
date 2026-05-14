@@ -77,17 +77,33 @@ export default function InquiryForm() {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-1.5">
-        <label htmlFor="phone" className="font-body text-xs font-semibold uppercase tracking-wider text-zinc-500">
-          Phone Number
-        </label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          placeholder="e.g. +1 555 000 0000"
-          className="font-body rounded-lg border border-white/10 bg-black/30 px-4 py-2.5 text-sm text-foreground placeholder:text-zinc-600 focus:border-primary/50 focus:outline-none"
-        />
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="age" className="font-body text-xs font-semibold uppercase tracking-wider text-zinc-500">
+            Age
+          </label>
+          <input
+            id="age"
+            name="age"
+            type="number"
+            min="10"
+            max="50"
+            placeholder="e.g. 22"
+            className="font-body rounded-lg border border-white/10 bg-black/30 px-4 py-2.5 text-sm text-foreground placeholder:text-zinc-600 focus:border-primary/50 focus:outline-none"
+          />
+        </div>
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="phone" className="font-body text-xs font-semibold uppercase tracking-wider text-zinc-500">
+            Phone Number
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="e.g. +1 555 000 0000"
+            className="font-body rounded-lg border border-white/10 bg-black/30 px-4 py-2.5 text-sm text-foreground placeholder:text-zinc-600 focus:border-primary/50 focus:outline-none"
+          />
+        </div>
       </div>
       <div className="flex flex-col gap-1.5">
         <label htmlFor="message" className="font-body text-xs font-semibold uppercase tracking-wider text-zinc-500">

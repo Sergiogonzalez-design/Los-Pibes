@@ -6,7 +6,6 @@ import ThiagoPlayerInfoBar from "@/components/ThiagoPlayerInfoBar";
 import ThiagoSeasonBreakdown from "@/components/ThiagoSeasonBreakdown";
 import StatsCard from "@/components/StatsCard";
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Thiago Cagna",
@@ -20,21 +19,13 @@ export default function ThiagoExamplePage() {
       <ThiagoNavbar />
 
       <section className="relative flex min-h-screen items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/thiago-cagna-hero.png"
-            alt="Thiago Cagna in Iona Gaels kit striking the ball on the pitch"
-            fill
-            priority
-            quality={92}
-            sizes="100vw"
-            className="object-cover object-[50%_20%] sm:object-[50%_17%] lg:object-[50%_14%]"
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-t from-[#0c1117]/[0.96] via-[#0c1117]/45 to-[#0c1117]/25"
-            aria-hidden
-          />
-        </div>
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 60% at 20% 0%, rgba(212,175,55,0.12), transparent 55%), radial-gradient(ellipse 60% 50% at 80% 10%, rgba(212,175,55,0.08), transparent 50%)",
+          }}
+        />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-8">
           <div className="flex items-end">
@@ -69,6 +60,14 @@ export default function ThiagoExamplePage() {
                   Iona roster
                 </a>
                 <a
+                  href="https://www.instagram.com/thiagocagna/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
+                >
+                  Instagram
+                </a>
+                <a
                   href="#contact"
                   className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
                 >
@@ -94,6 +93,32 @@ export default function ThiagoExamplePage() {
       <ThiagoSeasonBreakdown />
       <ThiagoHighlights />
       <ThiagoCareerTimeline />
+
+      <section id="contact" className="border-t border-white/10 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
+            Contact
+          </h2>
+          <p className="font-body mt-2 text-secondary-foreground">
+            Recruiting and media inquiries.
+          </p>
+          <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
+            <p className="font-heading text-xl font-semibold text-foreground">
+              Thiago Cagna
+            </p>
+            <p className="font-body mt-1 text-sm text-secondary-foreground">
+              Midfielder · #25 · NCAA Division I
+            </p>
+            <a
+              href="mailto:contact@onixmedia.agency"
+              className="font-body mt-4 block text-primary underline-offset-2 hover:underline"
+            >
+              contact@onixmedia.agency
+            </a>
+          </div>
+        </div>
+      </section>
+
       <ThiagoFooter />
     </div>
   );

@@ -31,6 +31,14 @@ export default function ThiagoFooter() {
           >
             Iona roster
           </a>
+          <a
+            href="https://www.instagram.com/thiagocagna/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary-foreground hover:text-primary"
+          >
+            Instagram
+          </a>
         </div>
       </div>
       <p className="mx-auto mt-10 max-w-7xl px-4 text-center font-body text-xs text-zinc-500 sm:px-6 lg:px-8">

@@ -15,6 +15,7 @@ export async function submitInquiry(
   const email = formData.get("email")?.toString().trim();
   const sport = formData.get("sport")?.toString().trim();
   const country = formData.get("country")?.toString().trim();
+  const age = formData.get("age")?.toString().trim() || null;
   const phone = formData.get("phone")?.toString().trim();
   const message = formData.get("message")?.toString().trim();
 
@@ -24,7 +25,7 @@ export async function submitInquiry(
 
   const { error } = await supabase
     .from("inquiries")
-    .insert({ name, email, sport, country, phone, message });
+    .insert({ name, email, sport, country, age: age ? parseInt(age) : null, phone, message });
 
   if (error) {
     return { status: "error", message: "Something went wrong. Please try again." };
