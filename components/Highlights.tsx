@@ -4,11 +4,6 @@ const clips = [
     href: "https://www.youtube.com/watch?v=MXZNl4Gz4sM",
     desc: "College film from Iona — NCAA Division I MAAC.",
   },
-  {
-    title: "George Mason highlights",
-    href: "https://www.youtube.com/watch?v=b5gVntwOK_Q",
-    desc: "George Mason Patriots — Atlantic 10.",
-  },
 ];
 
 export default function Highlights() {
@@ -22,7 +17,7 @@ export default function Highlights() {
           Highlights
         </h2>
         <p className="mt-2 font-body text-secondary-foreground">
-          Official YouTube reels — Iona and George Mason.
+          Official YouTube reels — Iona.
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {clips.map((c) => (
