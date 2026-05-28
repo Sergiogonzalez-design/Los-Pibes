@@ -28,12 +28,12 @@ export default function NachoPage() {
       {/* Hero */}
       <section className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
         <div
-          className="pointer-events-none absolute inset-0"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 20% 0%, rgba(0,56,168,0.18), transparent 55%), radial-gradient(ellipse 60% 50% at 80% 10%, rgba(212,175,55,0.13), transparent 50%)",
+            backgroundImage: "url('/Nacho jugando.jpeg')",
           }}
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="font-body mb-4 text-xs uppercase tracking-[0.35em] text-primary">
             Goalkeeper · Costa Rica

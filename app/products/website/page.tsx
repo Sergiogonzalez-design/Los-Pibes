@@ -1,0 +1,93 @@
+import CompanyLogo from "@/components/CompanyLogo";
+import LosPibesFooter from "@/components/LosPibesFooter";
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website",
+  description: "Website product overview.",
+};
+
+export default function WebsiteProductPage() {
+  return (
+    <div className="min-h-screen bg-background">
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+          <div className="flex min-w-0 items-center gap-4">
+            <Link
+              href="/products"
+              className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
+              aria-label="Back to products"
+            >
+              ←
+            </Link>
+            <CompanyLogo priority />
+          </div>
+          <ul className="flex max-w-[min(100%,42rem)] flex-1 flex-wrap items-center justify-end gap-x-3 gap-y-2 text-[11px] font-medium text-secondary-foreground sm:text-xs md:max-w-none md:text-sm">
+            <li>
+              <Link href="/mission" className="transition-colors hover:text-primary">
+                Mission
+              </Link>
+            </li>
+            <li>
+              <Link href="/values" className="transition-colors hover:text-primary">
+                Values
+              </Link>
+            </li>
+            <li>
+              <Link href="/products" className="transition-colors hover:text-primary">
+                Product
+              </Link>
+            </li>
+            <li>
+              <Link href="/examples" className="transition-colors hover:text-primary">
+                Examples
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="transition-colors hover:text-primary">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section className="mx-auto max-w-7xl px-4 pt-36 pb-16 sm:px-6 sm:pt-40 lg:px-8">
+        <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.1fr]">
+          <div>
+            <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
+              Product
+            </p>
+            <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">
+              Website
+            </h1>
+            <ul className="font-body mt-6 max-w-3xl space-y-3 text-base leading-relaxed text-secondary-foreground sm:text-lg">
+              <li>• A custom website that presents your profile in one place.</li>
+              <li>• Includes stats, videos, and your story with a clean structure.</li>
+              <li>• Built to look professional and easy to share with coaches.</li>
+            </ul>
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]" style={{ height: "420px" }}>
+            <img
+              src="/Nacho jugando.jpeg"
+              alt="Nacho Alfaro"
+              className="h-full w-full object-cover object-top"
+            />
+          </div>
+        </div>
+      </section>
+
+      <LosPibesFooter />
+    </div>
+  );
+}

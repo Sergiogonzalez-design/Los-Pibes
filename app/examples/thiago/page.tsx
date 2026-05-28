@@ -57,7 +57,7 @@ export default function ThiagoExamplePage() {
                   rel="noopener noreferrer"
                   className="font-body inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                 >
-                  Iona roster
+                  Iona Roster
                 </a>
                 <a
                   href="https://www.instagram.com/thiagocagna/"
@@ -79,9 +79,9 @@ export default function ThiagoExamplePage() {
                 id="hero-stats"
                 className="grid grid-cols-2 gap-3 sm:grid-cols-4"
               >
-                <StatsCard value="67" label="Career games" />
-                <StatsCard value="8" label="Career goals" />
-                <StatsCard value="16" label="Career assists" />
+                <StatsCard value="67" label="Career Games" />
+                <StatsCard value="8" label="Career Goals" />
+                <StatsCard value="16" label="Career Assists" />
                 <StatsCard value="MAAC" label="All-Conference" />
               </div>
             </div>

@@ -99,10 +99,10 @@ export default function AgostinaExamplePage() {
                 id="hero-stats"
                 className="grid grid-cols-2 gap-3 sm:grid-cols-4"
               >
-                <StatsCard value="66" label="Racing apps" />
-                <StatsCard value="20" label="Racing goals" />
+                <StatsCard value="66" label="Racing Apps" />
+                <StatsCard value="20" label="Racing Goals" />
                 <StatsCard value="25" label="Argentina (PJ)" />
-                <StatsCard value="3" label="Argentina goals" />
+                <StatsCard value="3" label="Argentina Goals" />
               </div>
             </div>
           </div>

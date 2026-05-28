@@ -33,19 +33,11 @@ export default function AudiencePage() {
           <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">
             Who we serve
           </h1>
-          <p className="font-body mt-6 max-w-3xl text-lg leading-relaxed text-secondary-foreground md:text-xl">
-            We work with{" "}
-            <span className="text-foreground font-medium">
-              athletes who want a single, professional place online
-            </span>{" "}
-            to show their stats, video, and journey.{" "}
-            <span className="text-foreground">
-              We operate in the Americas
-            </span>{" "}
-            —from college and club paths to pros building their name. If you
-            want a unique site that pulls your numbers and highlights
-            together—not scattered across social—this is what we build.
-          </p>
+          <ul className="font-body mt-6 max-w-3xl space-y-3 text-base leading-relaxed text-secondary-foreground md:text-lg">
+            <li>• Athletes in the Americas: college, club, and pro.</li>
+            <li>• One professional site for your stats, video, and story.</li>
+            <li>• Built to replace scattered social links with one clear home.</li>
+          </ul>
         </div>
       </header>
 

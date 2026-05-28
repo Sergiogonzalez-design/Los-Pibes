@@ -10,37 +10,39 @@ export const metadata: Metadata = {
 export default function ValuesPage() {
   return (
     <OnixPageShell>
-      <header className="border-b border-white/10 pt-36 pb-12 sm:pt-40">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section
+        className="relative min-h-screen overflow-hidden pt-36 sm:pt-40"
+        style={{
+          backgroundImage:
+            "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/St. Peters gol celebration.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center 40%",
+        }}
+      >
+        <div className="mx-auto flex min-h-[calc(100vh-7rem)] max-w-7xl flex-col px-4 pb-16 sm:px-6 lg:px-8">
           <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
             Onix Media
           </p>
           <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">
-            Our values
+            Values
           </h1>
-          <p className="font-body mt-6 max-w-2xl text-lg text-secondary-foreground">
-            Principles we bring to every athlete project—on the field and on
-            the web.
-          </p>
-        </div>
-      </header>
 
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {brandValues.map((v) => (
-            <li
-              key={v.title}
-              className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/25 px-5 py-4"
-            >
-              <span className="text-xl" aria-hidden>
-                {v.icon}
-              </span>
-              <span className="font-body font-medium text-foreground">
-                {v.title}
-              </span>
-            </li>
-          ))}
-        </ul>
+          <ul className="mt-12 grid flex-1 auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {brandValues.map((v) => (
+              <li
+                key={v.title}
+                className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/35 px-6 py-6"
+              >
+                <span className="text-xl" aria-hidden>
+                  {v.icon}
+                </span>
+                <span className="font-body text-base font-medium text-foreground">
+                  {v.title}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </OnixPageShell>
   );

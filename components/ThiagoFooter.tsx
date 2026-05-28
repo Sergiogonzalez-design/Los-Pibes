@@ -29,7 +29,7 @@ export default function ThiagoFooter() {
             rel="noopener noreferrer"
             className="text-secondary-foreground hover:text-primary"
           >
-            Iona roster
+            Iona Roster
           </a>
           <a
             href="https://www.instagram.com/thiagocagna/"

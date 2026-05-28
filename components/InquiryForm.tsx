@@ -80,12 +80,13 @@ export default function InquiryForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="age" className="font-body text-xs font-semibold uppercase tracking-wider text-zinc-500">
-            Age
+            Age *
           </label>
           <input
             id="age"
             name="age"
             type="number"
+            required
             min="10"
             max="50"
             placeholder="e.g. 22"

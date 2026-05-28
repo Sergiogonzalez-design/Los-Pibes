@@ -11,28 +11,27 @@ export const metadata: Metadata = {
 export default function ExamplesIndexPage() {
   return (
     <OnixPageShell>
-      <header className="border-b border-white/10 pt-36 pb-12 sm:pt-40">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section
+        className="relative min-h-screen overflow-hidden pt-36 sm:pt-40"
+        style={{
+          backgroundImage:
+            "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/Mati Sergi celebration.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
           <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
             Onix Media
           </p>
           <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">
             Examples of our work
           </h1>
-          <p className="font-body mt-4 max-w-2xl text-lg text-secondary-foreground">
-            Live player sites that show how we structure story, stats, seasons,
-            highlights, and career arc for athletes—in one place. We operate in
-            the Americas and add more examples as we go.
-          </p>
-        </div>
-      </header>
-
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <li>
             <Link
               href="/examples/sergio"
-              className="group block rounded-xl border border-white/10 bg-black/25 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
+              className="group block rounded-xl border border-white/10 bg-black/35 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
             >
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">
                 NCAA Division I
@@ -52,7 +51,7 @@ export default function ExamplesIndexPage() {
           <li>
             <Link
               href="/examples/thiago"
-              className="group block rounded-xl border border-white/10 bg-black/25 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
+              className="group block rounded-xl border border-white/10 bg-black/35 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
             >
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">
                 NCAA Division I
@@ -72,7 +71,7 @@ export default function ExamplesIndexPage() {
           <li>
             <Link
               href="/examples/agostina"
-              className="group block rounded-xl border border-white/10 bg-black/25 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
+              className="group block rounded-xl border border-white/10 bg-black/35 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
             >
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">
                 Argentina · Primera
@@ -91,7 +90,7 @@ export default function ExamplesIndexPage() {
           <li>
             <Link
               href="/examples/nacho"
-              className="group block rounded-xl border border-white/10 bg-black/25 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
+              className="group block rounded-xl border border-white/10 bg-black/35 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
             >
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">
                 NCAA Division I · Costa Rica
@@ -107,7 +106,8 @@ export default function ExamplesIndexPage() {
               </span>
             </Link>
           </li>
-        </ul>
+          </ul>
+        </div>
       </section>
     </OnixPageShell>
   );

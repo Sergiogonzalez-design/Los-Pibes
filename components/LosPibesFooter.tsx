@@ -19,7 +19,10 @@ export default function LosPibesFooter() {
           <p className="font-semibold text-foreground">Explore</p>
           <ul className="mt-2 flex flex-col gap-3 text-secondary-foreground">
             <li>
-              <Link href="/contact" className="text-primary hover:underline">
+              <Link
+                href="/contact#request-information"
+                className="text-primary hover:underline"
+              >
                 Contact us
               </Link>
             </li>
@@ -29,28 +32,61 @@ export default function LosPibesFooter() {
             <li className="max-w-[min(100%,20rem)] break-all">
               <a
                 href="mailto:contact@onixmedia.agency"
-                className="text-foreground underline decoration-primary/60 underline-offset-2 hover:text-primary"
+                className="text-primary hover:underline"
               >
                 contact@onixmedia.agency
               </a>
             </li>
-            <li className="mt-2">
-              <span className="text-foreground">Matias Morales Albil</span>
-            </li>
-            <li className="max-w-[min(100%,20rem)] break-all">
+            <li>
               <a
-                href="mailto:matiasmorales@onixmedia.agency"
-                className="text-foreground underline decoration-primary/60 underline-offset-2 hover:text-primary"
+                href="https://www.instagram.com/onixmediafutbol/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary"
               >
-                matiasmorales@onixmedia.agency
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-foreground hover:text-primary">
+                YouTube
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <p className="mx-auto mt-10 max-w-7xl px-4 text-center font-body text-xs text-zinc-500 sm:px-6 lg:px-8">
-        © {new Date().getFullYear()} Onix Media. All rights reserved.
-      </p>
+      <div className="mx-auto mt-10 max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <p className="font-body text-xs text-zinc-500">
+          © {new Date().getFullYear()} Onix Media. All rights reserved.
+        </p>
+        <ul className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-body text-xs text-secondary-foreground">
+          <li>
+            <Link
+              href="/terms-of-service"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary"
+            >
+              Terms of Service
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary"
+            >
+              Privacy Policy
+            </Link>
+          </li>
+          <li>
+            <Link href="/accessibility" className="hover:text-primary">
+              Accessibility
+            </Link>
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 }

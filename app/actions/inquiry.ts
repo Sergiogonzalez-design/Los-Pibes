@@ -15,17 +15,35 @@ export async function submitInquiry(
   const email = formData.get("email")?.toString().trim();
   const sport = formData.get("sport")?.toString().trim();
   const country = formData.get("country")?.toString().trim();
-  const age = formData.get("age")?.toString().trim() || null;
+  const age = formData.get("age")?.toString().trim();
   const phone = formData.get("phone")?.toString().trim();
   const message = formData.get("message")?.toString().trim();
 
-  if (!name || !email || !message) {
-    return { status: "error", message: "Name, email, and message are required." };
+  if (!name || !email || !age || !message) {
+    return {
+      status: "error",
+      message: "Name, email, age, and message are required.",
+    };
+  }
+  const parsedAge = Number.parseInt(age, 10);
+  if (Number.isNaN(parsedAge) || parsedAge < 10 || parsedAge > 50) {
+    return {
+      status: "error",
+      message: "Age must be a number between 10 and 50.",
+    };
   }
 
   const { error } = await supabase
     .from("inquiries")
-    .insert({ name, email, sport, country, age: age ? parseInt(age) : null, phone, message });
+    .insert({
+      name,
+      email,
+      sport,
+      country,
+      age: parsedAge,
+      phone,
+      message,
+    });
 
   if (error) {
     return { status: "error", message: "Something went wrong. Please try again." };

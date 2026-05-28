@@ -21,12 +21,14 @@ export default function SergioExamplePage() {
       {/* Hero Section */}
       <section className="relative flex min-h-screen items-end overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-0"
+          className="absolute inset-0 bg-no-repeat"
           style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 20% 0%, rgba(34,197,94,0.10), transparent 55%), radial-gradient(ellipse 60% 50% at 80% 10%, rgba(212,175,55,0.13), transparent 50%)",
+            backgroundImage: "url('/Sergi jugando.jpeg')",
+            backgroundSize: "100% auto",
+            backgroundPosition: "top center",
           }}
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10" />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-8">
           <div className="flex items-end">
@@ -89,9 +91,9 @@ export default function SergioExamplePage() {
                 id="hero-stats"
                 className="grid grid-cols-2 gap-3 sm:grid-cols-4"
               >
-                <StatsCard value="64" label="Career games" />
-                <StatsCard value="12" label="Career goals" />
-                <StatsCard value="13" label="Career assists" />
+                <StatsCard value="64" label="Career Games" />
+                <StatsCard value="12" label="Career Goals" />
+                <StatsCard value="13" label="Career Assists" />
                 <StatsCard value="MVP" label="MAAC Championship" />
               </div>
             </div>
