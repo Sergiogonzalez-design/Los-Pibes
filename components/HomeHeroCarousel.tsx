@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 
 const slides = [
   { src: "/Sergi jugando.jpeg",    alt: "Sergi",          position: "50% 28%" },
-  { src: "/Rami foto.jpeg",        alt: "Rami",           position: "50% 15%" },
+  { src: "/Rami sonriendo.jpeg",   alt: "Rami",           position: "50% 15%" },
   { src: "/Mati Iona.jpg",         alt: "Mati",           position: "50% 18%" },
   { src: "/Nacho jugando.jpeg",    alt: "Nacho",          position: "50% 22%" },
 ] as const;

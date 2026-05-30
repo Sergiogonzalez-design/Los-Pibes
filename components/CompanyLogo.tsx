@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const LOGO_SRC = "/onix-futbol-media-logo.png";
+const LOGO_SRC = "/Onix media logo.jpeg";
 
 type CompanyLogoProps = {
   variant?: "nav" | "footer";

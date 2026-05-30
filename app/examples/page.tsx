@@ -106,6 +106,25 @@ export default function ExamplesIndexPage() {
               </span>
             </Link>
           </li>
+            <li>
+              <Link
+                href="/examples/rami"
+                className="group block rounded-xl border border-white/10 bg-black/35 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
+              >
+                <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">
+                  Spain · Segunda Federación
+                </p>
+                <h2 className="font-heading mt-2 text-xl font-semibold capitalize text-foreground group-hover:text-primary">
+                  Pablo Ramirez
+                </h2>
+                <p className="font-body mt-2 text-sm capitalize text-secondary-foreground">
+                  Center Back · Fuenlabrada · Getafe academy — stats, timeline, and highlights
+                </p>
+                <span className="font-body mt-4 inline-block text-sm font-medium capitalize text-primary">
+                  View example →
+                </span>
+              </Link>
+            </li>
           </ul>
         </div>
       </section>

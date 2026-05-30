@@ -10,9 +10,11 @@ export default function LosPibesFooter() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:flex-row sm:items-start sm:justify-between sm:px-6 lg:px-8">
         <div>
           <CompanyLogo variant="footer" />
-          <p className="mt-2 max-w-md font-body text-sm text-secondary-foreground">
+          <p className="mt-2 font-body text-sm font-semibold text-primary">
+            Where Talent Meets Visibility.
+          </p>
+          <p className="mt-1 max-w-md font-body text-sm text-secondary-foreground">
             Custom websites for athletes—stats, video, and story in one site.
-            We operate in the Americas.
           </p>
         </div>
         <div className="font-body text-sm">

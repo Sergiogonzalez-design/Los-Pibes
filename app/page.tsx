@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Onix Media",
   },
   description:
-    "Custom websites for athletes in the Americas—stats, highlights, and your story in one site.",
+    "Where Talent Meets Visibility. Custom websites for athletes in the Americas—stats, highlights, and your story in one site.",
 };
 
 const dashboards = [
@@ -54,17 +54,13 @@ export default function Home() {
                 <span className="text-gradient-gold">athletes</span>—stats,
                 video, and story in one place.
               </h1>
-              <p className="font-body mt-4 max-w-2xl text-lg font-medium text-foreground md:text-xl">
-                Your game. Your numbers. Your highlights.
+              <p className="font-body mt-4 max-w-2xl text-lg font-semibold text-primary md:text-xl">
+                Where Talent Meets Visibility.
               </p>
               <p className="font-body mt-6 max-w-2xl text-lg leading-relaxed text-secondary-foreground md:text-xl">
                 We help players stand out with custom sites that show who you
                 are, where you’ve played, and what you can do—so coaches,
-                scouts, and fans get the full picture.{" "}
-                <span className="text-foreground">
-                  We operate in the Americas
-                </span>{" "}
-                and work with athletes ready to own their presence online.
+                scouts, and fans get the full picture.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
@@ -127,3 +123,4 @@ export default function Home() {
     </div>
   );
 }
+
