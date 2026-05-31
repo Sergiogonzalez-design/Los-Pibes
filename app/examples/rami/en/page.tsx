@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CompanyLogo from "@/components/CompanyLogo";
 import LosPibesFooter from "@/components/LosPibesFooter";
+import StatsNavDropdown from "@/components/StatsNavDropdown";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -49,21 +50,13 @@ export default function RamiEnPage() {
             <span className="font-body text-sm font-semibold text-secondary-foreground">PR15</span>
           </div>
           <ul className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 font-body text-sm font-medium text-secondary-foreground">
-            <li className="group relative">
-              <span className="cursor-pointer">Stats</span>
-              <ul className="invisible absolute left-1/2 top-full z-20 mt-3 w-36 -translate-x-1/2 rounded-xl border border-white/10 bg-background/95 p-2 opacity-0 shadow-xl backdrop-blur-md transition-all duration-150 group-hover:visible group-hover:opacity-100">
-                <li>
-                  <Link href="/examples/rami/en/stats/2025-26" className="block rounded-lg px-3 py-2 text-xs text-secondary-foreground transition-colors hover:bg-white/5 hover:text-primary">
-                    2025/26
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/examples/rami/en/stats/2024-25" className="block rounded-lg px-3 py-2 text-xs text-secondary-foreground transition-colors hover:bg-white/5 hover:text-primary">
-                    2024/25
-                  </Link>
-                </li>
-              </ul>
-            </li>
+            <StatsNavDropdown
+              label="Stats"
+              links={[
+                { href: "/examples/rami/en/stats/2025-26", label: "2025/26" },
+                { href: "/examples/rami/en/stats/2024-25", label: "2024/25" },
+              ]}
+            />
             <li><a href="#seasons" className="transition-colors hover:text-primary">Seasons</a></li>
             <li><a href="#highlights" className="transition-colors hover:text-primary">Highlights</a></li>
             <li><a href="#career" className="transition-colors hover:text-primary">Career</a></li>
@@ -209,7 +202,7 @@ export default function RamiEnPage() {
           <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
             <p className="font-heading text-xl font-semibold text-foreground">Pablo Ramirez Moreno</p>
             <p className="font-body mt-1 text-sm text-secondary-foreground">Center Back · Fuenlabrada · Spain</p>
-            <a href="mailto:contact@onixmedia.agency"
+            <a href="mailto:ramirez.pablom03@gmail.com"
               className="font-body mt-4 block text-primary underline-offset-2 hover:underline">
               contact@onixmedia.agency
             </a>
@@ -221,3 +214,4 @@ export default function RamiEnPage() {
     </div>
   );
 }
+

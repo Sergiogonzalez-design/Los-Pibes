@@ -34,7 +34,6 @@ const matches = [
   { date: "05 Oct", home: "LPA", away: "FUE", score: "1–2", min: 15, goal: false, yellow: true,  red: false, rating: 4.7 },
   { date: "07 Sep", home: "ORI", away: "FUE", score: "2–0", min: 90, goal: false, yellow: false, red: false, rating: 5.4 },
   { date: "31 Aug", home: "ADA", away: "FUE", score: "0–1", min: 33, goal: false, yellow: false, red: false, rating: 6.2 },
-  { date: "15 Aug", home: "FUE", away: "AVI", score: "0–0", min: 90, goal: false, yellow: false, red: false, rating: 6.5 },
 ];
 
 export default function RamiStats2526Page() {
@@ -108,3 +107,4 @@ export default function RamiStats2526Page() {
     </div>
   );
 }
+
