@@ -23,7 +23,7 @@ export default function ThiagoExamplePage() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 20% 0%, rgba(212,175,55,0.12), transparent 55%), radial-gradient(ellipse 60% 50% at 80% 10%, rgba(212,175,55,0.08), transparent 50%)",
+              "radial-gradient(ellipse 80% 60% at 20% 0%, rgba(224,198,149,0.12), transparent 55%), radial-gradient(ellipse 60% 50% at 80% 10%, rgba(224,198,149,0.08), transparent 50%)",
           }}
         />
 

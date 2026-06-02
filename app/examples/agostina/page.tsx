@@ -28,7 +28,7 @@ export default function AgostinaExamplePage() {
             className="pointer-events-none absolute inset-0 opacity-[0.4]"
             style={{
               backgroundImage:
-                "radial-gradient(ellipse 85% 55% at 65% 15%, rgba(212, 175, 55, 0.22), transparent 55%), radial-gradient(ellipse 50% 45% at 15% 75%, rgba(56, 189, 248, 0.12), transparent 50%)",
+                "radial-gradient(ellipse 85% 55% at 65% 15%, rgba(224, 198, 149, 0.22), transparent 55%), radial-gradient(ellipse 50% 45% at 15% 75%, rgba(56, 189, 248, 0.12), transparent 50%)",
             }}
             aria-hidden
           />

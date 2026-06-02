@@ -14,7 +14,7 @@ export default function HomeES() {
     <div className="min-h-screen bg-background">
       <LosPibesNavbarES backHref="/" />
       <section className="relative overflow-hidden border-b border-white/10 pt-36 pb-16 sm:pt-40 sm:pb-20">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.12]" style={{ backgroundImage: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 175, 55, 0.35), transparent 55%)" }} />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.12]" style={{ backgroundImage: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(224, 198, 149, 0.35), transparent 55%)" }} />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-10 md:grid-cols-[1fr_420px] lg:grid-cols-[1fr_480px]">
             <div>

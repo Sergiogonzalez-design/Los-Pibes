@@ -3,7 +3,7 @@
 :root {
   --background: #0c1117;
   --foreground: #f4f4f5;
-  --primary: #d4af37;
+  --primary: #e0c695;
   --primary-foreground: #0c1117;
   --secondary-foreground: rgba(244, 244, 245, 0.75);
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #f0d78c 0%, #d4af37 45%, #b8860b 100%);
+  background: linear-gradient(135deg, #f5e2b8 0%, #e0c695 45%, #b99968 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
