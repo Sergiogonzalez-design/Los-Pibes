@@ -86,7 +86,7 @@ export default function RamiEnPage() {
           <p className="font-body mb-4 text-xs uppercase tracking-[0.35em] text-primary">
             Center Back · Spain
           </p>
-          <h1 className="font-heading text-5xl font-bold leading-none text-foreground sm:text-7xl md:text-8xl">
+          <h1 className="font-heading text-4xl font-bold leading-none text-foreground sm:text-6xl md:text-7xl">
             <span className="block">Pablo</span>
             <span className="block text-gradient-gold">Ramirez</span>
           </h1>

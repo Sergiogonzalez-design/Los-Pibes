@@ -18,7 +18,7 @@ export default function ThiagoExamplePage() {
     <div className="min-h-screen bg-background">
       <ThiagoNavbar />
 
-      <section className="relative flex min-h-screen items-end overflow-hidden">
+      <section className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -27,14 +27,14 @@ export default function ThiagoExamplePage() {
           }}
         />
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end">
             <div className="max-w-xl">
               <div className="mb-4">
-                <span className="font-heading block text-5xl font-bold leading-none text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+                <span className="font-heading block text-4xl font-bold leading-none text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
                   Thiago
                 </span>
-                <span className="font-heading block text-5xl font-bold leading-none text-gradient-gold sm:text-6xl md:text-7xl lg:text-8xl">
+                <span className="font-heading block text-4xl font-bold leading-none text-gradient-gold sm:text-5xl md:text-6xl lg:text-7xl">
                   Cagna
                 </span>
               </div>

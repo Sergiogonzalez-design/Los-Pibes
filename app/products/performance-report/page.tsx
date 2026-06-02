@@ -53,7 +53,7 @@ export default function PerformanceReportPage() {
         </nav>
       </header>
 
-      <section className="mx-auto max-w-7xl px-4 pt-36 pb-16 sm:px-6 sm:pt-40 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pt-44 pb-16 sm:px-6 sm:pt-52 lg:px-8">
         <div className="grid items-start gap-8 lg:grid-cols-[0.65fr_1.5fr]">
           <div>
             <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">

@@ -36,10 +36,16 @@ export default function WebsiteProductPageES() {
               <li>• Incluye estadísticas, videos y tu historia con una estructura limpia.</li>
               <li>• Diseñado para verse profesional y fácil de compartir con entrenadores.</li>
             </ul>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/es/examples"
+                className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                Ver Ejemplos
+              </Link>
               <Link
                 href="/es/contact"
-                className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
               >
                 Contacto
               </Link>
@@ -51,8 +57,8 @@ export default function WebsiteProductPageES() {
             style={{ height: "420px" }}
           >
             <img
-              src="/Nacho jugando.jpeg"
-              alt="Nacho Alfaro"
+              src="/website-nacho.jpg"
+              alt="Nacho Alfaro website example"
               className="h-full w-full object-cover object-top"
             />
           </div>

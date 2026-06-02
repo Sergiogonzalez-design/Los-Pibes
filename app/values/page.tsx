@@ -11,7 +11,7 @@ export default function ValuesPage() {
   return (
     <OnixPageShell>
       <section
-        className="relative min-h-screen overflow-hidden pt-36 sm:pt-40"
+        className="relative min-h-screen overflow-hidden pt-44 sm:pt-52"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/St. Peters gol celebration.jpeg')",

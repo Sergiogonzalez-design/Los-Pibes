@@ -158,7 +158,7 @@ export default function NachoESPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="font-body mb-4 text-xs uppercase tracking-[0.35em] text-primary">Portero · Costa Rica</p>
-          <h1 className="font-heading text-5xl font-bold leading-none text-foreground sm:text-7xl md:text-8xl">
+          <h1 className="font-heading text-4xl font-bold leading-none text-foreground sm:text-6xl md:text-7xl">
             <span className="block">Nacho</span>
             <span className="block text-gradient-gold">Alfaro</span>
           </h1>

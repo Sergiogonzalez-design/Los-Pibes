@@ -53,7 +53,7 @@ export default function WebsiteProductPage() {
         </nav>
       </header>
 
-      <section className="mx-auto max-w-7xl px-4 pt-36 pb-16 sm:px-6 sm:pt-40 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pt-44 pb-16 sm:px-6 sm:pt-52 lg:px-8">
         <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.1fr]">
           <div>
             <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
@@ -67,10 +67,16 @@ export default function WebsiteProductPage() {
               <li>• Includes stats, videos, and your story with a clean structure.</li>
               <li>• Built to look professional and easy to share with coaches.</li>
             </ul>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/examples"
+                className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                View Examples
+              </Link>
               <Link
                 href="/contact"
-                className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
               >
                 Contact
               </Link>
@@ -79,8 +85,8 @@ export default function WebsiteProductPage() {
 
           <div className="overflow-hidden rounded-xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]" style={{ height: "420px" }}>
             <img
-              src="/Nacho jugando.jpeg"
-              alt="Nacho Alfaro"
+              src="/website-nacho.jpg"
+              alt="Nacho Alfaro website example"
               className="h-full w-full object-cover object-top"
             />
           </div>

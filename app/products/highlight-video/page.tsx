@@ -53,7 +53,7 @@ export default function HighlightVideoPage() {
         </nav>
       </header>
 
-      <section className="mx-auto max-w-7xl px-4 pt-36 pb-16 sm:px-6 sm:pt-40 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pt-44 pb-16 sm:px-6 sm:pt-52 lg:px-8">
         <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.1fr]">
           <div>
             <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
@@ -87,7 +87,7 @@ export default function HighlightVideoPage() {
             <div className="aspect-video w-full">
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/MXZNl4Gz4sM"
+                src="https://www.youtube.com/embed/UAL5VoMdMzU"
                 title="Highlight Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
