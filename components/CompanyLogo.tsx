@@ -18,8 +18,8 @@ export default function CompanyLogo({
 }: CompanyLogoProps) {
   const sizeClass =
     variant === "footer"
-      ? "h-32 w-auto sm:h-36 md:h-40"
-      : "h-20 w-auto sm:h-24 md:h-28";
+      ? "h-32 w-auto sm:h-40 md:h-48"
+      : "h-24 w-auto sm:h-28 md:h-32";
 
   return (
     <Link href={href} className={`inline-flex items-center ${className}`}>
@@ -30,7 +30,7 @@ export default function CompanyLogo({
         height={480}
         className={`${sizeClass} object-contain`}
         priority={priority}
-        sizes={variant === "footer" ? "(max-width: 640px) 320px, 400px" : "(max-width: 768px) 280px, 360px"}
+        sizes={variant === "footer" ? "(max-width: 640px) 384px, 768px" : "(max-width: 768px) 384px, 512px"}
       />
     </Link>
   );
