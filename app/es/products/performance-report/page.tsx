@@ -23,44 +23,39 @@ export default function PerformanceReportPageES() {
         }}
       >
       <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-8 lg:grid-cols-[0.65fr_1.5fr]">
-          <div>
-            <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
-              Producto
-            </p>
-            <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">
-              Informe de Rendimiento
-            </h1>
-            <ul className="font-body mt-6 max-w-3xl space-y-3 text-base leading-relaxed text-secondary-foreground sm:text-lg">
-              <li>• Una imagen clara del perfil del jugador y su progresión en la carrera.</li>
-              <li>• Métricas clave de la temporada organizadas para entrenadores, ojeadores y clubes.</li>
-              <li>• Un documento compartible que apoya las conversaciones de reclutamiento.</li>
-            </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/es/products/performance-report/samir-meza"
-                className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Informe de Rendimiento
-              </Link>
-              <Link
-                href="/es/contact"
-                className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-              >
-                Contacto
-              </Link>
-            </div>
-          </div>
-
-          <div className="overflow-hidden rounded-xl border border-white/10 bg-black/35 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
-            <div className="h-[600px] w-full sm:h-[700px]">
-              <iframe
-                src="/performance-samir-meza.pdf#toolbar=0&navpanes=0&pagemode=none&zoom=115"
-                title="Informe de Rendimiento PDF"
-                className="h-full w-full"
-              />
-            </div>
-          </div>
+        <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
+          Producto
+        </p>
+        <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">
+          Informe de Rendimiento
+        </h1>
+        <ul className="font-body mt-6 max-w-3xl space-y-3 text-base leading-relaxed text-secondary-foreground sm:text-lg">
+          <li>• Una imagen clara del perfil del jugador y su progresión en la carrera.</li>
+          <li>• Métricas clave de la temporada organizadas para entrenadores, ojeadores y clubes.</li>
+          <li>• Un documento compartible que apoya las conversaciones de reclutamiento.</li>
+        </ul>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href="/performance-samir-meza.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          >
+            Ver Informe de Ejemplo
+          </a>
+          <a
+            href="/performance-samir-meza.pdf"
+            download
+            className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
+          >
+            Descargar PDF
+          </a>
+          <Link
+            href="/es/contact"
+            className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
+          >
+            Contacto
+          </Link>
         </div>
       </div>
       </section>

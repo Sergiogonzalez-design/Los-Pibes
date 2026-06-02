@@ -223,15 +223,6 @@ export default function RamiEsPage() {
               Descargar PDF
             </a>
           </div>
-          <div className="mt-8 overflow-hidden rounded-xl border border-white/10 bg-black/35 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
-            <div className="h-[700px] w-full sm:h-[820px]">
-              <iframe
-                src="/pablo-ramirez-report.pdf#toolbar=0&navpanes=0&pagemode=none&zoom=115"
-                title="Informe de Rendimiento — Pablo Ramirez Moreno"
-                className="h-full w-full"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
