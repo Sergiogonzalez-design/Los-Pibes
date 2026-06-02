@@ -16,7 +16,7 @@ const MATIAS_EMAIL = "matiasmorales@onixmedia.agency";
 const SERGIO_EMAIL = "sergiogonzalez@onixmedia.agency";
 const NACHO_EMAIL = "nachoalfaro@onixmedia.agency";
 const INSTAGRAM_URL = "https://www.instagram.com/onixmediafutbol/";
-const YOUTUBE_URL = "#";
+const YOUTUBE_URL = "https://www.youtube.com/@OnixMediaAgency";
 const socialPhotos = [
   { src: "/Mati Iona.jpg", alt: "Mati jugando", position: "50% 26%" },
   { src: "/Sergi jugando.jpeg", alt: "Sergi jugando", position: "50% 30%" },
@@ -87,6 +87,8 @@ export default function ContactPage() {
                 </a>
                 <a
                   href={YOUTUBE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
                 >
                   YouTube

@@ -50,7 +50,12 @@ export default function LosPibesFooter() {
               </a>
             </li>
             <li>
-              <a href="#" className="text-foreground hover:text-primary">
+              <a
+                href="https://www.youtube.com/@OnixMediaAgency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary"
+              >
                 YouTube
               </a>
             </li>

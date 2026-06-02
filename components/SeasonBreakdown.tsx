@@ -13,7 +13,7 @@ const seasons = [
     goals: "0",
     ast: "5",
     note:
-      "Graduate student · MBA (Business Analytics) · 8 starts · 5 pts · per GMU 2025 game-by-game stats",
+      "Graduate student · MSBA (Business Analytics) · 8 starts · 5 pts · per GMU 2025 game-by-game stats",
   },
   {
     year: "2024",

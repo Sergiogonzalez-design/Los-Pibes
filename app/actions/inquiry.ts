@@ -18,6 +18,8 @@ export async function submitInquiry(
   const age = formData.get("age")?.toString().trim();
   const phone = formData.get("phone")?.toString().trim();
   const message = formData.get("message")?.toString().trim();
+  const productsRaw = formData.get("products")?.toString().trim();
+  const products = productsRaw ? productsRaw.split(",").filter(Boolean) : [];
 
   if (!name || !email || !age || !message) {
     return {
@@ -43,6 +45,7 @@ export async function submitInquiry(
       age: parsedAge,
       phone,
       message,
+      products,
     });
 
   if (error) {

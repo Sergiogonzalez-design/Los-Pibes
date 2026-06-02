@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description:
     "Onix Media builds custom sites for athletes in the Americas—stats, video, and story in one place.",
   icons: {
-    icon: "/onix-futbol-media-logo.png",
+    icon: "/Onix Media new logo.jpeg",
   },
 };
 

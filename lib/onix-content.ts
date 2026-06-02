@@ -1,11 +1,23 @@
 export const brandValues = [
-  { icon: "🏆", title: "Athlete-first" },
-  { icon: "📈", title: "Performance & clarity" },
-  { icon: "🎯", title: "Career-focused strategy" },
-  { icon: "🤝", title: "Built with you, not for you" },
-  { icon: "🚀", title: "Always leveling up your presence" },
-  { icon: "🧠", title: "Smart content structure" },
-  { icon: "⚡", title: "Fast and mobile-ready pages" },
-  { icon: "📹", title: "Video-first storytelling" },
-  { icon: "🌎", title: "Built for the Americas market" },
+  { icon: "🤝", title: "Honesty" },
+  { icon: "📋", title: "Responsibility" },
+  { icon: "💪", title: "Hard work" },
+  { icon: "🏆", title: "Excellence" },
+  { icon: "⚽", title: "Passion for soccer" },
+  { icon: "💡", title: "Innovation" },
+  { icon: "🎯", title: "Commitment to the athlete" },
+  { icon: "🌎", title: "Global mindset" },
+  { icon: "📈", title: "Continuous growth" },
+] as const;
+
+export const brandValuesES = [
+  { icon: "🤝", title: "Honestidad" },
+  { icon: "📋", title: "Responsabilidad" },
+  { icon: "💪", title: "Trabajo duro" },
+  { icon: "🏆", title: "Excelencia" },
+  { icon: "⚽", title: "Pasión por el fútbol" },
+  { icon: "💡", title: "Innovación" },
+  { icon: "🎯", title: "Compromiso con el atleta" },
+  { icon: "🌎", title: "Mentalidad global" },
+  { icon: "📈", title: "Crecimiento continuo" },
 ] as const;

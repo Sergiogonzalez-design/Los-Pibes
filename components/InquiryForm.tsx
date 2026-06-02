@@ -1,12 +1,26 @@
 "use client";
 
+import { useState } from "react";
 import { useActionState } from "react";
 import { submitInquiry, type InquiryState } from "@/app/actions/inquiry";
 
 const initialState: InquiryState = { status: "idle" };
 
+const productOptions = [
+  { value: "highlight-video", label: "Highlight Video" },
+  { value: "performance-report", label: "Performance Report" },
+  { value: "website", label: "Website" },
+  { value: "full-pack", label: "Full Pack" },
+  { value: "not-sure", label: "Not sure yet" },
+];
+
 export default function InquiryForm() {
   const [state, action, pending] = useActionState(submitInquiry, initialState);
+  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
+  const toggle = (v: string) =>
+    setSelectedProducts((prev) =>
+      prev.includes(v) ? prev.filter((x) => x !== v) : [...prev, v]
+    );
 
   if (state.status === "success") {
     return (
@@ -106,6 +120,29 @@ export default function InquiryForm() {
           />
         </div>
       </div>
+      <div className="flex flex-col gap-2">
+        <label className="font-body text-xs font-semibold uppercase tracking-wider text-zinc-500">
+          What are you interested in? *
+        </label>
+        <div className="flex flex-wrap gap-2">
+          {productOptions.map((opt) => (
+            <button
+              key={opt.value}
+              type="button"
+              onClick={() => toggle(opt.value)}
+              className={`font-body rounded-lg border px-4 py-2 text-sm font-medium transition-colors ${
+                selectedProducts.includes(opt.value)
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-white/10 bg-black/30 text-secondary-foreground hover:border-primary/40 hover:text-foreground"
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+        <input type="hidden" name="products" value={selectedProducts.join(",")} />
+      </div>
+
       <div className="flex flex-col gap-1.5">
         <label htmlFor="message" className="font-body text-xs font-semibold uppercase tracking-wider text-zinc-500">
           Message *

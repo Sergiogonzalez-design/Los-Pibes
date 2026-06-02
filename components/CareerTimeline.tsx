@@ -2,7 +2,7 @@ const milestones = [
   {
     year: "2025",
     title: "George Mason — Graduate year",
-    body: "MBA in Business Analytics while competing in the Atlantic 10. Roster and bio on the official athletics site.",
+    body: "MSBA in Business Analytics while competing in the Atlantic 10. 8 starts, 5 assists, including 2 against UVA.",
   },
   {
     year: "2024",

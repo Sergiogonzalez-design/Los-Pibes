@@ -1,137 +1,75 @@
-import CareerTimeline from "@/components/CareerTimeline";
-import Footer from "@/components/Footer";
-import Highlights from "@/components/Highlights";
-import Navbar from "@/components/Navbar";
-import PlayerInfoBar from "@/components/PlayerInfoBar";
-import SeasonBreakdown from "@/components/SeasonBreakdown";
-import StatsCard from "@/components/StatsCard";
 import type { Metadata } from "next";
+import CompanyLogo from "@/components/CompanyLogo";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Sergio Gonzalez",
+  title: "Sergio Gonzalez — Select Language",
   description:
-    "Spanish midfielder — Iona & George Mason. Career stats, highlights, and bio.",
+    "Sergio Gonzalez — Midfielder · NCAA Division I. Select your language.",
 };
 
-export default function SergioExamplePage() {
+export default function SergioLanguageSelector() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
+    <div
+      className="relative min-h-screen flex flex-col"
+      style={{
+        backgroundImage:
+          "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%), url('/Sergi jugando.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center 20%",
+      }}
+    >
+      {/* Top bar */}
+      <header className="flex items-center gap-4 px-6 py-5 sm:px-10">
+        <Link
+          href="/examples"
+          className="font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
+          aria-label="Back to examples"
+        >
+          ←
+        </Link>
+        <CompanyLogo priority />
+      </header>
 
-      {/* Hero Section */}
-      <section className="relative flex min-h-screen items-end overflow-hidden">
-        <div
-          className="absolute inset-0 bg-no-repeat"
-          style={{
-            backgroundImage: "url('/Sergi jugando.jpeg')",
-            backgroundSize: "100% auto",
-            backgroundPosition: "top center",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10" />
+      {/* Main content */}
+      <div className="flex flex-1 flex-col items-center justify-center px-4 pb-16 text-center">
+        <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
+          Midfielder · NCAA Division I
+        </p>
+        <h1 className="font-heading mt-4 text-5xl font-bold leading-none text-foreground sm:text-7xl">
+          <span className="block">Sergio</span>
+          <span className="block text-gradient-gold">Gonzalez</span>
+        </h1>
+        <p className="font-body mt-3 text-sm text-secondary-foreground">
+          Iona University · George Mason University
+        </p>
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-8">
-          <div className="flex items-end">
-            <div className="max-w-xl">
-              <div className="mb-4">
-                <span className="font-heading block text-5xl font-bold leading-none text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
-                  Sergio
-                </span>
-                <span className="font-heading block text-5xl font-bold leading-none text-gradient-gold sm:text-6xl md:text-7xl lg:text-8xl">
-                  Gonzalez
-                </span>
-              </div>
+        <p className="font-body mt-10 text-sm uppercase tracking-widest text-secondary-foreground/60">
+          Select language · Elige idioma
+        </p>
 
-              <p className="font-body mb-6 text-sm uppercase tracking-[0.3em] text-primary">
-                Midfielder · #6 · NCAA Division I
-              </p>
+        <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+          <Link
+            href="/en/examples/sergio"
+            className="group flex min-w-[180px] flex-col items-center gap-2 rounded-2xl border border-white/15 bg-black/30 px-10 py-7 backdrop-blur-sm transition-all hover:border-primary/50 hover:bg-black/50"
+          >
+            <span className="text-3xl">🇺🇸</span>
+            <span className="font-heading text-xl font-bold text-foreground transition-colors group-hover:text-primary">
+              English
+            </span>
+          </Link>
 
-              <p className="font-body mb-8 max-w-xl text-base leading-relaxed text-secondary-foreground md:text-lg">
-                Spanish midfielder from Villanueva del Pardillo, Spain. Three
-                seasons at Iona (2022–2024), including 2024 MAAC Championship MVP
-                and All-MAAC First Team. Now a graduate student at George Mason,
-                pursuing an MBA in Business Analytics while competing in the
-                A-10.
-              </p>
-
-              <div className="mb-10 flex flex-wrap gap-3">
-                <a
-                  href="https://gomason.com/sports/mens-soccer/roster/sergio-gonzalez-fernandez/9251"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  George Mason (2025)
-                </a>
-                <a
-                  href="https://ionagaels.com/sports/mens-soccer/roster/sergio-gonzalez-fernandez/7622"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-                >
-                  Iona Roster
-                </a>
-                <a
-                  href="https://www.instagram.com/sergigonzalez6/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-                >
-                  Instagram
-                </a>
-                <a
-                  href="#contact"
-                  className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-                >
-                  Contact
-                </a>
-              </div>
-
-              <div
-                id="hero-stats"
-                className="grid grid-cols-2 gap-3 sm:grid-cols-4"
-              >
-                <StatsCard value="64" label="Career Games" />
-                <StatsCard value="12" label="Career Goals" />
-                <StatsCard value="13" label="Career Assists" />
-                <StatsCard value="MVP" label="MAAC Championship" />
-              </div>
-            </div>
-          </div>
+          <Link
+            href="/es/examples/sergio"
+            className="group flex min-w-[180px] flex-col items-center gap-2 rounded-2xl border border-white/15 bg-black/30 px-10 py-7 backdrop-blur-sm transition-all hover:border-primary/50 hover:bg-black/50"
+          >
+            <span className="text-3xl">🇪🇸</span>
+            <span className="font-heading text-xl font-bold text-foreground transition-colors group-hover:text-primary">
+              Español
+            </span>
+          </Link>
         </div>
-      </section>
-
-      <PlayerInfoBar />
-      <SeasonBreakdown />
-      <Highlights />
-      <CareerTimeline />
-
-      <section id="contact" className="border-t border-white/10 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
-            Contact
-          </h2>
-          <p className="font-body mt-2 text-secondary-foreground">
-            Recruiting and media inquiries.
-          </p>
-          <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
-            <p className="font-heading text-xl font-semibold text-foreground">
-              Sergio Gonzalez Fernandez
-            </p>
-            <p className="font-body mt-1 text-sm text-secondary-foreground">
-              Midfielder · #6 · NCAA Division I
-            </p>
-            <a
-              href="mailto:sergiogonzalez.usa@icloud.com"
-              className="font-body mt-4 block text-primary underline-offset-2 hover:underline"
-            >
-              sergiogonzalez.usa@icloud.com
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
+      </div>
     </div>
   );
 }

@@ -10,11 +10,19 @@ export const metadata: Metadata = {
     "Pablo 'Rami' Ramirez Moreno — Defensa central español. Fuenlabrada · Leganés B · Getafe CF. Estadísticas, trayectoria y highlights.",
 };
 
-const stats = [
-  { label: "Fecha de Nacimiento", value: "18/03/2003" },
-  { label: "Altura / Peso", value: "186 cm / 78 kg" },
-  { label: "Minutos Totales", value: "11.764" },
+const heroStats = [
+  { label: "Partidos", value: "139" },
+  { label: "Titularidades", value: "116" },
+  { label: "Posición", value: "Defensa Central" },
   { label: "Liga Actual", value: "2ª Fed." },
+];
+
+const infoItems = [
+  { k: "Fecha de Nacimiento", v: "18/03/2003" },
+  { k: "Altura", v: "186 cm" },
+  { k: "Peso", v: "78 kg" },
+  { k: "Pie dominante", v: "Derecho" },
+  { k: "Ciudad natal", v: "Madrid, España" },
 ];
 
 const seasons = [
@@ -59,6 +67,7 @@ export default function RamiEsPage() {
             />
             <li><a href="#seasons" className="transition-colors hover:text-primary">Temporadas</a></li>
             <li><a href="#highlights" className="transition-colors hover:text-primary">Highlights</a></li>
+            <li><a href="#report" className="transition-colors hover:text-primary">Informe</a></li>
             <li><a href="#career" className="transition-colors hover:text-primary">Carrera</a></li>
             <li><a href="#contact" className="transition-colors hover:text-primary">Contacto</a></li>
           </ul>
@@ -109,9 +118,9 @@ export default function RamiEsPage() {
             </a>
           </div>
 
-          {/* Stats cards */}
-          <div id="stats" className="mt-14 grid scroll-mt-32 grid-cols-2 gap-4 sm:grid-cols-4">
-            {stats.map((s) => (
+          {/* Hero stats cards */}
+          <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {heroStats.map((s) => (
               <div key={s.label} className="rounded-xl border border-white/10 bg-black/25 p-5">
                 <p className="font-body text-xs uppercase tracking-widest text-primary">{s.label}</p>
                 <p className="mt-2 font-heading text-xl font-bold text-foreground">{s.value}</p>
@@ -121,8 +130,20 @@ export default function RamiEsPage() {
         </div>
       </section>
 
+      {/* Player info bar */}
+      <section id="stats" className="scroll-mt-24 border-y border-white/10 bg-zinc-900/50 py-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:grid-cols-5 sm:px-6 lg:px-8">
+          {infoItems.map((item) => (
+            <div key={item.k} className="text-center sm:text-left">
+              <p className="font-body text-xs uppercase tracking-widest text-primary">{item.k}</p>
+              <p className="mt-1 font-body text-sm font-medium text-foreground">{item.v}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Temporadas */}
-      <section id="seasons" className="scroll-mt-24 border-t border-white/10 py-16 sm:py-24">
+      <section id="seasons" className="scroll-mt-24 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Temporadas</h2>
           <p className="font-body mt-2 text-secondary-foreground">Rendimiento temporada a temporada en todos sus clubes.</p>
@@ -163,10 +184,52 @@ export default function RamiEsPage() {
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Highlights</h2>
           <div className="mt-10">
             <div className="overflow-hidden rounded-xl border border-white/10 bg-black/25 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
-              <video className="w-full" controls preload="metadata" poster="/Rami jugando.jpg">
-                <source src="/rami-highlights.mp4" type="video/mp4" />
-                Tu navegador no soporta la reproducción de vídeo.
-              </video>
+              <div className="aspect-video w-full">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/UAL5VoMdMzU"
+                  title="Pablo Ramirez Moreno — Highlights"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Report */}
+      <section id="report" className="scroll-mt-24 border-t border-white/10 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Informe de Rendimiento</h2>
+          <p className="font-body mt-2 text-secondary-foreground">
+            Informe completo con perfil, métricas de temporada y trayectoria — listo para entrenadores y reclutadores.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="/pablo-ramirez-report.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Ver Informe
+            </a>
+            <a
+              href="/pablo-ramirez-report.pdf"
+              download
+              className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
+            >
+              Descargar PDF
+            </a>
+          </div>
+          <div className="mt-8 overflow-hidden rounded-xl border border-white/10 bg-black/35 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+            <div className="h-[700px] w-full sm:h-[820px]">
+              <iframe
+                src="/pablo-ramirez-report.pdf#toolbar=0&navpanes=0&pagemode=none&zoom=115"
+                title="Informe de Rendimiento — Pablo Ramirez Moreno"
+                className="h-full w-full"
+              />
             </div>
           </div>
         </div>
