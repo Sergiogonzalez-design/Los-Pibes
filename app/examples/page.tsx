@@ -23,6 +23,12 @@ const premiumExamples = [
     name: "Pablo Ramirez",
     desc: "Center Back · Fuenlabrada · Getafe academy — stats, timeline, and highlights",
   },
+  {
+    href: "/examples/jaco",
+    tag: "NCAA Division I · Spain",
+    name: "Jacobo Sanfeliu",
+    desc: "Striker · George Mason & SIUE · Barcelona — stats, timeline, and highlights",
+  },
 ];
 
 const basicExamples = [

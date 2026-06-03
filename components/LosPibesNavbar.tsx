@@ -20,6 +20,7 @@ const exampleLinks = [
   { href: "/examples/agostina", label: "Agostina Holzheier" },
   { href: "/examples/nacho", label: "Nacho Alfaro" },
   { href: "/examples/rami", label: "Pablo Ramirez" },
+  { href: "/examples/jaco", label: "Jacobo Sanfeliu" },
 ];
 
 export default function LosPibesNavbar() {

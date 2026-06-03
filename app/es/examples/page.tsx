@@ -24,6 +24,12 @@ const premiumExamples = [
     name: "Pablo Ramirez",
     desc: "Defensa central · Fuenlabrada · Cantera del Getafe — estadísticas, cronología y destacados",
   },
+  {
+    href: "/examples/jaco",
+    tag: "NCAA Division I · España",
+    name: "Jacobo Sanfeliu",
+    desc: "Delantero · George Mason & SIUE · Barcelona — estadísticas, trayectoria y highlights",
+  },
 ];
 
 const basicExamples = [
