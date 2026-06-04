@@ -14,7 +14,7 @@ export default function PerformanceReportPageEN() {
       <LosPibesNavbarEN backHref="/en/products" />
 
       <section
-        className="relative min-h-screen overflow-hidden pt-52 sm:pt-60"
+        className="relative min-h-screen overflow-hidden pt-44 sm:pt-52"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, rgba(5,10,20,0.72), rgba(5,10,20,0.88)), url('/Nacho jugando.jpeg')",

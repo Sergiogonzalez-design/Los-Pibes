@@ -1,4 +1,5 @@
 import CompanyLogo from "@/components/CompanyLogo";
+import { siteHeaderClass, siteNavClass } from "@/lib/site-nav";
 
 const nav = [
   { href: "/mission", label: "Mision" },
@@ -25,8 +26,8 @@ const exampleLinks = [
 
 export default function LosPibesNavbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+    <header className={siteHeaderClass}>
+      <nav className={siteNavClass}>
         <CompanyLogo priority />
         <ul className="flex max-w-[min(100%,42rem)] flex-1 flex-wrap items-center justify-end gap-x-3 gap-y-2 text-[11px] font-medium text-secondary-foreground sm:text-xs md:max-w-none md:text-sm">
           {nav.map((item) => {

@@ -18,7 +18,7 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-background">
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
           <div className="flex min-w-0 items-center gap-4">
             <Link
               href="/"
@@ -60,7 +60,7 @@ export default function ProductsPage() {
       </header>
 
       <section
-        className="relative min-h-screen overflow-hidden pt-44 sm:pt-52"
+        className="relative min-h-screen overflow-hidden pt-36 sm:pt-44"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/Mati Sergi celebration.jpeg')",

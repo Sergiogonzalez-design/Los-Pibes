@@ -49,7 +49,7 @@ export default function RamiStats2526Page() {
       }}
     >
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
           <div className="flex min-w-0 items-center gap-4">
             <Link
               href="/examples/rami"
@@ -69,7 +69,7 @@ export default function RamiStats2526Page() {
         </nav>
       </header>
 
-      <section className="mx-auto max-w-7xl px-4 pt-36 pb-16 sm:px-6 sm:pt-40 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pt-28 pb-16 sm:px-6 sm:pt-32 lg:px-8">
         <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">Fuenlabrada · Segunda Federación</p>
         <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">
           2025 / 26 Season

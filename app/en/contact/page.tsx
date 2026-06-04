@@ -55,7 +55,7 @@ export default function ContactPageEN() {
 
       <section
         id="request-information"
-        className="scroll-mt-32 mx-auto max-w-7xl border-b border-white/10 px-4 pt-36 pb-16 sm:px-6 sm:pt-40 lg:px-8"
+        className="scroll-mt-32 mx-auto max-w-7xl border-b border-white/10 px-4 pt-28 pb-16 sm:px-6 sm:pt-32 lg:px-8"
       >
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-7">

@@ -18,7 +18,7 @@ export default function AgostinaExamplePage() {
     <div className="min-h-screen bg-background">
       <AgostinaNavbar />
 
-      <section className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+      <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-gradient-to-br from-[#1a1520] via-[#0c1117] to-[#0c1824]"

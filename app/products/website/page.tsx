@@ -12,7 +12,7 @@ export default function WebsiteProductPage() {
   return (
     <div className="min-h-screen bg-background">
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
           <div className="flex min-w-0 items-center gap-4">
             <Link
               href="/products"
@@ -53,7 +53,7 @@ export default function WebsiteProductPage() {
         </nav>
       </header>
 
-      <section className="mx-auto max-w-7xl px-4 pt-44 pb-16 sm:px-6 sm:pt-52 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pt-36 pb-16 sm:px-6 sm:pt-44 lg:px-8">
         <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.1fr]">
           <div>
             <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">

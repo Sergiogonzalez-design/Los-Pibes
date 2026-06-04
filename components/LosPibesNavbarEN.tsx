@@ -1,4 +1,5 @@
 import CompanyLogo from "@/components/CompanyLogo";
+import { siteHeaderClass, siteNavClass } from "@/lib/site-nav";
 import Link from "next/link";
 
 const nav = [
@@ -22,9 +23,9 @@ const exampleLinks = [
 
 export default function LosPibesNavbarEN({ backHref }: { backHref?: string } = {}) {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex min-w-0 items-center gap-4">
+    <header className={siteHeaderClass}>
+      <nav className={siteNavClass}>
+        <div className="flex min-w-0 items-center gap-3">
           {backHref && (
             <Link
               href={backHref}

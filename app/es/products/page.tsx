@@ -20,7 +20,7 @@ export default function ProductsPageES() {
       <LosPibesNavbarES backHref="/es" />
 
       <section
-        className="relative min-h-screen overflow-hidden pt-44 sm:pt-52"
+        className="relative min-h-screen overflow-hidden pt-36 sm:pt-44"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/Mati Sergi celebration.jpeg')",

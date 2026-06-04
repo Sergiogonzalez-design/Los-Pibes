@@ -125,7 +125,7 @@ export default function NachoENPage() {
     <div className="min-h-screen bg-background">
       {/* Custom player navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
           <div className="flex min-w-0 items-center gap-4">
             <Link
               href="/en/examples"
@@ -153,7 +153,7 @@ export default function NachoENPage() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+      <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Nacho jugando.jpeg')" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
