@@ -58,7 +58,8 @@ export default function ExamplesIndexPage() {
           backgroundImage:
             "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/Mati Sergi celebration.jpeg')",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center top",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

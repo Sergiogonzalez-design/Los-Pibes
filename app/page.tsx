@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4">
       <div className="flex flex-col items-center gap-6 text-center">
-        <CompanyLogo />
+        <CompanyLogo imageClassName="h-28 w-auto sm:h-36 md:h-44" />
         <p className="font-body text-lg font-semibold text-primary">Where Talent Meets Visibility.</p>
         <p className="font-body text-sm text-secondary-foreground">Select your language / Selecciona tu idioma</p>
         <div className="mt-4 flex flex-col gap-4 sm:flex-row">

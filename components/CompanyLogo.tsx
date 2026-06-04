@@ -6,6 +6,7 @@ const LOGO_SRC = "/Onix media new color logo.png";
 type CompanyLogoProps = {
   variant?: "nav" | "footer";
   className?: string;
+  imageClassName?: string;
   priority?: boolean;
   href?: string;
 };
@@ -13,13 +14,15 @@ type CompanyLogoProps = {
 export default function CompanyLogo({
   variant = "nav",
   className = "",
+  imageClassName,
   priority = false,
   href = "/",
 }: CompanyLogoProps) {
   const sizeClass =
-    variant === "footer"
+    imageClassName ??
+    (variant === "footer"
       ? "h-32 w-auto sm:h-40 md:h-48"
-      : "h-11 w-auto sm:h-12 md:h-14";
+      : "h-11 w-auto sm:h-12 md:h-14");
 
   return (
     <Link href={href} className={`inline-flex items-center ${className}`}>

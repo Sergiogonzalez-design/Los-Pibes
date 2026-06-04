@@ -8,6 +8,7 @@ const slides = [
   { src: "/Rami sonriendo.jpeg",   alt: "Rami",           position: "50% 15%" },
   { src: "/Mati Iona.jpg",         alt: "Mati",           position: "50% 18%" },
   { src: "/Nacho jugando.jpeg",    alt: "Nacho",          position: "50% 22%" },
+  { src: "/Jaco jugando.jpg",      alt: "Jaco",           position: "12% 20%" },
 ] as const;
 
 export default function HomeHeroCarousel() {
@@ -21,7 +22,7 @@ export default function HomeHeroCarousel() {
 
   useEffect(() => {
     if (paused) return;
-    const id = setInterval(next, 5000);
+    const id = setInterval(next, 4000);
     return () => clearInterval(id);
   }, [paused, next]);
 
