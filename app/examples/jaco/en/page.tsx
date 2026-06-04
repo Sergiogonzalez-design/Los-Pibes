@@ -91,6 +91,15 @@ const timeline = [
   },
 ];
 
+const awards = [
+  { year: "2025", title: "A-10 First Team", org: "George Mason" },
+  { year: "2024", title: "OVC Second Team", org: "SIUE" },
+  { year: "2022", title: "Region Player of the Year", org: "Sterling College" },
+  { year: "2022", title: "NCCAA First Team All-American", org: "Sterling College" },
+  { year: "2022", title: "KCAC Second Team", org: "Sterling College" },
+  { year: "2021", title: "KCAC Honorable Mention", org: "Sterling College" },
+];
+
 const highlights = [
   {
     title: "2025 Highlights",
@@ -111,6 +120,7 @@ export default function JacoEnPage() {
         backAria="Back to language selector"
         nav={{
           seasons: "Seasons",
+          awards: "Awards",
           highlights: "Highlights",
           career: "Career",
           contact: "Contact",
@@ -229,6 +239,24 @@ export default function JacoEnPage() {
         </div>
       </section>
 
+      <section id="awards" className="scroll-mt-14 border-t border-white/10 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Awards & Honors</h2>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {awards.map((a) => (
+              <div
+                key={`${a.year}-${a.title}`}
+                className="rounded-xl border border-white/10 bg-black/25 p-5 transition-colors hover:bg-black/40"
+              >
+                <p className="font-body text-xs uppercase tracking-widest text-primary">{a.year}</p>
+                <p className="font-heading mt-1.5 text-lg font-semibold text-foreground">{a.title}</p>
+                <p className="font-body mt-1 text-sm text-secondary-foreground">{a.org}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="highlights" className="scroll-mt-14 bg-zinc-900/40 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Highlights</h2>
@@ -284,10 +312,10 @@ export default function JacoEnPage() {
             <p className="font-heading text-xl font-semibold text-foreground">Jacobo Sanfeliu</p>
             <p className="font-body mt-1 text-sm text-secondary-foreground">Striker · #7 · George Mason</p>
             <a
-              href="mailto:contact@onixmedia.agency"
+              href="mailto:jacobosanfeliu03@gmail.com"
               className="font-body mt-4 block text-primary underline-offset-2 hover:underline"
             >
-              contact@onixmedia.agency
+              jacobosanfeliu03@gmail.com
             </a>
           </div>
         </div>

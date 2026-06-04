@@ -6,6 +6,7 @@ type JacoHeaderProps = {
   backAria: string;
   nav: {
     seasons: string;
+    awards: string;
     highlights: string;
     career: string;
     contact: string;
@@ -35,6 +36,11 @@ export default function JacoHeader({
           <li>
             <a href="#seasons" className="transition-colors hover:text-primary">
               {nav.seasons}
+            </a>
+          </li>
+          <li>
+            <a href="#awards" className="transition-colors hover:text-primary">
+              {nav.awards}
             </a>
           </li>
           <li>

@@ -91,6 +91,15 @@ const timeline = [
   },
 ];
 
+const awards = [
+  { year: "2025", title: "Primer Equipo All-A-10", org: "George Mason" },
+  { year: "2024", title: "Segundo Equipo All-OVC", org: "SIUE" },
+  { year: "2022", title: "Jugador del Año de la Región", org: "Sterling College" },
+  { year: "2022", title: "Primer Equipo All-American NCCAA", org: "Sterling College" },
+  { year: "2022", title: "Segundo Equipo All-KCAC", org: "Sterling College" },
+  { year: "2021", title: "Mención de Honor KCAC", org: "Sterling College" },
+];
+
 const highlights = [
   {
     title: "Highlights 2025",
@@ -111,6 +120,7 @@ export default function JacoEsPage() {
         backAria="Volver al selector de idioma"
         nav={{
           seasons: "Temporadas",
+          awards: "Premios",
           highlights: "Highlights",
           career: "Trayectoria",
           contact: "Contacto",
@@ -229,6 +239,24 @@ export default function JacoEsPage() {
         </div>
       </section>
 
+      <section id="awards" className="scroll-mt-14 border-t border-white/10 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Premios y Distinciones</h2>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {awards.map((a) => (
+              <div
+                key={`${a.year}-${a.title}`}
+                className="rounded-xl border border-white/10 bg-black/25 p-5 transition-colors hover:bg-black/40"
+              >
+                <p className="font-body text-xs uppercase tracking-widest text-primary">{a.year}</p>
+                <p className="font-heading mt-1.5 text-lg font-semibold text-foreground">{a.title}</p>
+                <p className="font-body mt-1 text-sm text-secondary-foreground">{a.org}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="highlights" className="scroll-mt-14 bg-zinc-900/40 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Highlights</h2>
@@ -284,10 +312,10 @@ export default function JacoEsPage() {
             <p className="font-heading text-xl font-semibold text-foreground">Jacobo Sanfeliu</p>
             <p className="font-body mt-1 text-sm text-secondary-foreground">Delantero · #7 · George Mason</p>
             <a
-              href="mailto:contact@onixmedia.agency"
+              href="mailto:jacobosanfeliu03@gmail.com"
               className="font-body mt-4 block text-primary underline-offset-2 hover:underline"
             >
-              contact@onixmedia.agency
+              jacobosanfeliu03@gmail.com
             </a>
           </div>
         </div>
