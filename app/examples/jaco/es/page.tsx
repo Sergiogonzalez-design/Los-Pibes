@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import CompanyLogo from "@/components/CompanyLogo";
 import LosPibesFooter from "@/components/LosPibesFooter";
-import Link from "next/link";
+import JacoHeader from "@/components/jaco/JacoHeader";
+import JacoHero from "@/components/jaco/JacoHero";
 
 export const metadata: Metadata = {
   title: "Jacobo Sanfeliu — Delantero",
@@ -14,8 +14,8 @@ const SIUE_ROSTER = "https://siuecougars.com/sports/mens-soccer/roster/jacobo-sa
 const STERLING_ROSTER = "https://www.scwarriors.com/sports/msoc/2022-23/bios/Jacobo_Sanfeliu";
 
 const heroStats = [
-  { label: "Partidos", value: "60" },
-  { label: "Goles", value: "30" },
+  { label: "Partidos", value: "100" },
+  { label: "Goles", value: "68" },
   { label: "All-A-10 1er Equipo", value: "2025" },
   { label: "Posición", value: "Delantero" },
 ];
@@ -29,10 +29,16 @@ const infoItems = [
 ];
 
 const seasons = [
-  { club: "George Mason", league: "A-10", season: "2025", gp: 16, gs: 12, goals: 5, assists: 2, minutes: 720 },
+  { club: "George Mason", league: "A-10", season: "2025", gp: 16, gs: 12, goals: 7, assists: 2, minutes: 720 },
   { club: "SIUE", league: "OVC", season: "2024", gp: 20, gs: 14, goals: 6, assists: 0, minutes: 1011 },
   { club: "SIUE", league: "OVC", season: "2023", gp: 5, gs: 0, goals: 1, assists: 0, minutes: 98 },
   { club: "Sterling College", league: "NAIA", season: "2022", gp: 19, gs: 19, goals: 18, assists: 4, minutes: 1710 },
+  { club: "Sterling College", league: "NAIA", season: "2021", gp: 21, gs: 19, goals: 17, assists: 0, minutes: "—" },
+];
+
+const summerSeasons = [
+  { club: "Corpus Christi FC", league: "USL2", season: "2024 · Verano", gp: 11, goals: 14 },
+  { club: "Toledo Villa FC", league: "USL2", season: "2023 · Verano", gp: 8, goals: 5 },
 ];
 
 const timeline = [
@@ -43,10 +49,22 @@ const timeline = [
       "Estudiante de posgrado en George Mason, compitiendo en la Atlantic 10. Seleccionado al Primer Equipo All-A-10 en 2025 tras llegar desde SIUE.",
   },
   {
+    year: "Verano 2024",
+    club: "Corpus Christi FC — USL2",
+    detail:
+      "Liga de verano USL League Two — 14 goles en 11 partidos.",
+  },
+  {
     year: "2024",
     club: "SIUE — Senior",
     detail:
       "Segundo Equipo All-OVC. Máximo goleador del equipo con 6 goles en 20 partidos (14 titularidades). Lideró a los Cougars y la OVC en tiros totales (46).",
+  },
+  {
+    year: "Verano 2023",
+    club: "Toledo Villa FC — USL2",
+    detail:
+      "Liga de verano USL League Two — 5 goles en 8 partidos.",
   },
   {
     year: "2023",
@@ -59,6 +77,12 @@ const timeline = [
     club: "Sterling College",
     detail:
       "NAIA — Jugador del Año de la Región Central. Máximo goleador del equipo con 18 goles y 4 asistencias (40 puntos) en 19 partidos.",
+  },
+  {
+    year: "2021",
+    club: "Sterling College",
+    detail:
+      "NAIA — 17 goles en 21 partidos (19 titularidades), con 5 goles de la victoria.",
   },
   {
     year: "Juvenil",
@@ -83,100 +107,38 @@ const highlights = [
 export default function JacoEsPage() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-4">
-            <Link
-              href="/examples/jaco"
-              className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
-              aria-label="Volver al selector de idioma"
-            >
-              ←
-            </Link>
-            <CompanyLogo priority />
-            <span className="font-body text-sm font-semibold text-secondary-foreground">JS7</span>
-          </div>
-          <ul className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 font-body text-sm font-medium text-secondary-foreground">
-            <li><a href="#seasons" className="transition-colors hover:text-primary">Temporadas</a></li>
-            <li><a href="#highlights" className="transition-colors hover:text-primary">Highlights</a></li>
-            <li><a href="#career" className="transition-colors hover:text-primary">Trayectoria</a></li>
-            <li><a href="#contact" className="transition-colors hover:text-primary">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
+      <JacoHeader
+        backAria="Volver al selector de idioma"
+        nav={{
+          seasons: "Temporadas",
+          highlights: "Highlights",
+          career: "Trayectoria",
+          contact: "Contacto",
+        }}
+      />
 
-      <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
-        <div
-          className="absolute inset-0 bg-no-repeat"
-          style={{
-            backgroundImage: "url('/Jaco jugando 2.jpeg')",
-            backgroundSize: "100% auto",
-            backgroundPosition: "top center",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
-
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="font-body mb-4 text-xs uppercase tracking-[0.35em] text-primary">
-            Delantero · #7 · NCAA División I · All-A-10 1er Equipo 2025
-          </p>
-          <h1 className="font-heading text-4xl font-bold leading-none text-foreground sm:text-6xl md:text-7xl">
-            <span className="block">Jacobo</span>
-            <span className="block text-gradient-gold">Sanfeliu</span>
-          </h1>
-
-          <p className="font-body mt-6 max-w-2xl text-lg leading-relaxed text-secondary-foreground md:text-xl">
+      <JacoHero
+        tagline="Delantero · #7 · NCAA División I · All-A-10 1er Equipo 2025"
+        bio={
+          <>
             Jacobo Sanfeliu es un delantero español de Barcelona. Tras dos temporadas en
             SIUE — incluyendo un curso senior con 6 goles y el Segundo Equipo All-OVC —
             fue seleccionado al <span className="font-semibold text-primary">Primer Equipo All-A-10</span> en
             2025 como estudiante de posgrado en George Mason.
-          </p>
+          </>
+        }
+        stats={heroStats}
+        cta={{
+          gmu: "Roster George Mason",
+          siue: "Roster SIUE",
+          instagram: "Instagram",
+          contact: "Contactar",
+        }}
+        gmuRoster={GMU_ROSTER}
+        siueRoster={SIUE_ROSTER}
+      />
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href={GMU_ROSTER}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              Roster George Mason
-            </a>
-            <a
-              href={SIUE_ROSTER}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-            >
-              Roster SIUE
-            </a>
-            <a
-              href="https://www.instagram.com/jacosanfeliu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-            >
-              Instagram
-            </a>
-            <a
-              href="#contact"
-              className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-            >
-              Contactar
-            </a>
-          </div>
-
-          <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {heroStats.map((s) => (
-              <div key={s.label} className="rounded-xl border border-white/10 bg-black/25 p-5">
-                <p className="font-body text-xs uppercase tracking-widest text-primary">{s.label}</p>
-                <p className="mt-2 font-heading text-xl font-bold text-foreground">{s.value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="stats" className="scroll-mt-24 border-y border-white/10 bg-zinc-900/50 py-8">
+      <section id="stats" className="scroll-mt-14 border-y border-white/10 bg-zinc-900/50 py-8">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:grid-cols-5 sm:px-6 lg:px-8">
           {infoItems.map((item) => (
             <div key={item.k} className="text-center sm:text-left">
@@ -187,7 +149,7 @@ export default function JacoEsPage() {
         </div>
       </section>
 
-      <section id="seasons" className="scroll-mt-24 py-16 sm:py-24">
+      <section id="seasons" className="scroll-mt-14 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Temporadas</h2>
           <p className="font-body mt-2 text-secondary-foreground">
@@ -235,10 +197,39 @@ export default function JacoEsPage() {
               </tbody>
             </table>
           </div>
+
+          <h3 className="font-heading mt-12 text-xl font-semibold text-foreground sm:text-2xl">
+            Ligas de verano
+          </h3>
+          <p className="font-body mt-2 text-secondary-foreground">USL League Two.</p>
+          <div className="mt-6 overflow-hidden rounded-xl border border-white/10">
+            <table className="w-full font-body text-sm">
+              <thead>
+                <tr className="border-b border-white/10 bg-black/30">
+                  <th className="px-4 py-3 text-left text-xs uppercase tracking-widest text-primary">Temporada</th>
+                  <th className="px-4 py-3 text-left text-xs uppercase tracking-widest text-primary">Club</th>
+                  <th className="hidden px-4 py-3 text-left text-xs uppercase tracking-widest text-primary sm:table-cell">Liga</th>
+                  <th className="px-4 py-3 text-center text-xs uppercase tracking-widest text-primary">PJ</th>
+                  <th className="px-4 py-3 text-center text-xs uppercase tracking-widest text-primary">G</th>
+                </tr>
+              </thead>
+              <tbody>
+                {summerSeasons.map((s) => (
+                  <tr key={`${s.season}-${s.club}`} className="border-b border-white/5 bg-black/10 transition-colors hover:bg-black/25">
+                    <td className="px-4 py-3 text-secondary-foreground">{s.season}</td>
+                    <td className="px-4 py-3 font-medium text-foreground">{s.club}</td>
+                    <td className="hidden px-4 py-3 text-secondary-foreground sm:table-cell">{s.league}</td>
+                    <td className="px-4 py-3 text-center text-foreground">{s.gp}</td>
+                    <td className="px-4 py-3 text-center font-semibold text-primary">{s.goals}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
-      <section id="highlights" className="scroll-mt-24 bg-zinc-900/40 py-16 sm:py-24">
+      <section id="highlights" className="scroll-mt-14 bg-zinc-900/40 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Highlights</h2>
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
@@ -264,7 +255,7 @@ export default function JacoEsPage() {
         </div>
       </section>
 
-      <section id="career" className="scroll-mt-24 border-t border-white/10 py-16 sm:py-24">
+      <section id="career" className="scroll-mt-14 border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Trayectoria</h2>
           <ol className="mt-10 space-y-6">
@@ -285,7 +276,7 @@ export default function JacoEsPage() {
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-24 border-t border-white/10 py-16 sm:py-24">
+      <section id="contact" className="scroll-mt-14 border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Contacto</h2>
           <p className="font-body mt-2 text-secondary-foreground">Consultas de reclutamiento y medios.</p>
@@ -306,3 +297,4 @@ export default function JacoEsPage() {
     </div>
   );
 }
+
