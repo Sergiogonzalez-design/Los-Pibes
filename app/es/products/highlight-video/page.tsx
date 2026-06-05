@@ -56,7 +56,7 @@ export default function HighlightVideoPageES() {
             <div className="aspect-video w-full">
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/UAL5VoMdMzU"
+                src="https://www.youtube.com/embed/2fs-Gborb0o"
                 title="Highlight Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
