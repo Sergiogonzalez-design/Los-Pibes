@@ -15,8 +15,8 @@ export type NavItem =
   | { type: "link"; href: string; label: string; active?: boolean };
 
 type SiteHeaderProps = {
-  backHref: string;
-  backAriaLabel: string;
+  backHref?: string;
+  backAriaLabel?: string;
   menuLabel: string;
   items: NavItem[];
   badge?: string;
@@ -65,13 +65,15 @@ export default function SiteHeader({
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
         <div className="flex min-w-0 items-center gap-3 sm:gap-4">
-          <Link
-            href={backHref}
-            className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
-            aria-label={backAriaLabel}
-          >
-            ←
-          </Link>
+          {backHref ? (
+            <Link
+              href={backHref}
+              className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
+              aria-label={backAriaLabel ?? "Back"}
+            >
+              ←
+            </Link>
+          ) : null}
           <CompanyLogo priority href={logoHref} />
           {badge ? (
             <span className="font-body text-sm font-semibold text-secondary-foreground">{badge}</span>

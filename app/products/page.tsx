@@ -1,4 +1,4 @@
-import CompanyLogo from "@/components/CompanyLogo";
+import LosPibesNavbar from "@/components/LosPibesNavbar";
 import LosPibesFooter from "@/components/LosPibesFooter";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -17,47 +17,7 @@ const products = [
 export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-4">
-            <Link
-              href="/"
-              className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
-              aria-label="Back to home"
-            >
-              ←
-            </Link>
-            <CompanyLogo priority />
-          </div>
-          <ul className="flex max-w-[min(100%,42rem)] flex-1 flex-wrap items-center justify-end gap-x-3 gap-y-2 text-[11px] font-medium text-secondary-foreground sm:text-xs md:max-w-none md:text-sm">
-            <li>
-              <Link href="/mission" className="transition-colors hover:text-primary">
-                Mission
-              </Link>
-            </li>
-            <li>
-              <Link href="/values" className="transition-colors hover:text-primary">
-                Values
-              </Link>
-            </li>
-            <li>
-              <Link href="/products" className="transition-colors hover:text-primary">
-                Product
-              </Link>
-            </li>
-            <li>
-              <Link href="/examples" className="transition-colors hover:text-primary">
-                Examples
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="transition-colors hover:text-primary">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <LosPibesNavbar backHref="/" />
 
       <section
         className="relative min-h-screen overflow-hidden pt-36 sm:pt-44"

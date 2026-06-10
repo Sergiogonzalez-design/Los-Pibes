@@ -1,47 +1,24 @@
-import CompanyLogo from "@/components/CompanyLogo";
-import Link from "next/link";
+"use client";
 
-const links = [
-  { href: "#stats", label: "Stats" },
-  { href: "#seasons", label: "Club" },
-  { href: "#performance-report", label: "Report" },
-  { href: "#timeline", label: "Career" },
-  { href: "#contact", label: "Contact" },
+import SiteHeader, { type NavItem } from "@/components/SiteHeader";
+
+const links: NavItem[] = [
+  { type: "anchor", href: "#stats", label: "Stats" },
+  { type: "anchor", href: "#seasons", label: "Club" },
+  { type: "anchor", href: "#performance-report", label: "Report" },
+  { type: "anchor", href: "#timeline", label: "Career" },
+  { type: "anchor", href: "#contact", label: "Contact" },
 ];
 
 export default function AgostinaNavbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex min-w-0 items-center gap-4">
-          <Link
-            href="/examples"
-            className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
-            aria-label="Back to examples"
-          >
-            ←
-          </Link>
-          <CompanyLogo priority />
-          <Link
-            href="/examples/agostina"
-            className="shrink-0 font-body text-xs font-medium text-secondary-foreground transition-colors hover:text-primary"
-          >
-            Agostina
-          </Link>
-        </div>
-        <ul className="flex max-w-[70vw] flex-1 flex-wrap items-center justify-end gap-x-4 gap-y-2 text-xs font-medium text-secondary-foreground sm:text-sm md:max-w-none">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="transition-colors hover:text-primary"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+    <SiteHeader
+      backHref="/examples"
+      backAriaLabel="Back to examples"
+      menuLabel="Menu"
+      badge="Agostina"
+      logoHref="/"
+      items={links}
+    />
   );
 }

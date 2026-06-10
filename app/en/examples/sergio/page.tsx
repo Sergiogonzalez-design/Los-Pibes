@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import CompanyLogo from "@/components/CompanyLogo";
 import LosPibesFooterEN from "@/components/LosPibesFooterEN";
+import SiteHeader, { type NavItem } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Sergio Gonzalez — Midfielder",
@@ -12,12 +11,12 @@ export const metadata: Metadata = {
 const GMU_ROSTER = "https://gomason.com/sports/mens-soccer/roster/sergio-gonzalez-fernandez/9251";
 const IONA_ROSTER = "https://ionagaels.com/sports/mens-soccer/roster/sergio-gonzalez-fernandez/7622";
 
-const navLinks = [
-  { href: "#stats", label: "Stats" },
-  { href: "#highlights", label: "Highlights" },
-  { href: "#report", label: "Report" },
-  { href: "#timeline", label: "Career" },
-  { href: "#contact", label: "Contact" },
+const navItems: NavItem[] = [
+  { type: "anchor", href: "#stats", label: "Stats" },
+  { type: "anchor", href: "#highlights", label: "Highlights" },
+  { type: "anchor", href: "#report", label: "Report" },
+  { type: "anchor", href: "#timeline", label: "Career" },
+  { type: "anchor", href: "#contact", label: "Contact" },
 ];
 
 const infoItems = [
@@ -102,36 +101,14 @@ const milestones = [
 export default function SergioENPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Custom player navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-4">
-            <Link
-              href="/en/examples"
-              className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
-              aria-label="Back to examples"
-            >
-              ←
-            </Link>
-            <CompanyLogo priority href="/en" />
-            <Link
-              href="/examples/sergio"
-              className="shrink-0 font-body text-xs font-medium text-secondary-foreground transition-colors hover:text-primary"
-            >
-              SG<span className="text-primary">6</span>
-            </Link>
-          </div>
-          <ul className="flex max-w-[70vw] flex-1 flex-wrap items-center justify-end gap-x-4 gap-y-2 text-xs font-medium text-secondary-foreground sm:text-sm md:max-w-none">
-            {navLinks.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="transition-colors hover:text-primary">
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
+      <SiteHeader
+        backHref="/en/examples"
+        backAriaLabel="Back to examples"
+        menuLabel="Menu"
+        badge="SG6"
+        logoHref="/en"
+        items={navItems}
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import CompanyLogo from "@/components/CompanyLogo";
 import LosPibesFooterES from "@/components/LosPibesFooterES";
+import SiteHeader, { type NavItem } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Nacho Alfaro — Portero",
@@ -12,11 +11,11 @@ export const metadata: Metadata = {
 const IONA_ROSTER = "https://ionagaels.com/sports/mens-soccer/roster/nacho-alfaro-monge/7135";
 const FAU_ROSTER = "https://fausports.com/sports/mens-soccer/roster/nacho-alfaro/18064";
 
-const navLinks = [
-  { href: "#stats", label: "Estadísticas" },
-  { href: "#highlights", label: "Highlights" },
-  { href: "#timeline", label: "Trayectoria" },
-  { href: "#contact", label: "Contacto" },
+const navItems: NavItem[] = [
+  { type: "anchor", href: "#stats", label: "Estadísticas" },
+  { type: "anchor", href: "#highlights", label: "Highlights" },
+  { type: "anchor", href: "#timeline", label: "Trayectoria" },
+  { type: "anchor", href: "#contact", label: "Contacto" },
 ];
 
 const infoItems = [
@@ -123,34 +122,14 @@ const highlights = [
 export default function NachoESPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Custom player navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-4">
-            <Link
-              href="/es/examples"
-              className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
-              aria-label="Volver a ejemplos"
-            >
-              ←
-            </Link>
-            <CompanyLogo priority href="/es" />
-            <Link
-              href="/examples/nacho"
-              className="shrink-0 font-body text-xs font-medium text-secondary-foreground transition-colors hover:text-primary"
-            >
-              NA<span className="text-primary">13</span>
-            </Link>
-          </div>
-          <ul className="flex max-w-[70vw] flex-1 flex-wrap items-center justify-end gap-x-4 gap-y-2 text-xs font-medium text-secondary-foreground sm:text-sm md:max-w-none">
-            {navLinks.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="transition-colors hover:text-primary">{l.label}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
+      <SiteHeader
+        backHref="/es/examples"
+        backAriaLabel="Volver a ejemplos"
+        menuLabel="Menú"
+        badge="NA13"
+        logoHref="/es"
+        items={navItems}
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
