@@ -67,6 +67,7 @@ export default function RamiEsPage() {
             />
             <li><a href="#seasons" className="transition-colors hover:text-primary">Temporadas</a></li>
             <li><a href="#highlights" className="transition-colors hover:text-primary">Highlights</a></li>
+            <li><a href="#full-game" className="transition-colors hover:text-primary">Partido completo</a></li>
             <li><a href="#report" className="transition-colors hover:text-primary">Informe</a></li>
             <li><a href="#career" className="transition-colors hover:text-primary">Carrera</a></li>
             <li><a href="#contact" className="transition-colors hover:text-primary">Contacto</a></li>
@@ -189,6 +190,30 @@ export default function RamiEsPage() {
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/2fs-Gborb0o"
                   title="Pablo Ramirez Moreno — Highlights"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partido completo */}
+      <section id="full-game" className="scroll-mt-24 border-t border-white/10 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Partido completo</h2>
+          <p className="font-body mt-2 text-secondary-foreground">
+            Jornada 19 vs Coria — Segunda Federación (2ª RFEF).
+          </p>
+          <div className="mt-10">
+            <div className="overflow-hidden rounded-xl border border-white/10 bg-black/25 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+              <div className="aspect-video w-full">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/xi2N_XEJZxs"
+                  title="Pablo Ramirez Moreno — Partido completo vs Coria (Jornada 19, 2ª RFEF)"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
