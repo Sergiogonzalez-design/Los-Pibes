@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CompanyLogo from "@/components/CompanyLogo";
+import FlagIcon from "@/components/FlagIcon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function Home() {
             href="/en"
             className="group flex items-center gap-3 rounded-xl border border-white/10 bg-black/25 px-8 py-5 transition-colors hover:border-primary/40 hover:bg-black/40"
           >
-            <span className="text-3xl">🇺🇸</span>
+            <FlagIcon country="us" />
             <div className="text-left">
               <p className="font-heading text-base font-semibold text-foreground group-hover:text-primary">English</p>
               <p className="font-body text-xs text-secondary-foreground">Continue in English</p>
@@ -32,7 +33,7 @@ export default function Home() {
             href="/es"
             className="group flex items-center gap-3 rounded-xl border border-white/10 bg-black/25 px-8 py-5 transition-colors hover:border-primary/40 hover:bg-black/40"
           >
-            <span className="text-3xl">🇪🇸</span>
+            <FlagIcon country="es" />
             <div className="text-left">
               <p className="font-heading text-base font-semibold text-foreground group-hover:text-primary">Español</p>
               <p className="font-body text-xs text-secondary-foreground">Continuar en español</p>

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import CompanyLogo from "@/components/CompanyLogo";
 import LosPibesFooter from "@/components/LosPibesFooter";
-import StatsNavDropdown from "@/components/StatsNavDropdown";
-import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Pablo Ramirez Moreno — Defensa Central",
@@ -43,37 +41,28 @@ const timeline = [
 export default function RamiEsPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-4">
-            <Link
-              href="/examples/rami"
-              className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
-              aria-label="Volver al selector de idioma"
-            >
-              ←
-            </Link>
-            <CompanyLogo priority />
-            <span className="font-body text-sm font-semibold text-secondary-foreground">PR15</span>
-          </div>
-          <ul className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 font-body text-sm font-medium text-secondary-foreground">
-            <StatsNavDropdown
-              label="Estadísticas"
-              links={[
-                { href: "/examples/rami/es/stats/2025-26", label: "2025/26" },
-                { href: "/examples/rami/es/stats/2024-25", label: "2024/25" },
-              ]}
-            />
-            <li><a href="#seasons" className="transition-colors hover:text-primary">Temporadas</a></li>
-            <li><a href="#highlights" className="transition-colors hover:text-primary">Highlights</a></li>
-            <li><a href="#full-game" className="transition-colors hover:text-primary">Partido completo</a></li>
-            <li><a href="#report" className="transition-colors hover:text-primary">Informe</a></li>
-            <li><a href="#career" className="transition-colors hover:text-primary">Carrera</a></li>
-            <li><a href="#contact" className="transition-colors hover:text-primary">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
+      <SiteHeader
+        backHref="/examples/rami"
+        backAriaLabel="Volver al selector de idioma"
+        menuLabel="Menú"
+        badge="PR15"
+        items={[
+          {
+            type: "group",
+            label: "Estadísticas",
+            links: [
+              { href: "/examples/rami/es/stats/2025-26", label: "2025/26" },
+              { href: "/examples/rami/es/stats/2024-25", label: "2024/25" },
+            ],
+          },
+          { type: "anchor", href: "#seasons", label: "Temporadas" },
+          { type: "anchor", href: "#highlights", label: "Highlights" },
+          { type: "anchor", href: "#full-game", label: "Partido completo" },
+          { type: "anchor", href: "#report", label: "Informe" },
+          { type: "anchor", href: "#career", label: "Carrera" },
+          { type: "anchor", href: "#contact", label: "Contacto" },
+        ]}
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">

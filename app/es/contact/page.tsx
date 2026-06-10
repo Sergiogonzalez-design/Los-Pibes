@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const MATIAS_EMAIL = "matiasmorales@onixmedia.agency";
 const SERGIO_EMAIL = "sergiogonzalez@onixmedia.agency";
 const NACHO_EMAIL = "nachoalfaro@onixmedia.agency";
-const INSTAGRAM_URL = "https://www.instagram.com/onixmediafutbol/";
+const INSTAGRAM_URL = "https://www.instagram.com/onixmedia.agency/";
 const YOUTUBE_URL = "https://www.youtube.com/@OnixMediaAgency";
 
 const socialPhotos = [

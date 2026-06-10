@@ -41,7 +41,7 @@ export default function LosPibesFooterEN() {
             </li>
             <li>
               <a
-                href="https://www.instagram.com/onixmediafutbol/"
+                href="https://www.instagram.com/onixmedia.agency/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-primary"

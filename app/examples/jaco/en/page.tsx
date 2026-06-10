@@ -118,6 +118,7 @@ export default function JacoEnPage() {
     <div className="min-h-screen bg-background">
       <JacoHeader
         backAria="Back to language selector"
+        menuLabel="Menu"
         nav={{
           seasons: "Seasons",
           awards: "Awards",

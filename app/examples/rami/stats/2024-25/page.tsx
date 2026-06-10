@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import CompanyLogo from "@/components/CompanyLogo";
 import LosPibesFooter from "@/components/LosPibesFooter";
-import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Pablo Ramirez — 2024/25 Stats",
@@ -46,26 +45,17 @@ export default function RamiStats2425Page() {
         backgroundAttachment: "scroll",
       }}
     >
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
-          <div className="flex min-w-0 items-center gap-4">
-            <Link
-              href="/examples/rami"
-              className="shrink-0 font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
-              aria-label="Back to Rami's profile"
-            >
-              ←
-            </Link>
-            <CompanyLogo priority />
-            <span className="font-body text-sm font-semibold text-secondary-foreground">PR15</span>
-          </div>
-          <ul className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 font-body text-sm font-medium text-secondary-foreground">
-            <li><Link href="/examples/rami" className="transition-colors hover:text-primary">Profile</Link></li>
-            <li><Link href="/examples/rami/stats/2025-26" className="transition-colors hover:text-primary">2025/26</Link></li>
-            <li><Link href="/examples/rami/stats/2024-25" className="text-primary">2024/25</Link></li>
-          </ul>
-        </nav>
-      </header>
+      <SiteHeader
+        backHref="/examples/rami"
+        backAriaLabel="Back to Rami's profile"
+        menuLabel="Menu"
+        badge="PR15"
+        items={[
+          { type: "link", href: "/examples/rami", label: "Profile" },
+          { type: "link", href: "/examples/rami/stats/2025-26", label: "2025/26" },
+          { type: "link", href: "/examples/rami/stats/2024-25", label: "2024/25", active: true },
+        ]}
+      />
 
       <section className="mx-auto max-w-7xl px-4 pt-28 pb-16 sm:px-6 sm:pt-32 lg:px-8">
         <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">Leganés B · Tercera Federación</p>

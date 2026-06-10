@@ -95,7 +95,7 @@ export default function ProductsPage() {
               Contact
             </Link>
             <a
-              href="https://www.instagram.com/onixmediafutbol/"
+              href="https://www.instagram.com/onixmedia.agency/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-body inline-flex items-center rounded-lg border border-white/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary"
