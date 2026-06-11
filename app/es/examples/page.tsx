@@ -20,7 +20,7 @@ const premiumExamples = [
   },
   {
     href: "/examples/rami",
-    tag: "España · Segunda Federación",
+    tag: "Segunda Federación · España",
     name: "Pablo Ramirez",
     desc: "Defensa central · Fuenlabrada · Cantera del Getafe — estadísticas, cronología y destacados",
   },

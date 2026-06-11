@@ -20,7 +20,7 @@ const premiumExamples = [
   },
   {
     href: "/examples/rami",
-    tag: "Spain · Segunda Federación",
+    tag: "Segunda Federación · Spain",
     name: "Pablo Ramirez",
     desc: "Center Back · Fuenlabrada · Getafe academy — stats, timeline, and highlights",
   },
