@@ -17,7 +17,6 @@ export const enMarketingNavItems: NavItem[] = [
     type: "group",
     label: "Examples",
     links: [
-      { href: "/en/examples", label: "All examples" },
       { href: "/en/examples#premium", label: "Premium" },
       { href: "/en/examples#basic", label: "Basic" },
     ],
@@ -42,7 +41,6 @@ export const esMarketingNavItems: NavItem[] = [
     type: "group",
     label: "Ejemplos",
     links: [
-      { href: "/es/examples", label: "Todos los ejemplos" },
       { href: "/es/examples#premium", label: "Premium" },
       { href: "/es/examples#basic", label: "Basic" },
     ],

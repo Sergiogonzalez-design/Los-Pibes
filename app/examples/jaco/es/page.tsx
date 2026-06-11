@@ -129,7 +129,7 @@ export default function JacoEsPage() {
       />
 
       <JacoHero
-        tagline="Delantero · #7 · NCAA División I · All-A-10 1er Equipo 2025"
+        tagline="Delantero · #7 · NCAA División I"
         bio={
           <>
             Jacobo Sanfeliu es un delantero español de Barcelona. Tras dos temporadas en

@@ -129,7 +129,7 @@ export default function JacoEnPage() {
       />
 
       <JacoHero
-        tagline="Striker · #7 · NCAA Division I · All-A-10 First Team 2025"
+        tagline="Striker · #7 · NCAA Division I"
         bio={
           <>
             Jacobo Sanfeliu is a Spanish striker from Barcelona. After two seasons at
