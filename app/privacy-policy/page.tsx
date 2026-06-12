@@ -17,14 +17,14 @@ export default function PrivacyPolicyPage() {
           Privacy Policy
         </h1>
         <p className="font-body mt-2 text-sm text-secondary-foreground">
-          Effective date: January 1, 2025
+          Effective date: June 12, 2026
         </p>
 
         <div className="font-body mt-10 space-y-8 text-base leading-relaxed text-secondary-foreground">
           <div>
             <h2 className="font-heading text-xl font-semibold text-foreground">1. Introduction</h2>
             <p className="mt-2">
-              Onix Media ("we," "our," or "us") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard the data you provide when using our website and services.
+              Aplicaciones Patrimoniales Moreia S.L., operating as ONIX Media ("we," "our," or "us"), is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard the data you provide when using our website, the ONIX Media mobile application (the "App"), and related services.
             </p>
           </div>
 
@@ -58,21 +58,41 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div>
-            <h2 className="font-heading text-xl font-semibold text-foreground">5. Data Retention</h2>
+            <h2 className="font-heading text-xl font-semibold text-foreground">5. ONIX Media Mobile App</h2>
             <p className="mt-2">
-              We retain inquiry data only as long as necessary to respond to your request. Athlete profile data is retained for as long as the athlete profile is active on our platform. You may request deletion of your data at any time by contacting us.
+              The ONIX Media App lets athletes create and manage a player dossier (profile, statistics, achievements, photos, videos, and reports). When you use the App, we may collect:
+            </p>
+            <ul className="mt-2 list-disc pl-5 space-y-1">
+              <li><strong className="text-foreground">Profile information:</strong> Name, email, position, height, weight, graduation year, team, nationality, GPA, and biography.</li>
+              <li><strong className="text-foreground">Contact details:</strong> Phone number, agent name, agent email, and social media handles.</li>
+              <li><strong className="text-foreground">Media:</strong> Profile photos, gallery images, highlight videos, and PDF performance reports you upload.</li>
+              <li><strong className="text-foreground">Performance data:</strong> Season statistics and achievements.</li>
+              <li><strong className="text-foreground">Access codes:</strong> The access code used to sign in to your dossier.</li>
+            </ul>
+            <p className="mt-2">
+              App data is stored using Supabase, our secure cloud database provider. Access to dossier data is controlled through access codes and server-side permissions. The App does not use third-party advertising or tracking SDKs.
+            </p>
+            <p className="mt-2">
+              You can delete your dossier at any time in the App by going to <strong className="text-foreground">Settings → Delete My Data</strong>, which permanently removes your dossier and deactivates your access code. You may also request deletion by email.
             </p>
           </div>
 
           <div>
-            <h2 className="font-heading text-xl font-semibold text-foreground">6. Cookies</h2>
+            <h2 className="font-heading text-xl font-semibold text-foreground">6. Data Retention</h2>
+            <p className="mt-2">
+              We retain inquiry data only as long as necessary to respond to your request. Athlete profile data is retained for as long as the athlete profile is active on our platform. When you use the Delete My Data feature in the App, we remove your dossier content and deactivate your access code. You may request deletion of your data at any time by contacting us.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-heading text-xl font-semibold text-foreground">7. Cookies</h2>
             <p className="mt-2">
               Our website may use basic cookies to improve your browsing experience. We do not use tracking or advertising cookies. You can disable cookies through your browser settings without affecting your ability to use the site.
             </p>
           </div>
 
           <div>
-            <h2 className="font-heading text-xl font-semibold text-foreground">7. Your Rights</h2>
+            <h2 className="font-heading text-xl font-semibold text-foreground">8. Your Rights</h2>
             <p className="mt-2">You have the right to:</p>
             <ul className="mt-2 list-disc pl-5 space-y-1">
               <li>Request access to the personal data we hold about you.</li>
@@ -83,18 +103,18 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div>
-            <h2 className="font-heading text-xl font-semibold text-foreground">8. Security</h2>
+            <h2 className="font-heading text-xl font-semibold text-foreground">9. Security</h2>
             <p className="mt-2">
               We take reasonable technical measures to protect your information from unauthorized access. However, no internet transmission is completely secure, and we cannot guarantee the absolute security of data sent to us online.
             </p>
           </div>
 
           <div>
-            <h2 className="font-heading text-xl font-semibold text-foreground">9. Contact</h2>
+            <h2 className="font-heading text-xl font-semibold text-foreground">10. Contact</h2>
             <p className="mt-2">
-              For privacy-related requests or questions, contact us at{" "}
-              <a href="mailto:contact@onixmedia.agency" className="text-primary hover:underline">
-                contact@onixmedia.agency
+              For privacy-related requests or questions, contact Aplicaciones Patrimoniales Moreia S.L. (ONIX Media) at{" "}
+              <a href="mailto:sergiogonzalez@onixmedia.agency" className="text-primary hover:underline">
+                sergiogonzalez@onixmedia.agency
               </a>.
             </p>
           </div>
