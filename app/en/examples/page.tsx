@@ -30,12 +30,6 @@ const premiumExamples = [
     name: "Jacobo Sanfeliu",
     desc: "Striker · George Mason & SIUE · Barcelona — stats, timeline, and highlights",
   },
-  {
-    href: "/examples/juan",
-    tag: "Liga Premier · Mexico · Argentina",
-    name: "Juan Ignacio Morales",
-    desc: "Goalkeeper · Cañoneros FC · Mexico City — stats, timeline, and highlights",
-  },
 ];
 
 const basicExamples = [
