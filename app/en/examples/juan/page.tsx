@@ -101,13 +101,13 @@ export default function JuanENPage() {
           src="/Juan mobile.jpeg"
           alt=""
           aria-hidden
-          className="absolute inset-0 h-full w-full object-cover object-[35%_35%] brightness-110 contrast-105 sm:hidden"
+          className="absolute inset-0 h-full w-full object-cover object-[48%_35%] brightness-110 contrast-105 sm:hidden"
         />
         <img
           src="/Juan accion.jpeg"
           alt=""
           aria-hidden
-          className="absolute inset-0 hidden h-full w-full object-cover object-[38%_center] brightness-110 contrast-105 sm:block"
+          className="absolute inset-0 hidden h-full w-full object-cover object-[50%_center] brightness-110 contrast-105 sm:block"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/55 to-background/80 sm:bg-gradient-to-r sm:from-background sm:via-background/75 sm:to-background/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
