@@ -115,8 +115,8 @@ export default function JuanESPage() {
           <p className="font-body mb-4 text-xs uppercase tracking-[0.35em] text-primary [text-shadow:0_2px_8px_rgba(0,0,0,0.9)]">
             Portero · #1 · Liga Premier
           </p>
-          <h1 className="font-heading text-4xl font-bold leading-none text-foreground [text-shadow:0_2px_12px_rgba(0,0,0,0.9)] sm:text-6xl md:text-7xl">
-            <span className="block">Juan Ignacio</span>
+          <h1 className="font-heading text-4xl font-bold leading-none text-foreground sm:text-6xl md:text-7xl">
+            <span className="block [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">Juan Ignacio</span>
             <span className="block text-gradient-gold">Morales</span>
           </h1>
           <p className="font-body mt-6 max-w-2xl text-lg font-medium leading-relaxed text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.95)] md:text-xl">
