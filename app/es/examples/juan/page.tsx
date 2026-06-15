@@ -21,11 +21,11 @@ const navItems: NavItem[] = [
 ];
 
 const infoItems = [
+  { k: "Nombre completo", v: "Juan Ignacio Morales Albil" },
+  { k: "Fecha de nacimiento", v: "16/04/2001" },
+  { k: "Altura / Peso", v: "180 cm · 78 kg" },
   { k: "Posición", v: "Portero" },
-  { k: "Ciudad natal", v: "Ciudad de México, México" },
-  { k: "Altura", v: "1,80 m" },
-  { k: "Ligas", v: "Liga Premier · Federal A/B · Primera Nacional" },
-  { k: "Pie dominante", v: "Derecho" },
+  { k: "Pie hábil", v: "Derecho" },
 ];
 
 const seasons = [
@@ -34,45 +34,30 @@ const seasons = [
     club: "Cañoneros FC",
     division: "Liga Premier (MEX)",
     apps: "10",
-    gc: "10",
-    gaa: "1.00",
-    note: "Club actual · fichado ene. 2026",
   },
   {
     year: "2024–26",
     club: "Estudiantes Unidos",
     division: "Federal B (ARG)",
     apps: "18",
-    gc: "17",
-    gaa: "0.94",
-    note: "Mejor media goleadora de su carrera",
   },
   {
     year: "2023",
     club: "Boca Unidos",
     division: "Federal A (ARG)",
     apps: "2",
-    gc: "2",
-    gaa: "1.00",
-    note: "Chaco · Torneo Federal A",
   },
   {
     year: "2022",
     club: "Quilmes",
     division: "Primera Nacional (ARG)",
     apps: "1",
-    gc: "2",
-    gaa: "2.00",
-    note: "Debut en segunda división",
   },
   {
     year: "2021",
     club: "Argentino de Quilmes",
     division: "Federal A (ARG)",
     apps: "15",
-    gc: "17",
-    gaa: "1.13",
-    note: "Temporada de consolidación · 15 partidos",
   },
 ];
 
@@ -111,12 +96,15 @@ export default function JuanESPage() {
         items={navItems}
       />
 
-      <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/Juan jugando.jpeg')" }}
+      <section className="relative min-h-[70vh] overflow-hidden bg-black pt-28 pb-20 sm:min-h-[75vh] sm:pt-36 sm:pb-28">
+        <img
+          src="/Juan accion.jpeg"
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full object-cover object-[50%_42%] brightness-110 contrast-105 sm:object-[55%_center]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/20 to-background/50 sm:bg-gradient-to-r sm:from-background/75 sm:via-background/40 sm:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="font-body mb-4 text-xs uppercase tracking-[0.35em] text-primary">
             Portero · #1 · Liga Premier
@@ -174,7 +162,7 @@ export default function JuanESPage() {
         </div>
       </section>
 
-      <section id="stats" className="border-y border-white/10 bg-zinc-900/50 py-8">
+      <section id="stats" className="scroll-mt-14 border-y border-white/10 bg-zinc-900/50 py-8">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:grid-cols-5 sm:px-6 lg:px-8">
           {infoItems.map((item) => (
             <div key={item.k} className="text-center sm:text-left">
@@ -185,7 +173,7 @@ export default function JuanESPage() {
         </div>
       </section>
 
-      <section id="seasons" className="py-16 sm:py-24">
+      <section id="seasons" className="scroll-mt-14 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
             Estadísticas por temporada
@@ -202,16 +190,13 @@ export default function JuanESPage() {
             </a>
           </p>
           <div className="mt-10 overflow-x-auto rounded-xl border border-white/10">
-            <table className="w-full min-w-[620px] text-left text-sm">
+            <table className="w-full min-w-[520px] text-left text-sm">
               <thead>
                 <tr className="border-b border-white/10 bg-white/5">
                   <th className="px-4 py-3 font-body font-semibold text-primary">Temporada</th>
                   <th className="px-4 py-3 font-body font-semibold">Club</th>
                   <th className="px-4 py-3 font-body font-semibold">División</th>
                   <th className="px-4 py-3 font-body font-semibold text-center">PJ</th>
-                  <th className="px-4 py-3 font-body font-semibold text-center">GR</th>
-                  <th className="px-4 py-3 font-body font-semibold text-center">Media</th>
-                  <th className="px-4 py-3 font-body font-semibold">Notas</th>
                 </tr>
               </thead>
               <tbody>
@@ -224,21 +209,16 @@ export default function JuanESPage() {
                     <td className="px-4 py-3 font-medium text-foreground">{s.club}</td>
                     <td className="px-4 py-3 text-secondary-foreground">{s.division}</td>
                     <td className="px-4 py-3 text-center">{s.apps}</td>
-                    <td className="px-4 py-3 text-center">{s.gc}</td>
-                    <td className="px-4 py-3 text-center">{s.gaa}</td>
-                    <td className="px-4 py-3 text-secondary-foreground">{s.note}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="mt-4 font-body text-xs text-zinc-500">
-            PJ = partidos jugados · GR = goles recibidos · Media = goles en contra por partido
-          </p>
+          <p className="mt-4 font-body text-xs text-zinc-500">PJ = partidos jugados</p>
         </div>
       </section>
 
-      <section id="highlights" className="bg-zinc-900/40 py-16 sm:py-24">
+      <section id="highlights" className="scroll-mt-14 bg-zinc-900/40 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Highlights</h2>
           <p className="mt-2 font-body text-secondary-foreground">
@@ -269,7 +249,7 @@ export default function JuanESPage() {
         </div>
       </section>
 
-      <section id="timeline" className="border-t border-white/10 py-16 sm:py-24">
+      <section id="timeline" className="scroll-mt-14 border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Trayectoria</h2>
           <p className="mt-2 font-body text-secondary-foreground">
@@ -292,12 +272,12 @@ export default function JuanESPage() {
         </div>
       </section>
 
-      <section id="contact" className="border-t border-white/10 py-16 sm:py-24">
+      <section id="contact" className="scroll-mt-14 border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Contacto</h2>
           <p className="font-body mt-2 text-secondary-foreground">Reclutamiento y consultas de medios.</p>
           <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
-            <p className="font-heading text-xl font-semibold text-foreground">Juan Ignacio Morales</p>
+            <p className="font-heading text-xl font-semibold text-foreground">Juan Ignacio Morales Albil</p>
             <p className="font-body mt-1 text-sm text-secondary-foreground">
               Portero · Liga Premier · México y Argentina
             </p>

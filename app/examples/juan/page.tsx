@@ -11,16 +11,21 @@ export const metadata: Metadata = {
 
 export default function JuanLanguageSelector() {
   return (
-    <div
-      className="relative min-h-screen flex flex-col"
-      style={{
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%), url('/Juan jugando.jpeg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center 30%",
-      }}
-    >
-      <header className="flex items-center gap-4 px-6 py-5 sm:px-10">
+    <div className="relative flex min-h-screen flex-col overflow-hidden bg-black">
+      <img
+        src="/Juan accion.jpeg"
+        alt=""
+        aria-hidden
+        className="absolute inset-0 h-full w-full object-cover object-[50%_42%] brightness-110 contrast-105 sm:object-[center_42%]"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.65) 100%)",
+        }}
+      />
+      <header className="relative z-10 flex items-center gap-4 px-6 py-5 sm:px-10">
         <Link
           href="/examples"
           className="font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
@@ -31,7 +36,7 @@ export default function JuanLanguageSelector() {
         <CompanyLogo priority />
       </header>
 
-      <div className="flex flex-1 flex-col items-center justify-center px-4 pb-16 text-center">
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 pb-16 text-center">
         <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
           Goalkeeper · Mexico · Argentina
         </p>
