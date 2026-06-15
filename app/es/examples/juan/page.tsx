@@ -98,10 +98,16 @@ export default function JuanESPage() {
 
       <section className="relative min-h-[70vh] overflow-hidden bg-black pt-28 pb-20 sm:min-h-[75vh] sm:pt-36 sm:pb-28">
         <img
+          src="/Juan mobile.jpeg"
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full object-cover object-[55%_35%] brightness-110 contrast-105 sm:hidden"
+        />
+        <img
           src="/Juan accion.jpeg"
           alt=""
           aria-hidden
-          className="absolute inset-0 h-full w-full object-cover object-[50%_42%] brightness-110 contrast-105 sm:object-[55%_center]"
+          className="absolute inset-0 hidden h-full w-full object-cover object-[55%_center] brightness-110 contrast-105 sm:block"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/20 to-background/50 sm:bg-gradient-to-r sm:from-background/75 sm:via-background/40 sm:to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />

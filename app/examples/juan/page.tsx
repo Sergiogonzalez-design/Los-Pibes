@@ -13,10 +13,16 @@ export default function JuanLanguageSelector() {
   return (
     <div className="relative flex min-h-screen flex-col overflow-hidden bg-black">
       <img
+        src="/Juan mobile.jpeg"
+        alt=""
+        aria-hidden
+        className="absolute inset-0 h-full w-full object-cover object-[55%_35%] brightness-110 contrast-105 sm:hidden"
+      />
+      <img
         src="/Juan accion.jpeg"
         alt=""
         aria-hidden
-        className="absolute inset-0 h-full w-full object-cover object-[50%_42%] brightness-110 contrast-105 sm:object-[center_42%]"
+        className="absolute inset-0 hidden h-full w-full object-cover object-[55%_center] brightness-110 contrast-105 sm:block"
       />
       <div
         className="absolute inset-0"
