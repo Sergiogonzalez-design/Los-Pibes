@@ -96,7 +96,7 @@ export default function JuanENPage() {
         items={navItems}
       />
 
-      <section className="relative min-h-[70vh] overflow-hidden bg-black pt-28 pb-20 sm:min-h-[75vh] sm:pt-36 sm:pb-28">
+      <section className="relative min-h-screen overflow-hidden bg-black pt-28 pb-20 sm:pt-36 sm:pb-28">
         <img
           src="/Juan mobile.jpeg"
           alt=""
