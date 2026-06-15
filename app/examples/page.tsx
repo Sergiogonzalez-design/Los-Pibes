@@ -58,17 +58,18 @@ export default function ExamplesIndexPage() {
 
   return (
     <OnixPageShell>
-      <section
-        className="relative min-h-screen overflow-hidden pt-36 sm:pt-44"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/Mati Sergi celebration.jpeg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="relative min-h-screen overflow-hidden bg-background pt-36 sm:pt-44">
+        <div
+          className="pointer-events-none absolute inset-0 hidden sm:block"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/Mati Sergi celebration.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            backgroundAttachment: "fixed",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
           <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
             Onix Media
           </p>
