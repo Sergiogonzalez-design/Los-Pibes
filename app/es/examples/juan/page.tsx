@@ -101,30 +101,30 @@ export default function JuanESPage() {
           src="/Juan mobile.jpeg"
           alt=""
           aria-hidden
-          className="absolute inset-0 h-full w-full object-cover object-[78%_35%] brightness-110 contrast-105 sm:hidden"
+          className="absolute inset-0 h-full w-full object-cover object-[92%_35%] brightness-110 contrast-105 sm:hidden"
         />
         <img
           src="/Juan accion.jpeg"
           alt=""
           aria-hidden
-          className="absolute inset-0 hidden h-full w-full object-cover object-[72%_center] brightness-110 contrast-105 sm:block"
+          className="absolute inset-0 hidden h-full w-full object-cover object-[88%_center] brightness-110 contrast-105 sm:block"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/20 to-background/50 sm:bg-gradient-to-r sm:from-background/75 sm:via-background/40 sm:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/55 to-background/80 sm:bg-gradient-to-r sm:from-background sm:via-background/75 sm:to-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="font-body mb-4 text-xs uppercase tracking-[0.35em] text-primary">
+          <p className="font-body mb-4 text-xs uppercase tracking-[0.35em] text-primary [text-shadow:0_2px_8px_rgba(0,0,0,0.9)]">
             Portero · #1 · Liga Premier
           </p>
-          <h1 className="font-heading text-4xl font-bold leading-none text-foreground sm:text-6xl md:text-7xl">
+          <h1 className="font-heading text-4xl font-bold leading-none text-foreground [text-shadow:0_2px_12px_rgba(0,0,0,0.9)] sm:text-6xl md:text-7xl">
             <span className="block">Juan Ignacio</span>
             <span className="block text-gradient-gold">Morales</span>
           </h1>
-          <p className="font-body mt-6 max-w-2xl text-lg leading-relaxed text-secondary-foreground md:text-xl">
+          <p className="font-body mt-6 max-w-2xl text-lg font-medium leading-relaxed text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.95)] md:text-xl">
             Juan Ignacio Morales es un portero de Ciudad de México con nacionalidad mexicana y argentina.
             Tras formarse en la pirámide del fútbol argentino — desde Federal B hasta Primera Nacional —
             fichó por Cañoneros FC en la Liga Premier, donde viste el dorsal 1 como titular habitual.
           </p>
-          <p className="font-body mt-4 max-w-2xl text-lg leading-relaxed text-secondary-foreground md:text-xl">
+          <p className="font-body mt-4 max-w-2xl text-lg font-medium leading-relaxed text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.95)] md:text-xl">
             Proveniente de una familia de porteros, Morales acumula 46 partidos oficiales entre Argentina
             y México con una media goleadora de 1.04.
           </p>
