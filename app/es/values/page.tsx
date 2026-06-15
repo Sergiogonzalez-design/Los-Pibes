@@ -23,16 +23,17 @@ export default function ValuesPageES() {
   return (
     <div className="min-h-screen bg-background">
       <LosPibesNavbarES backHref="/es" />
-      <section
-        className="relative min-h-screen overflow-hidden pt-36 sm:pt-44"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/St. Peters gol celebration.jpeg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center 40%",
-        }}
-      >
-        <div className="mx-auto flex min-h-[calc(100vh-7rem)] max-w-7xl flex-col px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="relative min-h-screen overflow-hidden bg-background pt-36 sm:pt-44">
+        <div
+          className="pointer-events-none absolute inset-0 hidden sm:block"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/St. Peters gol celebration.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center 40%",
+          }}
+        />
+        <div className="relative mx-auto flex min-h-[calc(100vh-7rem)] max-w-7xl flex-col px-4 pb-16 sm:px-6 lg:px-8">
           <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
             Onix Media
           </p>

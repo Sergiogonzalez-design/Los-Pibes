@@ -12,16 +12,17 @@ export default function MissionPageEN() {
   return (
     <div className="min-h-screen bg-background">
       <LosPibesNavbarEN backHref="/en" />
-      <section
-        className="relative min-h-screen overflow-hidden pt-36 sm:pt-44"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/Quinnipiac gol celebration.jpeg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="relative min-h-screen overflow-hidden bg-background pt-36 sm:pt-44">
+        <div
+          className="pointer-events-none absolute inset-0 hidden sm:block"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/Quinnipiac gol celebration.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
           <h1 className="font-heading pt-8 text-3xl font-bold text-foreground sm:pt-14 sm:text-4xl">
             Purpose, Mission, and Vision
           </h1>
