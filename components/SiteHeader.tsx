@@ -45,7 +45,7 @@ export default function SiteHeader({
 
     function handleClick(event: MouseEvent) {
       if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
-        setMenuOpen(false);
+        setMenuOpen((open) => (open ? false : open));
       }
     }
 

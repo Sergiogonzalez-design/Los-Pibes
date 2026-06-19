@@ -65,7 +65,7 @@ export default function RamiEnStats2425Page() {
           </div>
           <div className="flex gap-3 pt-2">
             {[{ label: "Appearances", value: "22" }, { label: "Started", value: "17" }, { label: "Goals", value: "0" }].map((s) => (
-              <div key={s.label} className="rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-center backdrop-blur-sm">
+              <div key={s.label} className="flex flex-col items-center justify-center rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-center backdrop-blur-sm">
                 <p className="font-body text-xs uppercase tracking-widest text-primary">{s.label}</p>
                 <p className="font-heading mt-1 text-2xl font-bold text-foreground">{s.value}</p>
               </div>

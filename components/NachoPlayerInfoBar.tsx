@@ -10,7 +10,7 @@ export default function NachoPlayerInfoBar() {
     <section id="stats" className="border-y border-white/10 bg-zinc-900/50 py-8">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:grid-cols-4 sm:px-6 lg:px-8">
         {items.map((item) => (
-          <div key={item.k} className="text-center sm:text-left">
+          <div key={item.k} className="text-center">
             <p className="font-body text-xs uppercase tracking-widest text-primary">
               {item.k}
             </p>

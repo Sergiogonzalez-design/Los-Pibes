@@ -15,7 +15,7 @@ export default function StatsDropdown({ label, links }: StatsDropdownProps) {
   useEffect(() => {
     function handleClick(event: MouseEvent) {
       if (ref.current && !ref.current.contains(event.target as Node)) {
-        setOpen(false);
+        setOpen((value) => (value ? false : value));
       }
     }
 

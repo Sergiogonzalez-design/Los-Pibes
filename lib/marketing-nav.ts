@@ -73,6 +73,7 @@ export const rootMarketingNavItems: NavItem[] = [
       { href: "/examples/rami", label: "Pablo Ramirez" },
       { href: "/examples/jaco", label: "Jacobo Sanfeliu" },
       { href: "/examples/juan", label: "Juan Ignacio Morales" },
+      { href: "/examples/bautista", label: "Bautista Rossi Molinas" },
     ],
   },
   { type: "link", href: "/contact", label: "Contact" },

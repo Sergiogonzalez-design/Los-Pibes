@@ -158,7 +158,7 @@ export default function NachoESPage() {
           </div>
           <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[{ v: "50", l: "Partidos" }, { v: "156", l: "Paradas" }, { v: ".739", l: "% Paradas" }, { v: "Guante de Oro", l: "Premio" }].map((s) => (
-              <div key={s.l} className="rounded-xl border border-white/10 bg-black/25 p-5">
+              <div key={s.l} className="flex flex-col items-center justify-center rounded-xl border border-white/10 bg-black/25 p-5 text-center">
                 <p className="font-body text-xs uppercase tracking-widest text-primary">{s.l}</p>
                 <p className="mt-2 font-heading text-xl font-bold text-foreground">{s.v}</p>
               </div>
@@ -171,7 +171,7 @@ export default function NachoESPage() {
       <section id="stats" className="border-y border-white/10 bg-zinc-900/50 py-8">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:grid-cols-5 sm:px-6 lg:px-8">
           {infoItems.map((item) => (
-            <div key={item.k} className="text-center sm:text-left">
+            <div key={item.k} className="text-center">
               <p className="font-body text-xs uppercase tracking-widest text-primary">{item.k}</p>
               <p className="mt-1 font-body text-sm font-medium text-foreground">{item.v}</p>
             </div>

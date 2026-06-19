@@ -14,7 +14,7 @@ export default function AgostinaPlayerInfoBar() {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:grid-cols-5 sm:px-6 lg:px-8">
         {items.map((item) => (
-          <div key={item.k} className="text-center sm:text-left">
+          <div key={item.k} className="text-center">
             <p className="font-body text-xs uppercase tracking-widest text-primary">
               {item.k}
             </p>

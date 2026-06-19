@@ -14,7 +14,7 @@ export default function StatsNavDropdown({ label, links }: StatsNavDropdownProps
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
+        setOpen((value) => (value ? false : value));
       }
     }
     document.addEventListener("mousedown", handleClick);

@@ -94,7 +94,7 @@ export default function JacoHero({
           {stats.map((s) => (
             <div
               key={s.label}
-              className="rounded-xl border border-white/10 bg-black/40 p-3 backdrop-blur-sm sm:bg-black/25 sm:p-4 sm:backdrop-blur-none"
+              className="flex flex-col items-center justify-center rounded-xl border border-white/10 bg-black/40 p-3 text-center backdrop-blur-sm sm:bg-black/25 sm:p-4 sm:backdrop-blur-none"
             >
               <p className="font-body text-[0.65rem] uppercase tracking-widest text-primary sm:text-xs">
                 {s.label}
