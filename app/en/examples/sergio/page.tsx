@@ -112,7 +112,10 @@ export default function SergioENPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/Sergi jugando.jpeg')" }} />
+        <div
+          className="absolute inset-0 bg-cover bg-[center_25%]"
+          style={{ backgroundImage: "url('/Sergi jugando.jpeg')" }}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl">

@@ -113,17 +113,6 @@ export default function JuanProfilePage({ locale }: Props) {
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
             {content.seasonsTitle}
           </h2>
-          <p className="mt-2 max-w-3xl font-body text-secondary-foreground">
-            {content.seasonsIntro}{" "}
-            <a
-              href={TRANSFERMARKT}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline-offset-2 hover:underline"
-            >
-              {content.transfermarktLink}
-            </a>
-          </p>
           <div className="mt-10 overflow-x-auto rounded-xl border border-white/10">
             <table className="w-full min-w-[520px] text-left text-sm">
               <thead>
@@ -164,7 +153,6 @@ export default function JuanProfilePage({ locale }: Props) {
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
             {content.highlightsTitle}
           </h2>
-          <p className="mt-2 font-body text-secondary-foreground">{content.highlightsIntro}</p>
           <div className="mt-10">
             <div className="overflow-hidden rounded-xl border border-white/10 bg-black/25 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
               <div className="aspect-video w-full">
@@ -195,7 +183,6 @@ export default function JuanProfilePage({ locale }: Props) {
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
             {content.timelineTitle}
           </h2>
-          <p className="mt-2 font-body text-secondary-foreground">{content.timelineIntro}</p>
           <ol className="relative mt-12 space-y-8 border-l border-primary/40 pl-8">
             {content.milestones.map((m) => (
               <li key={m.title} className="relative">
@@ -218,15 +205,14 @@ export default function JuanProfilePage({ locale }: Props) {
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
             {content.contactTitle}
           </h2>
-          <p className="font-body mt-2 text-secondary-foreground">{content.contactIntro}</p>
           <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
             <p className="font-heading text-xl font-semibold text-foreground">{content.contactName}</p>
             <p className="font-body mt-1 text-sm text-secondary-foreground">{content.contactRole}</p>
             <a
-              href="mailto:contact@onixmedia.agency"
+              href={`mailto:${content.contactEmail}`}
               className="font-body mt-4 block text-primary underline-offset-2 hover:underline"
             >
-              contact@onixmedia.agency
+              {content.contactEmail}
             </a>
           </div>
         </div>

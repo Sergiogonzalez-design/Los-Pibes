@@ -58,7 +58,7 @@ export function getJuanContent(locale: "en" | "es") {
       timelineTitle: "Trayectoria",
       timelineIntro: "De la pirámide argentina a la Liga Premier en México.",
       contactTitle: "Contacto",
-      contactIntro: "Reclutamiento y consultas de medios.",
+      contactEmail: "juaanimorales10@gmail.com",
       contactName: "Juan Ignacio Morales Albil",
       contactRole: "Portero · Liga Premier · México y Argentina",
       milestones: [
@@ -133,7 +133,7 @@ export function getJuanContent(locale: "en" | "es") {
     timelineTitle: "Career timeline",
     timelineIntro: "From the Argentine pyramid to Liga Premier in Mexico.",
     contactTitle: "Contact",
-    contactIntro: "Recruiting and media inquiries.",
+    contactEmail: "juaanimorales10@gmail.com",
     contactName: "Juan Ignacio Morales Albil",
     contactRole: "Goalkeeper · Liga Premier · Mexico & Argentina",
     milestones: [

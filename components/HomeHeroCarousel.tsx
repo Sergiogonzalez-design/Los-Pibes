@@ -9,6 +9,8 @@ const slides = [
   { src: "/Mati Iona.jpg",         alt: "Mati",           position: "50% 18%" },
   { src: "/Nacho jugando.jpeg",    alt: "Nacho",          position: "50% 22%" },
   { src: "/Jaco jugando.jpg",      alt: "Jaco",           position: "12% 20%" },
+  { src: "/Juan jugando.jpeg",     alt: "Juan Morales",   position: "45% center" },
+  { src: "/Bautista gritando.jpg", alt: "Bauti",          position: "50% 30%" },
 ] as const;
 
 export default function HomeHeroCarousel() {

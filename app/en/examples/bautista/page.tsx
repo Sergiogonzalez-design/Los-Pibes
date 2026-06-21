@@ -26,8 +26,9 @@ const navItems: NavItem[] = [
 ];
 
 const infoItems = [
-  { k: "Height", v: "5′10″" },
-  { k: "Weight", v: "170 lbs" },
+  { k: "Date of birth", v: "3 July 2005" },
+  { k: "Height", v: "5′11″" },
+  { k: "Weight", v: "178 lbs" },
   { k: "Position", v: "Forward" },
   { k: "Hometown", v: "Buenos Aires, Argentina" },
   { k: "Youth Club", v: "Unión de Santa Fe" },
@@ -44,7 +45,6 @@ const seasons = [
     goals: "3",
     ast: "2",
     pts: "8",
-    note: "1 game-winning goal · 723 min · per Creighton 2025 game-by-game stats",
   },
   {
     year: "2024",
@@ -56,7 +56,6 @@ const seasons = [
     goals: "8",
     ast: "2",
     pts: "18",
-    note: "All-MAAC Third Team · MAAC All-Championship Team · GW in MAAC final vs Rider",
   },
 ];
 
@@ -169,7 +168,7 @@ export default function BautistaENPage() {
       </section>
 
       <section id="stats" className="scroll-mt-14 border-y border-white/10 bg-zinc-900/50 py-8">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:grid-cols-5 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:grid-cols-3 lg:grid-cols-6 sm:px-6 lg:px-8">
           {infoItems.map((item) => (
             <div key={item.k} className="text-center">
               <p className="font-body text-xs uppercase tracking-widest text-primary">{item.k}</p>
@@ -184,27 +183,6 @@ export default function BautistaENPage() {
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
             Season breakdown
           </h2>
-          <p className="mt-2 max-w-3xl font-body text-secondary-foreground">
-            Official game-by-game totals from{" "}
-            <a
-              href={IONA_ROSTER}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline-offset-2 hover:underline"
-            >
-              Iona (2024)
-            </a>
-            {" · "}
-            <a
-              href={CREIGHTON_ROSTER}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline-offset-2 hover:underline"
-            >
-              Creighton (2025)
-            </a>
-            .
-          </p>
           <div className="mt-10 overflow-x-auto rounded-xl border border-white/10">
             <table className="w-full min-w-[720px] text-left text-sm">
               <thead>
@@ -217,7 +195,6 @@ export default function BautistaENPage() {
                   <th className="px-4 py-3 font-body font-semibold text-center">G</th>
                   <th className="px-4 py-3 font-body font-semibold text-center">A</th>
                   <th className="px-4 py-3 font-body font-semibold text-center">Pts</th>
-                  <th className="px-4 py-3 font-body font-semibold">Notes</th>
                 </tr>
               </thead>
               <tbody>
@@ -243,7 +220,6 @@ export default function BautistaENPage() {
                     <td className="px-4 py-3 text-center">{s.goals}</td>
                     <td className="px-4 py-3 text-center">{s.ast}</td>
                     <td className="px-4 py-3 text-center">{s.pts}</td>
-                    <td className="px-4 py-3 text-secondary-foreground">{s.note}</td>
                   </tr>
                 ))}
               </tbody>
@@ -255,15 +231,9 @@ export default function BautistaENPage() {
       <section id="highlights" className="scroll-mt-14 bg-zinc-900/40 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Highlights</h2>
-          <p className="mt-2 font-body text-secondary-foreground">
-            Official YouTube reels — Iona 2024 and summer 2025.
-          </p>
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
             <div>
               <h3 className="font-heading text-lg font-semibold text-foreground">2024 — Iona</h3>
-              <p className="mt-1 font-body text-sm text-secondary-foreground">
-                Freshman season film — MAAC regular season and championship run.
-              </p>
               <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-black/25 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
                 <div className="aspect-video w-full">
                   <iframe
@@ -287,17 +257,14 @@ export default function BautistaENPage() {
             </div>
             <div>
               <h3 className="font-heading text-lg font-semibold text-foreground">
-                Summer 2025
+                2025 — Creighton
               </h3>
-              <p className="mt-1 font-body text-sm text-secondary-foreground">
-                Summer 2025 highlight reel.
-              </p>
               <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-black/25 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
                 <div className="aspect-video w-full">
                   <iframe
                     className="h-full w-full"
                     src={HIGHLIGHTS_2025_EMBED}
-                    title="Bautista Rossi — Summer 2025 Highlights"
+                    title="Bautista Rossi — 2025 Creighton Highlights"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
@@ -322,9 +289,6 @@ export default function BautistaENPage() {
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
             Career timeline
           </h2>
-          <p className="mt-2 font-body text-secondary-foreground">
-            Key stops aligned with official Iona and Creighton roster bios.
-          </p>
           <ol className="relative mt-12 space-y-8 border-l border-primary/40 pl-8">
             {milestones.map((m) => (
               <li key={m.title} className="relative">
@@ -345,7 +309,6 @@ export default function BautistaENPage() {
       <section id="contact" className="scroll-mt-14 border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Contact</h2>
-          <p className="font-body mt-2 text-secondary-foreground">Recruiting and media inquiries.</p>
           <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
             <p className="font-heading text-xl font-semibold text-foreground">
               Bautista Rossi Molinas
