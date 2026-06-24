@@ -28,9 +28,6 @@ export default function CareerTimeline() {
         <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
           Career timeline
         </h2>
-        <p className="mt-2 font-body text-secondary-foreground">
-          Key stops aligned with official Iona and George Mason roster bios.
-        </p>
         <ol className="relative mt-12 space-y-8 border-l border-primary/40 pl-8">
           {milestones.map((m) => (
             <li key={m.title} className="relative">

@@ -163,21 +163,6 @@ export default function JacoEnPage() {
       <section id="seasons" className="scroll-mt-14 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Seasons</h2>
-          <p className="font-body mt-2 text-secondary-foreground">
-            Year-by-year performance at George Mason, SIUE, and Sterling College. Roster links:{" "}
-            <a href={GMU_ROSTER} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-2 hover:underline">
-              George Mason
-            </a>
-            {" · "}
-            <a href={SIUE_ROSTER} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-2 hover:underline">
-              SIUE
-            </a>
-            {" · "}
-            <a href={STERLING_ROSTER} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-2 hover:underline">
-              Sterling College
-            </a>
-            .
-          </p>
           <div className="mt-10 overflow-hidden rounded-xl border border-white/10">
             <table className="w-full font-body text-sm">
               <thead>
@@ -212,7 +197,6 @@ export default function JacoEnPage() {
           <h3 className="font-heading mt-12 text-xl font-semibold text-foreground sm:text-2xl">
             Summer leagues
           </h3>
-          <p className="font-body mt-2 text-secondary-foreground">USL League Two.</p>
           <div className="mt-6 overflow-hidden rounded-xl border border-white/10">
             <table className="w-full font-body text-sm">
               <thead>
@@ -265,7 +249,6 @@ export default function JacoEnPage() {
             {highlights.map((h) => (
               <div key={h.title}>
                 <h3 className="font-heading text-lg font-semibold text-foreground">{h.title}</h3>
-                <p className="font-body mt-1 text-sm text-secondary-foreground">{h.desc}</p>
                 <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-black/25 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
                   <div className="aspect-video w-full">
                     <iframe
@@ -308,7 +291,6 @@ export default function JacoEnPage() {
       <section id="contact" className="scroll-mt-14 border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Contact</h2>
-          <p className="font-body mt-2 text-secondary-foreground">Recruiting and media inquiries.</p>
           <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
             <p className="font-heading text-xl font-semibold text-foreground">Jacobo Sanfeliu</p>
             <p className="font-body mt-1 text-sm text-secondary-foreground">Striker · #7 · George Mason</p>

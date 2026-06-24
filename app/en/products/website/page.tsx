@@ -23,44 +23,31 @@ export default function WebsiteProductPageEN() {
         }}
       >
       <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.1fr]">
-          <div>
-            <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
-              Product
-            </p>
-            <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">
-              Website
-            </h1>
-            <ul className="font-body mt-6 max-w-3xl space-y-3 text-base leading-relaxed text-secondary-foreground sm:text-lg">
-              <li>• A custom website that presents your profile in one place.</li>
-              <li>• Includes stats, videos, and your story with a clean structure.</li>
-              <li>• Built to look professional and easy to share with coaches.</li>
-            </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/en/examples"
-                className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                View Examples
-              </Link>
-              <Link
-                href="/en/contact"
-                className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
-
-          <div
-            className="overflow-hidden rounded-xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
-            style={{ height: "420px" }}
-          >
-            <img
-              src="/website-nacho.jpg"
-              alt="Nacho Alfaro website example"
-              className="h-full w-full object-cover object-top"
-            />
+        <div className="max-w-3xl">
+          <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
+            Product
+          </p>
+          <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">
+            Website
+          </h1>
+          <ul className="font-body mt-6 space-y-3 text-base leading-relaxed text-secondary-foreground sm:text-lg">
+            <li>• A custom website that presents your profile in one place.</li>
+            <li>• Includes stats, videos, and your story with a clean structure.</li>
+            <li>• Built to look professional and easy to share with coaches.</li>
+          </ul>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/en/examples"
+              className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              View Examples
+            </Link>
+            <Link
+              href="/en/contact"
+              className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>

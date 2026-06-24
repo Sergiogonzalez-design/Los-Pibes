@@ -1,47 +1,78 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import type { ExampleCard } from "@/lib/examples-index";
 
-export type ExampleCard = {
-  href: string;
-  tag: string;
-  name: string;
-  desc: string;
+export type { ExampleCard } from "@/lib/examples-index";
+
+export type CountryFilter = {
+  slug: string;
+  label: string;
 };
+
+const LEGACY_HASHES: Record<string, string> = {
+  premium: "all",
+  basic: "all",
+};
+
+const DEFAULT_COUNTRY_FILTERS: CountryFilter[] = [
+  { slug: "all", label: "All" },
+  { slug: "spain", label: "Spain" },
+  { slug: "costa-rica", label: "Costa Rica" },
+  { slug: "mexico", label: "Mexico" },
+  { slug: "argentina", label: "Argentina" },
+];
 
 type ExamplesIndexProps = {
   title: string;
-  premiumLabel: string;
-  basicLabel: string;
   viewLabel: string;
-  premiumExamples: ExampleCard[];
-  basicExamples: ExampleCard[];
+  examples?: ExampleCard[];
+  countryFilters?: CountryFilter[];
 };
 
 export default function ExamplesIndex({
   title,
-  premiumLabel,
-  basicLabel,
   viewLabel,
-  premiumExamples,
-  basicExamples,
+  examples = [],
+  countryFilters = DEFAULT_COUNTRY_FILTERS,
 }: ExamplesIndexProps) {
-  const [active, setActive] = useState<"premium" | "basic">("premium");
-  const examples = active === "premium" ? premiumExamples : basicExamples;
+  const filters = countryFilters.length > 0 ? countryFilters : DEFAULT_COUNTRY_FILTERS;
+
+  const validSlugs = useMemo(
+    () => new Set(filters.map((filter) => filter.slug)),
+    [filters]
+  );
+  const defaultSlug = filters[0]?.slug ?? "all";
+
+  const [active, setActive] = useState(defaultSlug);
+
+  const visibleExamples = useMemo(() => {
+    if (active === "all") return examples;
+    return examples.filter((example) => example.countries.includes(active));
+  }, [active, examples]);
 
   useEffect(() => {
     const syncFromHash = () => {
-      const hash = window.location.hash.replace("#", "");
-      if (hash === "basic" || hash === "premium") {
+      const raw = window.location.hash.replace("#", "");
+      const hash = LEGACY_HASHES[raw] ?? raw;
+      if (hash && validSlugs.has(hash)) {
         setActive(hash);
+      } else if (!raw || raw === "premium" || raw === "basic") {
+        setActive(defaultSlug);
       }
     };
 
     syncFromHash();
     window.addEventListener("hashchange", syncFromHash);
     return () => window.removeEventListener("hashchange", syncFromHash);
-  }, []);
+  }, [validSlugs, defaultSlug]);
+
+  function selectFilter(slug: string) {
+    setActive(slug);
+    const nextHash = slug === defaultSlug ? "" : `#${slug}`;
+    window.history.replaceState(null, "", `${window.location.pathname}${nextHash}`);
+  }
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-background pt-36 sm:pt-44">
@@ -59,43 +90,34 @@ export default function ExamplesIndex({
         <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">Onix Media</p>
         <h1 className="font-heading mt-4 text-4xl font-bold text-foreground sm:text-5xl">{title}</h1>
 
-        <div className="mt-8 flex gap-3">
-          <button
-            type="button"
-            onClick={() => setActive("premium")}
-            className={`font-body rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors ${
-              active === "premium"
-                ? "bg-primary text-primary-foreground"
-                : "border border-white/20 text-foreground hover:bg-white/10"
-            }`}
-          >
-            {premiumLabel}
-          </button>
-          <button
-            type="button"
-            onClick={() => setActive("basic")}
-            className={`font-body rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors ${
-              active === "basic"
-                ? "bg-primary text-primary-foreground"
-                : "border border-white/20 text-foreground hover:bg-white/10"
-            }`}
-          >
-            {basicLabel}
-          </button>
+        <div className="mt-8 flex flex-wrap gap-3">
+          {filters.map((filter) => (
+            <button
+              key={filter.slug}
+              type="button"
+              onClick={() => selectFilter(filter.slug)}
+              className={`font-body rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors ${
+                active === filter.slug
+                  ? "bg-primary text-primary-foreground"
+                  : "border border-white/20 text-foreground hover:bg-white/10"
+              }`}
+            >
+              {filter.label}
+            </button>
+          ))}
         </div>
 
         <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {examples.map((e) => (
-            <li key={e.href}>
+          {visibleExamples.map((example) => (
+            <li key={example.href}>
               <Link
-                href={e.href}
+                href={example.href}
                 className="group block rounded-xl border border-white/10 bg-black/35 p-6 transition-colors hover:border-primary/40 hover:bg-black/40"
               >
-                <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">{e.tag}</p>
+                <p className="font-body text-xs uppercase tracking-[0.2em] text-primary">{example.tag}</p>
                 <h2 className="font-heading mt-2 text-xl font-semibold capitalize text-foreground group-hover:text-primary">
-                  {e.name}
+                  {example.name}
                 </h2>
-                <p className="font-body mt-2 text-sm capitalize text-secondary-foreground">{e.desc}</p>
                 <span className="font-body mt-4 inline-block text-sm font-medium capitalize text-primary">
                   {viewLabel}
                 </span>

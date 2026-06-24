@@ -16,9 +16,6 @@ export default function Highlights() {
         <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
           Highlights
         </h2>
-        <p className="mt-2 font-body text-secondary-foreground">
-          Official YouTube reels — Iona.
-        </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {clips.map((c) => (
             <a
@@ -31,9 +28,6 @@ export default function Highlights() {
               <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary">
                 {c.title}
               </h3>
-              <p className="mt-2 font-body text-sm text-secondary-foreground">
-                {c.desc}
-              </p>
               <span className="mt-4 inline-block font-body text-sm font-medium text-primary">
                 Watch on YouTube →
               </span>

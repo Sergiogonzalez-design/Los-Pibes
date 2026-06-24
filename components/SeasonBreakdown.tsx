@@ -55,28 +55,6 @@ export default function SeasonBreakdown() {
         <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
           Season breakdown
         </h2>
-        <p className="mt-2 max-w-3xl font-body text-secondary-foreground">
-          Numbers from official Iona seasons (2022–2024) and George Mason 2025
-          game-by-game totals. Click a school name for the live roster page:{" "}
-          <a
-            href={GMU_ROSTER}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline-offset-2 hover:underline"
-          >
-            George Mason
-          </a>
-          {" · "}
-          <a
-            href={IONA_ROSTER}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline-offset-2 hover:underline"
-          >
-            Iona
-          </a>
-          .
-        </p>
         <div className="mt-10 overflow-x-auto rounded-xl border border-white/10">
           <table className="w-full min-w-[640px] text-left text-sm">
             <thead>

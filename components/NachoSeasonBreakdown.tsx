@@ -57,26 +57,6 @@ export default function NachoSeasonBreakdown() {
         <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
           Season breakdown
         </h2>
-        <p className="mt-2 max-w-3xl font-body text-secondary-foreground">
-          Official profiles:{" "}
-          <a
-            href={IONA_ROSTER}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline-offset-2 hover:underline"
-          >
-            Iona Gaels
-          </a>{" "}
-          ·{" "}
-          <a
-            href={FAU_ROSTER}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline-offset-2 hover:underline"
-          >
-            FAU Owls
-          </a>
-        </p>
         <div className="mt-10 overflow-x-auto rounded-xl border border-white/10">
           <table className="w-full min-w-[540px] text-left text-sm">
             <thead>

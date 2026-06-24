@@ -163,12 +163,6 @@ export default function SergioENPage() {
       <section id="seasons" className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Season breakdown</h2>
-          <p className="mt-2 max-w-3xl font-body text-secondary-foreground">
-            Numbers from official Iona seasons (2022–2024) and George Mason 2025 game-by-game totals. Click a school name for the live roster page:{" "}
-            <a href={GMU_ROSTER} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-2 hover:underline">George Mason</a>
-            {" · "}
-            <a href={IONA_ROSTER} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-2 hover:underline">Iona</a>.
-          </p>
           <div className="mt-10 overflow-x-auto rounded-xl border border-white/10">
             <table className="w-full min-w-[640px] text-left text-sm">
               <thead>
@@ -206,16 +200,13 @@ export default function SergioENPage() {
       <section id="highlights" className="bg-zinc-900/40 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Highlights</h2>
-          <p className="mt-2 font-body text-secondary-foreground">Official YouTube reels — Iona.</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             <a href="https://www.youtube.com/watch?v=MXZNl4Gz4sM" target="_blank" rel="noopener noreferrer" className="group rounded-xl border border-white/10 bg-black/20 p-6 transition-colors hover:border-primary/50 hover:bg-black/40">
               <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary">Iona highlights</h3>
-              <p className="mt-2 font-body text-sm text-secondary-foreground">College film from Iona — NCAA Division I MAAC.</p>
               <span className="mt-4 inline-block font-body text-sm font-medium text-primary">Watch on YouTube →</span>
             </a>
             <a href="https://www.youtube.com/watch?v=wVKjUAZjyZY&t=3880s" target="_blank" rel="noopener noreferrer" className="group rounded-xl border border-white/10 bg-black/20 p-6 transition-colors hover:border-primary/50 hover:bg-black/40">
               <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary">Getafe CF vs Real Madrid CF — 2021</h3>
-              <p className="mt-2 font-body text-sm text-secondary-foreground">Full game with Getafe CF facing Real Madrid CF (2021).</p>
               <span className="mt-4 inline-block font-body text-sm font-medium text-primary">Watch on YouTube →</span>
             </a>
           </div>
@@ -226,9 +217,6 @@ export default function SergioENPage() {
       <section id="report" className="scroll-mt-24 border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Performance Report</h2>
-          <p className="font-body mt-2 text-secondary-foreground">
-            Full report with profile, season metrics, and career path — ready for coaches and recruiters.
-          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="/sergio-gonzalez-report.pdf"
@@ -253,7 +241,6 @@ export default function SergioENPage() {
       <section id="timeline" className="border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Career timeline</h2>
-          <p className="mt-2 font-body text-secondary-foreground">Key stops aligned with official Iona and George Mason roster bios.</p>
           <ol className="relative mt-12 space-y-8 border-l border-primary/40 pl-8">
             {milestones.map((m) => (
               <li key={m.title} className="relative">
@@ -271,7 +258,6 @@ export default function SergioENPage() {
       <section id="contact" className="border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Contact</h2>
-          <p className="font-body mt-2 text-secondary-foreground">Recruiting and media inquiries.</p>
           <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
             <p className="font-heading text-xl font-semibold text-foreground">Sergio Gonzalez Fernandez</p>
             <p className="font-body mt-1 text-sm text-secondary-foreground">Midfielder · #6 · NCAA Division I</p>

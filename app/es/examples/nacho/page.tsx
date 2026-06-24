@@ -183,12 +183,6 @@ export default function NachoESPage() {
       <section id="seasons" className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Estadísticas por temporada</h2>
-          <p className="mt-2 max-w-3xl font-body text-secondary-foreground">
-            Perfiles oficiales:{" "}
-            <a href={IONA_ROSTER} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-2 hover:underline">Iona Gaels</a>
-            {" · "}
-            <a href={FAU_ROSTER} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-2 hover:underline">FAU Owls</a>
-          </p>
           <div className="mt-10 overflow-x-auto rounded-xl border border-white/10">
             <table className="w-full min-w-[540px] text-left text-sm">
               <thead>
@@ -229,12 +223,10 @@ export default function NachoESPage() {
       <section id="highlights" className="bg-zinc-900/40 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Highlights</h2>
-          <p className="mt-2 font-body text-secondary-foreground">Reels de YouTube por temporada — Iona Gaels y Costa Rica.</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {highlights.map((c) => (
               <a key={c.title} href={c.href} target="_blank" rel="noopener noreferrer" className="group rounded-xl border border-white/10 bg-black/20 p-6 transition-colors hover:border-primary/50 hover:bg-black/40">
                 <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary">{c.title}</h3>
-                <p className="mt-2 font-body text-sm text-secondary-foreground">{c.desc}</p>
                 <span className="mt-4 inline-block font-body text-sm font-medium text-primary">Ver en YouTube →</span>
               </a>
             ))}
@@ -246,7 +238,6 @@ export default function NachoESPage() {
       <section id="timeline" className="border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Trayectoria</h2>
-          <p className="mt-2 font-body text-secondary-foreground">De Costa Rica a la NCAA División I — títulos nacionales al Guante de Oro.</p>
           <ol className="relative mt-12 space-y-8 border-l border-primary/40 pl-8">
             {milestones.map((m) => (
               <li key={m.title} className="relative">
@@ -264,7 +255,6 @@ export default function NachoESPage() {
       <section id="contact" className="border-t border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">Contacto</h2>
-          <p className="font-body mt-2 text-secondary-foreground">Reclutamiento y consultas de medios.</p>
           <div className="mt-8 max-w-md rounded-xl border border-white/10 bg-black/25 p-8">
             <p className="font-heading text-xl font-semibold text-foreground">Nacho Alfaro</p>
             <p className="font-body mt-1 text-sm text-secondary-foreground">Portero · NCAA División I · Costa Rica</p>

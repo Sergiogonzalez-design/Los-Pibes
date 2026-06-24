@@ -40,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# onix-player local sync tracking (per-machine)
+lib/onix-player/.sync-state.json
+
+# cloudflare local dev state
+.wrangler/

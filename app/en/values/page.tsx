@@ -17,9 +17,9 @@ export default function ValuesPageEN() {
           className="pointer-events-none absolute inset-0 hidden sm:block"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/St. Peters gol celebration.jpeg')",
+              "linear-gradient(to bottom, rgba(5,10,20,0.65), rgba(5,10,20,0.82)), url('/Quinnipiac gol celebration.jpeg')",
             backgroundSize: "cover",
-            backgroundPosition: "center 40%",
+            backgroundPosition: "center",
           }}
         />
         <div className="relative mx-auto flex min-h-[calc(100vh-7rem)] max-w-7xl flex-col px-4 pb-16 sm:px-6 lg:px-8">
