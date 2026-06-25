@@ -57,7 +57,7 @@ export default function JacoHero({
           {bio}
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2.5 sm:mt-8 sm:gap-3">
+        <div className="mt-6 flex flex-nowrap gap-2.5 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:mt-8 sm:gap-3 [&::-webkit-scrollbar]:hidden [&>a]:shrink-0">
           <a
             href={gmuRoster}
             target="_blank"

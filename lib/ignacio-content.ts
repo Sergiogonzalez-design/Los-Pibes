@@ -59,10 +59,10 @@ export function getIgnacioContent(locale: "en" | "es") {
       tagline: "Extremo / carrilero · #17 · RFFM Madrid",
       bio: "Ignacio Atienzar Sacristán es un extremo y carrilero derecho de Madrid, España. Tras una temporada con goles en Siello CF (2023/24) y un paso por CF Pozuelo (2024/25), es titular habitual en Villanueva de la Cañada en la Primera División Autonómica Aficionado 2025/26, con minutos también en Copa Aficionados RFFM.",
       heroStats: [
-        { value: "47", label: "Partidos" },
-        { value: "4", label: "Goles" },
-        { value: "#17", label: "Dorsal" },
-        { value: "RFFM", label: "Fútbol madrileño" },
+        { label: "Partidos", value: "47" },
+        { label: "Titularidades", value: "26" },
+        { label: "Posición", value: "Extremo / carrilero" },
+        { label: "Liga Actual", value: "1ª Autonómica" },
       ],
       cta: {
         elBalon: "El Balón de Madrid",
@@ -77,11 +77,11 @@ export function getIgnacioContent(locale: "en" | "es") {
         { type: "anchor", href: "#contact", label: "Contacto" },
       ] satisfies NavItem[],
       infoItems: [
-        { k: "Fecha de nacimiento", v: "26/05/2003" },
-        { k: "Posición", v: "Extremo / carrilero" },
-        { k: "Ciudad", v: "Madrid, España" },
-        { k: "Pie hábil", v: "Derecho" },
-        { k: "Altura / Peso", v: "185 cm · 77 kg" },
+        { k: "Fecha de Nacimiento", v: "26/05/2003" },
+        { k: "Altura", v: "185 cm" },
+        { k: "Peso", v: "77 kg" },
+        { k: "Pie dominante", v: "Derecho" },
+        { k: "Ciudad natal", v: "Madrid, España" },
       ],
       seasonsTitle: "Desglose por temporada",
       tableHeaders: {
@@ -139,10 +139,10 @@ export function getIgnacioContent(locale: "en" | "es") {
     tagline: "Winger / wingback · #17 · RFFM Madrid",
     bio: "Ignacio Atienzar Sacristán is a right-footed winger and wingback from Madrid, Spain. After a goal-scoring season with Siello CF (2023/24) and a spell at CF Pozuelo (2024/25), he is a regular for Villanueva de la Cañada in the 2025/26 Primera División Autonómica Aficionado — with Copa Aficionados RFFM minutes as well.",
     heroStats: [
-      { value: "47", label: "Career Games" },
-      { value: "4", label: "Career Goals" },
-      { value: "#17", label: "Shirt" },
-      { value: "RFFM", label: "Madrid Football" },
+      { label: "Games", value: "47" },
+      { label: "Starts", value: "26" },
+      { label: "Position", value: "Winger / wingback" },
+      { label: "Current League", value: "1ª Autonómica" },
     ],
     cta: {
       elBalon: "El Balón de Madrid",
@@ -157,11 +157,11 @@ export function getIgnacioContent(locale: "en" | "es") {
       { type: "anchor", href: "#contact", label: "Contact" },
     ] satisfies NavItem[],
     infoItems: [
-      { k: "Date of birth", v: "26 May 2003" },
-      { k: "Position", v: "Winger / wingback" },
-      { k: "Hometown", v: "Madrid, Spain" },
+      { k: "Birth date", v: "26 May 2003" },
+      { k: "Height", v: "185 cm" },
+      { k: "Weight", v: "77 kg" },
       { k: "Strong foot", v: "Right" },
-      { k: "Height / weight", v: "185 cm · 77 kg" },
+      { k: "Hometown", v: "Madrid, Spain" },
     ],
     seasonsTitle: "Season breakdown",
     tableHeaders: {

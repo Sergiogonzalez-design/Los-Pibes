@@ -59,7 +59,7 @@ export default function JuanProfilePage({ locale }: Props) {
           <p className="font-body mt-4 max-w-2xl text-lg font-medium leading-relaxed text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.95)] md:text-xl">
             {content.bio2}
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-nowrap gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>a]:shrink-0">
             <a
               href={TRANSFERMARKT}
               target="_blank"

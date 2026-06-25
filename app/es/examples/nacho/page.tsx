@@ -150,7 +150,7 @@ export default function NachoESPage() {
             Antes de la universidad, Nacho representó a Costa Rica en los niveles U-15, U-17 y U-20 — ganando
             el Torneo Nacional U-17 y el Torneo Internacional CONCACAF en 2018.
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-nowrap gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>a]:shrink-0">
             <a href={FAU_ROSTER} target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">Perfil FAU</a>
             <a href={IONA_ROSTER} target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10">Perfil Iona</a>
             <a href="https://www.instagram.com/nachoo_2908/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10">Instagram</a>

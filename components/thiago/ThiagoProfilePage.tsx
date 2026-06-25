@@ -58,7 +58,7 @@ export default function ThiagoProfilePage({ locale }: Props) {
               {content.bio}
             </p>
 
-            <div className="mb-10 flex flex-wrap gap-3">
+            <div className="mb-10 flex flex-nowrap gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>a]:shrink-0">
               <a
                 href={IONA_ROSTER}
                 target="_blank"

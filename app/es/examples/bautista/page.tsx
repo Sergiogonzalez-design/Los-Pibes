@@ -118,7 +118,7 @@ export default function BautistaESPage() {
             conquista del MAAC — incluyendo un doblete ante Manhattan — antes de definir la final
             contra Rider.
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-nowrap gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>a]:shrink-0">
             <a
               href={CREIGHTON_ROSTER}
               target="_blank"

@@ -118,7 +118,7 @@ export default function BautistaENPage() {
             MAAC title run — including a brace against Manhattan — before delivering the winner against
             Rider in the conference final.
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-nowrap gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>a]:shrink-0">
             <a
               href={CREIGHTON_ROSTER}
               target="_blank"

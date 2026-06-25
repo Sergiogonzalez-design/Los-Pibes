@@ -129,7 +129,7 @@ export default function SergioENPage() {
               including 2024 MAAC Championship MVP and All-MAAC First Team. Now a graduate student at George
               Mason, pursuing an MSBA in Business Analytics while competing in the A-10.
             </p>
-            <div className="mb-10 flex flex-wrap gap-3">
+            <div className="mb-10 flex flex-nowrap gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>a]:shrink-0">
               <a href={GMU_ROSTER} target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">George Mason (2025)</a>
               <a href={IONA_ROSTER} target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10">Iona Roster</a>
               <a href="https://www.instagram.com/sergigonzalez6/" target="_blank" rel="noopener noreferrer" className="font-body inline-flex items-center gap-2 rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10">Instagram</a>
