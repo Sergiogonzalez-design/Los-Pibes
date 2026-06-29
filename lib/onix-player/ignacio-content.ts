@@ -2,9 +2,8 @@ import { toAscii } from './ascii';
 import type { WebsitePlayerDefinition } from './types';
 import { publicAssetUrl, siteUrl } from './site-origin';
 import {
-  BESOCCER_PROFILE,
   CONTACT_EMAIL,
-  EL_BALON_PROFILE,
+  GPS_REPORT_PDF,
   HERO_IMAGE,
   getIgnacioContent,
 } from '../ignacio-content';
@@ -48,7 +47,6 @@ export function buildIgnacioOnixPlayerDossier() {
       team: s.club,
       position: 'Winger',
       matches_played: parseInt(s.apps, 10) || 0,
-      goals: parseInt(s.goals, 10) || 0,
     })),
     achievements: milestones.map((m) => ({
       title: toAscii(m.title),
@@ -56,16 +54,21 @@ export function buildIgnacioOnixPlayerDossier() {
       description: toAscii(m.body),
     })),
     report: {
-      highlight_video_url: BESOCCER_PROFILE,
-      highlight_video_title: 'Ignacio Atienzar - BeSoccer match log',
-      performance_pdf_url: EL_BALON_PROFILE,
-      performance_pdf_title: 'El Balon de Madrid profile',
+      highlight_video_url: 'https://www.youtube.com/watch?v=kHXskUKfEnQ',
+      highlight_video_title: 'Highlight Video Igna Atienzar',
+      performance_pdf_url: publicAssetUrl(GPS_REPORT_PDF.replace(/^\//, '')),
+      performance_pdf_title: 'Ignacio Atienzar GPS Report',
     },
     videos: [
       {
-        title: 'BeSoccer match log',
-        url: BESOCCER_PROFILE,
+        title: 'Highlight Video Igna Atienzar',
+        url: 'https://www.youtube.com/watch?v=kHXskUKfEnQ',
         video_type: 'highlight',
+      },
+      {
+        title: 'Villanueva del Pardillo vs CF Pozuelo — Matchday 19',
+        url: 'https://www.youtube.com/watch?v=INxb2SinPpE',
+        video_type: 'full_match',
       },
     ],
   };

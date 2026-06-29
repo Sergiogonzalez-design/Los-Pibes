@@ -12,6 +12,7 @@ export const EL_BALON_PROFILE =
 export const CONTACT_EMAIL = "ignaatienzar@gmail.com";
 export const INSTAGRAM_URL = "https://www.instagram.com/igna.atienzar/";
 export const HERO_IMAGE = "/Igna Atienzar 1.jpg";
+export const GPS_REPORT_PDF = "/Ignacio Atienzar GPS Report.pdf";
 
 const seasonRows = [
   {
@@ -52,16 +53,32 @@ const seasonRows = [
   },
 ] as const;
 
+const highlightVideo = {
+  youtubeId: "kHXskUKfEnQ",
+  sectionTitle: { en: "Highlight Video", es: "Highlight Video" },
+  label: { en: "Highlight Video Igna Atienzar", es: "Highlight Video Igna Atienzar" },
+} as const;
+
+const matchVideos = [
+  {
+    youtubeId: "INxb2SinPpE",
+    sectionTitle: { en: "Full Match", es: "Partido Completo" },
+    matchday: { en: "Matchday 19", es: "Jornada 19" },
+    home: "Villanueva del Pardillo",
+    away: "CF Pozuelo",
+  },
+] as const;
+
 export function getIgnacioContent(locale: "en" | "es") {
   if (locale === "es") {
     return {
       menuLabel: "Menú",
-      tagline: "Extremo / carrilero · #17 · RFFM Madrid",
-      bio: "Ignacio Atienzar Sacristán es un extremo y carrilero derecho de Madrid, España. Tras una temporada con goles en Siello CF (2023/24) y un paso por CF Pozuelo (2024/25), es titular habitual en Villanueva de la Cañada en la Primera División Autonómica Aficionado 2025/26, con minutos también en Copa Aficionados RFFM.",
+      tagline: "Extremo / Carrilero · #17 · RFFM Madrid",
+      bio: "Ignacio Atienzar Sacristán es un extremo y Carrilero derecho de Madrid, España. Tras una temporada con goles en Siello CF (2023/24) y un paso por CF Pozuelo (2024/25), es titular habitual en Villanueva de la Cañada en la Primera División Autonómica Aficionado 2025/26, con minutos también en Copa Aficionados RFFM.",
       heroStats: [
         { label: "Partidos", value: "47" },
         { label: "Titularidades", value: "26" },
-        { label: "Posición", value: "Extremo / carrilero" },
+        { label: "Posición", value: "Extremo / Carrilero" },
         { label: "Liga Actual", value: "1ª Autonómica" },
       ],
       cta: {
@@ -73,6 +90,8 @@ export function getIgnacioContent(locale: "en" | "es") {
       navItems: [
         { type: "anchor", href: "#stats", label: "Datos" },
         { type: "anchor", href: "#seasons", label: "Temporadas" },
+        { type: "anchor", href: "#games", label: "Videos" },
+        { type: "anchor", href: "#gps-report", label: "Informe GPS" },
         { type: "anchor", href: "#timeline", label: "Trayectoria" },
         { type: "anchor", href: "#contact", label: "Contacto" },
       ] satisfies NavItem[],
@@ -92,6 +111,24 @@ export function getIgnacioContent(locale: "en" | "es") {
         minutes: "Min",
         goals: "G",
       },
+      gamesTitle: "Videos",
+      watchOnYoutube: "Ver en YouTube",
+      highlightVideo: {
+        youtubeId: highlightVideo.youtubeId,
+        youtubeUrl: `https://www.youtube.com/watch?v=${highlightVideo.youtubeId}`,
+        sectionTitle: highlightVideo.sectionTitle.es,
+        label: highlightVideo.label.es,
+      },
+      gpsReportTitle: "Informe GPS",
+      viewPdf: "Ver PDF",
+      downloadPdf: "Descargar PDF",
+      matchVideos: matchVideos.map((match) => ({
+        youtubeId: match.youtubeId,
+        youtubeUrl: `https://www.youtube.com/watch?v=${match.youtubeId}`,
+        sectionTitle: match.sectionTitle.es,
+        label: match.matchday.es,
+        title: `${match.home} vs ${match.away}`,
+      })),
       timelineTitle: "Trayectoria",
       milestones: [
         {
@@ -111,14 +148,14 @@ export function getIgnacioContent(locale: "en" | "es") {
         },
         {
           year: "Origen",
-          title: "Madrid — extremo y carrilero",
-          body: "Jugador diestro de banda nacido en Madrid, España. Cómodo en ambos costados como extremo o carrilero.",
+          title: "Madrid — extremo y Carrilero",
+          body: "Jugador diestro de banda nacido en Madrid, España. Cómodo en ambos costados como extremo o Carrilero.",
         },
       ],
       contactTitle: "Contacto",
       contactName: "Ignacio Atienzar Sacristán",
-      contactRole: "Extremo / carrilero · #17 · RFFM Madrid",
-      selectorTagline: "Extremo / carrilero · RFFM Madrid",
+      contactRole: "Extremo / Carrilero · #17 · RFFM Madrid",
+      selectorTagline: "Extremo / Carrilero · RFFM Madrid",
       selectorSubtitle: "Villanueva de la Cañada · CF Pozuelo · Siello CF",
       selectorPrompt: "Select language · Elige idioma",
       selectorBackAria: "Volver a ejemplos",
@@ -153,6 +190,8 @@ export function getIgnacioContent(locale: "en" | "es") {
     navItems: [
       { type: "anchor", href: "#stats", label: "Stats" },
       { type: "anchor", href: "#seasons", label: "Seasons" },
+      { type: "anchor", href: "#games", label: "Videos" },
+      { type: "anchor", href: "#gps-report", label: "GPS Report" },
       { type: "anchor", href: "#timeline", label: "Career" },
       { type: "anchor", href: "#contact", label: "Contact" },
     ] satisfies NavItem[],
@@ -172,6 +211,24 @@ export function getIgnacioContent(locale: "en" | "es") {
       minutes: "MIN",
       goals: "G",
     },
+    gamesTitle: "Videos",
+    watchOnYoutube: "Watch on YouTube",
+    highlightVideo: {
+      youtubeId: highlightVideo.youtubeId,
+      youtubeUrl: `https://www.youtube.com/watch?v=${highlightVideo.youtubeId}`,
+      sectionTitle: highlightVideo.sectionTitle.en,
+      label: highlightVideo.label.en,
+    },
+    gpsReportTitle: "GPS Report",
+    viewPdf: "View PDF",
+    downloadPdf: "Download PDF",
+    matchVideos: matchVideos.map((match) => ({
+      youtubeId: match.youtubeId,
+      youtubeUrl: `https://www.youtube.com/watch?v=${match.youtubeId}`,
+      sectionTitle: match.sectionTitle.en,
+      label: match.matchday.en,
+      title: `${match.home} vs ${match.away}`,
+    })),
     timelineTitle: "Career timeline",
     milestones: [
       {

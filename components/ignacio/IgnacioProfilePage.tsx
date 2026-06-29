@@ -5,6 +5,7 @@ import {
   BESOCCER_PROFILE,
   CONTACT_EMAIL,
   EL_BALON_PROFILE,
+  GPS_REPORT_PDF,
   HERO_IMAGE,
   INSTAGRAM_URL,
   getIgnacioContent,
@@ -173,6 +174,97 @@ export default function IgnacioProfilePage({ locale }: Props) {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="games" className="scroll-mt-14 border-t border-white/10 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
+            {content.gamesTitle}
+          </h2>
+
+          <div className="mt-10 grid gap-10 lg:grid-cols-2">
+            <div>
+              <h3 className="font-heading text-lg font-semibold text-foreground">
+                {content.highlightVideo.sectionTitle}
+              </h3>
+              <p className="font-body mt-1 text-sm text-secondary-foreground">
+                {content.highlightVideo.label}
+              </p>
+              <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-black/25 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+                <div className="aspect-video w-full">
+                  <iframe
+                    className="h-full w-full"
+                    src={`https://www.youtube-nocookie.com/embed/${content.highlightVideo.youtubeId}`}
+                    title={content.highlightVideo.label}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+              <a
+                href={content.highlightVideo.youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body mt-4 inline-block text-sm font-medium text-primary underline-offset-2 hover:underline"
+              >
+                {content.watchOnYoutube}
+              </a>
+            </div>
+
+            {content.matchVideos.map((match) => (
+              <div key={match.youtubeId}>
+                <h3 className="font-heading text-lg font-semibold text-foreground">
+                  {match.sectionTitle}
+                </h3>
+                <p className="font-body mt-1 text-sm text-secondary-foreground">{match.label}</p>
+                <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-black/25 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+                  <div className="aspect-video w-full">
+                    <iframe
+                      className="h-full w-full"
+                      src={`https://www.youtube-nocookie.com/embed/${match.youtubeId}`}
+                      title={match.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+                <a
+                  href={match.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body mt-4 inline-block text-sm font-medium text-primary underline-offset-2 hover:underline"
+                >
+                  {content.watchOnYoutube}
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <div id="gps-report" className="mt-10 scroll-mt-24">
+            <h3 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
+              {content.gpsReportTitle}
+            </h3>
+            <div className="mt-4 flex flex-nowrap gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>a]:shrink-0">
+              <a
+                href={GPS_REPORT_PDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                {content.viewPdf}
+              </a>
+              <a
+                href={GPS_REPORT_PDF}
+                download="Ignacio Atienzar GPS Report.pdf"
+                className="font-body inline-flex items-center rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/10"
+              >
+                {content.downloadPdf}
+              </a>
+            </div>
           </div>
         </div>
       </section>
