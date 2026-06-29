@@ -1,23 +1,12 @@
 import LosPibesNavbarES from "@/components/LosPibesNavbarES";
 import LosPibesFooterES from "@/components/LosPibesFooterES";
+import { brandValuesES } from "@/lib/onix-content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Valores",
   description: "Cómo trabaja Onix Media con atletas que construyen su presencia en línea.",
 };
-
-const brandValuesES = [
-  { icon: "🤝", title: "Honestidad" },
-  { icon: "📋", title: "Responsabilidad" },
-  { icon: "💪", title: "Trabajo duro" },
-  { icon: "🏆", title: "Excelencia" },
-  { icon: "⚽", title: "Pasión por el fútbol" },
-  { icon: "💡", title: "Innovación" },
-  { icon: "🎯", title: "Compromiso con el atleta" },
-  { icon: "🌎", title: "Mentalidad global" },
-  { icon: "📈", title: "Crecimiento continuo" },
-] as const;
 
 export default function ValuesPageES() {
   return (
@@ -41,18 +30,10 @@ export default function ValuesPageES() {
             Valores
           </h1>
 
-          <ul className="mt-12 grid flex-1 auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {brandValuesES.map((v) => (
-              <li
-                key={v.title}
-                className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/35 px-6 py-6"
-              >
-                <span className="text-xl" aria-hidden>
-                  {v.icon}
-                </span>
-                <span className="font-body text-base font-medium text-foreground">
-                  {v.title}
-                </span>
+          <ul className="mt-12 grid flex-1 gap-y-4 gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+            {brandValuesES.map((title) => (
+              <li key={title} className="font-body text-base font-medium text-foreground">
+                - {title}
               </li>
             ))}
           </ul>

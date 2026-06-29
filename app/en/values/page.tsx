@@ -30,18 +30,10 @@ export default function ValuesPageEN() {
             Values
           </h1>
 
-          <ul className="mt-12 grid flex-1 auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {brandValues.map((v) => (
-              <li
-                key={v.title}
-                className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/35 px-6 py-6"
-              >
-                <span className="text-xl" aria-hidden>
-                  {v.icon}
-                </span>
-                <span className="font-body text-base font-medium text-foreground">
-                  {v.title}
-                </span>
+          <ul className="mt-12 grid flex-1 gap-y-4 gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+            {brandValues.map((title) => (
+              <li key={title} className="font-body text-base font-medium text-foreground">
+                - {title}
               </li>
             ))}
           </ul>
