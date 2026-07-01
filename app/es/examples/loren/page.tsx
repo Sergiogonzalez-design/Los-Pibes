@@ -123,8 +123,8 @@ const milestones = [
   },
   {
     year: "Trayectoria",
-    title: "Madrid — delantero centro",
-    body: "Delantero derecho de Madrid. Formado en las canteras del Valencia CF y del Real Madrid antes de dar el salto profesional. 146 partidos, 39 goles y 7.168 minutos en su carrera.",
+    title: "Madrid — Delantero Centro",
+    body: "Delantero centro de Madrid. Formado en las canteras del Valencia CF y del Real Madrid antes de dar el salto profesional. 146 partidos, 39 goles y 7.168 minutos en su carrera.",
   },
 ];
 
