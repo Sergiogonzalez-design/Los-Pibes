@@ -142,7 +142,11 @@ export default function LorenESPage() {
 
       <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
         <div
-          className="absolute inset-0 bg-cover [background-position:20%_20%] sm:[background-position:40%_20%]"
+          className="absolute inset-0 bg-cover bg-[20%_20%] sm:hidden"
+          style={{ backgroundImage: "url('/Debut 2da rfef loren 2.jpg')", backgroundColor: "#0c1117" }}
+        />
+        <div
+          className="absolute inset-0 hidden bg-cover bg-[40%_20%] sm:block"
           style={{ backgroundImage: "url('/loren 2.jpg')", backgroundColor: "#0c1117" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
