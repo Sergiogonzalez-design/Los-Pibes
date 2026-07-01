@@ -142,8 +142,8 @@ export default function LorenESPage() {
 
       <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
         <div
-          className="absolute inset-0 bg-cover bg-[center_30%]"
-          style={{ backgroundImage: "url('/loren 2.jpg')", backgroundPosition: "40% 20%", backgroundColor: "#0c1117" }}
+          className="absolute inset-0 bg-cover [background-position:20%_20%] sm:[background-position:40%_20%]"
+          style={{ backgroundImage: "url('/loren 2.jpg')", backgroundColor: "#0c1117" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -276,7 +276,7 @@ export default function LorenESPage() {
             <h3 className="font-heading text-xl font-bold text-foreground">
               Debut en La Liga Hypermotion
             </h3>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 max-w-2xl">
               <div className="overflow-hidden rounded-xl border border-white/10">
                 <img
                   src="/Debut 2da rfef loren.jpg"
@@ -287,13 +287,6 @@ export default function LorenESPage() {
               <div className="overflow-hidden rounded-xl border border-white/10">
                 <img
                   src="/Debut 2da rfef loren 2.jpg"
-                  alt="Lorenzo Sánchez debut La Liga Hypermotion"
-                  className="h-80 w-full object-cover"
-                />
-              </div>
-              <div className="overflow-hidden rounded-xl border border-white/10">
-                <img
-                  src="/Debut 2da rfef loren 3.jpg"
                   alt="Lorenzo Sánchez debut La Liga Hypermotion"
                   className="h-80 w-full object-cover"
                 />
