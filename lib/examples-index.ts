@@ -141,6 +141,19 @@ const exampleCardsData: ExampleCardData[] = [
       desc: "Extremo / carrilero · Villanueva de la Cañada — estadísticas, trayectoria y enlaces",
     },
   },
+  {
+    href: "/examples/loren",
+    name: "Lorenzo Sánchez",
+    countries: ["spain"],
+    en: {
+      tag: "2ª Federación · Spain",
+      desc: "Striker · CD Tenerife B · UD Almería · Real Madrid Sub 19 — stats, timeline, and links",
+    },
+    es: {
+      tag: "2ª Federación · España",
+      desc: "Delantero · CD Tenerife B · UD Almería · Real Madrid Sub 19 — estadísticas, trayectoria y enlaces",
+    },
+  },
 ];
 
 const countryLabels: Record<ExampleCountrySlug, { en: string; es: string }> = {
