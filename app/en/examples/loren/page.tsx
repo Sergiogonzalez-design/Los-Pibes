@@ -52,7 +52,7 @@ const seasons = [
     year: "2024/25",
     club: "UD Almería B",
     clubUrl: BESOCCER,
-    league: "3ª RFEF",
+    league: "2ª RFEF",
     gp: "29",
     gs: "28",
     goals: "9",
@@ -62,7 +62,7 @@ const seasons = [
     year: "2023/24",
     club: "UD Almería B",
     clubUrl: BESOCCER,
-    league: "3ª RFEF",
+    league: "2ª RFEF",
     gp: "33",
     gs: "13",
     goals: "12",
@@ -72,7 +72,7 @@ const seasons = [
     year: "2022/23",
     club: "Penya Deportiva",
     clubUrl: BESOCCER,
-    league: "3ª RFEF",
+    league: "2ª RFEF",
     gp: "31",
     gs: "10",
     goals: "2",
@@ -99,17 +99,17 @@ const milestones = [
   {
     year: "2024/25",
     title: "UD Almería — Segunda División & B team",
-    body: "Made 2 appearances for the Almería first team (1 LaLiga2 + 1 Copa del Rey, 16 minutes). Also featured for Almería B in 1ª RFEF: 29 games and 9 goals.",
+    body: "Made 2 appearances for the Almería first team (1 LaLiga2 + 1 Copa del Rey, 16 minutes). Also featured for Almería B in 2ª RFEF: 29 games and 9 goals.",
   },
   {
     year: "2023/24",
-    title: "UD Almería B — 1ª RFEF",
-    body: "Standout season for Almería B: 33 appearances and 12 goals in 1ª RFEF — the most prolific campaign of his career so far.",
+    title: "UD Almería B — 2ª RFEF",
+    body: "Standout season for Almería B: 33 appearances and 12 goals in 2ª RFEF — the most prolific campaign of his career so far.",
   },
   {
     year: "2022/23",
-    title: "Penya Deportiva",
-    body: "31 appearances (10 starts), 2 goals and 1,065 minutes. First senior experience outside the academy circuit.",
+    title: "Penya Deportiva — 2ª RFEF",
+    body: "31 appearances (10 starts), 2 goals and 1,065 minutes.",
   },
   {
     year: "2021/22",
@@ -281,7 +281,10 @@ export default function LorenENPage() {
             <h3 className="font-heading text-xl font-bold text-foreground">
               La Liga Hypermotion debut
             </h3>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2 max-w-2xl">
+            <p className="font-body mt-2 text-sm text-secondary-foreground">
+              Lorenzo made his debut in La Liga Hypermotion on January 19th, 2025 — Spain&apos;s second division.
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl">
               <div className="overflow-hidden rounded-xl border border-white/10">
                 <img
                   src="/Debut 2da rfef loren.jpg"
@@ -292,6 +295,13 @@ export default function LorenENPage() {
               <div className="overflow-hidden rounded-xl border border-white/10">
                 <img
                   src="/Debut 2da rfef loren 2.jpg"
+                  alt="Lorenzo Sánchez La Liga Hypermotion debut"
+                  className="h-80 w-full object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-xl border border-white/10">
+                <img
+                  src="/Debut 2da rfef loren 3.jpg"
                   alt="Lorenzo Sánchez La Liga Hypermotion debut"
                   className="h-80 w-full object-cover"
                 />

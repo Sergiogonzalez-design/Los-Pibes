@@ -52,7 +52,7 @@ const seasons = [
     year: "2024/25",
     club: "UD Almería B",
     clubUrl: BESOCCER,
-    league: "3ª RFEF",
+    league: "2ª RFEF",
     gp: "29",
     gs: "28",
     goals: "9",
@@ -62,7 +62,7 @@ const seasons = [
     year: "2023/24",
     club: "UD Almería B",
     clubUrl: BESOCCER,
-    league: "3ª RFEF",
+    league: "2ª RFEF",
     gp: "33",
     gs: "13",
     goals: "12",
@@ -72,7 +72,7 @@ const seasons = [
     year: "2022/23",
     club: "Penya Deportiva",
     clubUrl: BESOCCER,
-    league: "3ª RFEF",
+    league: "2ª RFEF",
     gp: "31",
     gs: "10",
     goals: "2",
@@ -99,16 +99,16 @@ const milestones = [
   {
     year: "2024/25",
     title: "UD Almería — Segunda División y filial",
-    body: "2 apariciones con el primer equipo del Almería (1 LaLiga2 + 1 Copa del Rey, 16 minutos). También jugó en el Almería B en 3ª RFEF: 29 partidos y 9 goles.",
+    body: "2 apariciones con el primer equipo del Almería (1 LaLiga2 + 1 Copa del Rey, 16 minutos). También jugó en el Almería B en 2ª RFEF: 29 partidos y 9 goles.",
   },
   {
     year: "2023/24",
-    title: "UD Almería B — 3ª RFEF",
-    body: "Temporada destacada en el Almería B: 33 partidos y 12 goles en 3ª RFEF — la campaña más goleadora de su carrera hasta la fecha.",
+    title: "UD Almería B — 2ª RFEF",
+    body: "Temporada destacada en el Almería B: 33 partidos y 12 goles en 2ª RFEF — la campaña más goleadora de su carrera hasta la fecha.",
   },
   {
     year: "2022/23",
-    title: "Penya Deportiva",
+    title: "Penya Deportiva — 2ª RFEF",
     body: "31 partidos (10 de titular), 2 goles y 1.065 minutos.",
   },
   {
@@ -280,7 +280,10 @@ export default function LorenESPage() {
             <h3 className="font-heading text-xl font-bold text-foreground">
               Debut en La Liga Hypermotion
             </h3>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2 max-w-2xl">
+            <p className="font-body mt-2 text-sm text-secondary-foreground">
+              Lorenzo debutó en La Liga Hypermotion el 19 de enero de 2025, la segunda división del fútbol español.
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl">
               <div className="overflow-hidden rounded-xl border border-white/10">
                 <img
                   src="/Debut 2da rfef loren.jpg"
@@ -291,6 +294,13 @@ export default function LorenESPage() {
               <div className="overflow-hidden rounded-xl border border-white/10">
                 <img
                   src="/Debut 2da rfef loren 2.jpg"
+                  alt="Lorenzo Sánchez debut La Liga Hypermotion"
+                  className="h-80 w-full object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-xl border border-white/10">
+                <img
+                  src="/Debut 2da rfef loren 3.jpg"
                   alt="Lorenzo Sánchez debut La Liga Hypermotion"
                   className="h-80 w-full object-cover"
                 />
