@@ -6,7 +6,7 @@ export type ExampleCard = {
   countries: string[];
 };
 
-export type ExampleCountrySlug = "spain" | "costa-rica" | "mexico" | "argentina";
+export type ExampleCountrySlug = "spain" | "costa-rica" | "mexico" | "argentina" | "usa";
 
 export type ExampleCountryFilter = {
   slug: ExampleCountrySlug | "all";
@@ -142,6 +142,32 @@ const exampleCardsData: ExampleCardData[] = [
     },
   },
   {
+    href: "/examples/santiago",
+    name: "Santiago Marín Gutiérrez",
+    countries: ["costa-rica"],
+    en: {
+      tag: "NCAA Division I · Costa Rica",
+      desc: "Midfielder · CCSU · Creighton · NEC Rookie of the Week 2025 — stats, timeline, and contact",
+    },
+    es: {
+      tag: "NCAA División I · Costa Rica",
+      desc: "Centrocampista · CCSU · Creighton · NEC Rookie of the Week 2025 — estadísticas, trayectoria y contacto",
+    },
+  },
+  {
+    href: "/examples/jaime",
+    name: "Jaime Roman Jr.",
+    countries: ["usa"],
+    en: {
+      tag: "NCAA Division I · USA",
+      desc: "Defender · Captain · Iona University · All-MAAC Second Team 2025 — stats, timeline, and contact",
+    },
+    es: {
+      tag: "NCAA División I · EE.UU.",
+      desc: "Defensa · Capitán · Iona University · All-MAAC Segundo Equipo 2025 — estadísticas, trayectoria y contacto",
+    },
+  },
+  {
     href: "/examples/loren",
     name: "Lorenzo Sánchez",
     countries: ["spain"],
@@ -161,6 +187,7 @@ const countryLabels: Record<ExampleCountrySlug, { en: string; es: string }> = {
   "costa-rica": { en: "Costa Rica", es: "Costa Rica" },
   mexico: { en: "Mexico", es: "México" },
   argentina: { en: "Argentina", es: "Argentina" },
+  usa: { en: "USA", es: "EE.UU." },
 };
 
 const countryOrder: ExampleCountrySlug[] = [
@@ -168,6 +195,7 @@ const countryOrder: ExampleCountrySlug[] = [
   "costa-rica",
   "mexico",
   "argentina",
+  "usa",
 ];
 
 export function getExamplesForLocale(locale: "en" | "es"): ExampleCard[] {
