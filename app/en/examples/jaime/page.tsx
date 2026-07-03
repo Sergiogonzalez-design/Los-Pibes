@@ -107,7 +107,7 @@ export default function JaimeENPage() {
       <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
         <div
           className="absolute inset-0 bg-cover bg-[center_70%] sm:hidden"
-          style={{ backgroundImage: "url('/Jaime Roman 3.jpg')", backgroundColor: "#0c1117" }}
+          style={{ backgroundImage: "url('/Jaime roman 4.jpg')", backgroundColor: "#0c1117" }}
         />
         <div
           className="absolute inset-0 hidden bg-cover bg-[center_85%] sm:block"
