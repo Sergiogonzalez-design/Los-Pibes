@@ -13,15 +13,21 @@ export default function SantiagoLanguageSelector() {
   return (
     <div
       className="relative flex min-h-screen flex-col"
-      style={{
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%), url('/santiago marin 1.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center 25%",
-        backgroundColor: "#0c1117",
-      }}
+      style={{ backgroundColor: "#0c1117" }}
     >
-      <header className="flex items-center gap-4 px-6 py-5 sm:px-10">
+      {/* mobile background */}
+      <div
+        className="absolute inset-0 bg-cover bg-[center_25%] sm:hidden"
+        style={{ backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%), url('/Santiago marin 3.jpg')" }}
+        aria-hidden
+      />
+      {/* desktop background */}
+      <div
+        className="absolute inset-0 hidden bg-cover bg-[center_25%] sm:block"
+        style={{ backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%), url('/santiago marin 1.jpg')" }}
+        aria-hidden
+      />
+      <header className="relative z-10 flex items-center gap-4 px-6 py-5 sm:px-10">
         <Link
           href="/examples"
           className="font-body text-sm text-secondary-foreground transition-colors hover:text-primary"
@@ -32,7 +38,7 @@ export default function SantiagoLanguageSelector() {
         <CompanyLogo priority />
       </header>
 
-      <div className="flex flex-1 flex-col items-center justify-center px-4 pb-16 text-center">
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 pb-16 text-center">
         <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
           Midfielder · NCAA Division I
         </p>
