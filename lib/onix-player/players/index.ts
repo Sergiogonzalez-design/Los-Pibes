@@ -6,9 +6,12 @@ import { websitePlayer as agostina } from '../agostina-content';
 import { websitePlayer as bautista } from '../bautista-content';
 import { websitePlayer as ignacio } from '../ignacio-content';
 import { websitePlayer as jaco } from '../jaco-content';
+import { websitePlayer as jaime } from '../jaime-content';
 import { websitePlayer as juan } from '../juan-content';
+import { websitePlayer as loren } from '../loren-content';
 import { websitePlayer as nacho } from '../nacho-content';
 import { websitePlayer as rami } from '../rami-content';
+import { websitePlayer as santiago } from '../santiago-content';
 import { websitePlayer as sergio } from '../sergio-content';
 import { websitePlayer as thiago } from '../thiago-content';
 import type { WebsitePlayerDefinition } from '../types';
@@ -18,9 +21,12 @@ export const WEBSITE_PLAYERS_RAW: WebsitePlayerDefinition[] = [
   bautista,
   ignacio,
   jaco,
+  jaime,
   juan,
+  loren,
   nacho,
   rami,
+  santiago,
   sergio,
   thiago,
 ];
