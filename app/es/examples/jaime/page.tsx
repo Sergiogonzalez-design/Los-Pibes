@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const IONA_ROSTER = "https://ionagaels.com/sports/mens-soccer/roster/jaime-roman-jr-/8958";
 
 const navItems: NavItem[] = [
-  { type: "anchor", href: "#stats", label: "Stats" },
+  { type: "anchor", href: "#stats", label: "Estadísticas" },
   { type: "anchor", href: "#seasons", label: "Temporadas" },
   { type: "anchor", href: "#timeline", label: "Carrera" },
   { type: "anchor", href: "#contact", label: "Contacto" },

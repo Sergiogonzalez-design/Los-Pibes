@@ -13,6 +13,8 @@ const slides = [
   { src: "/Juan jugando.jpeg",     alt: "Juan Morales",   position: "45% center" },
   { src: "/Bautista gritando.jpg", alt: "Bauti",          position: "50% 30%" },
   { src: "/Loren debut 2da 3.jpeg", alt: "Loren",         position: "50% 25%" },
+  { src: "/Jaime Rider.jpg",        alt: "Jaime",         position: "50% 25%" },
+  { src: "/santiago marin 2.jpg",   alt: "Santiago",      position: "35% 25%" },
 ] as const;
 
 export default function HomeHeroCarousel() {

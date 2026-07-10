@@ -17,7 +17,7 @@ const HIGHLIGHTS_URL = "https://www.youtube.com/watch?v=ybDbU45hyfw";
 const HIGHLIGHTS_EMBED = "https://www.youtube.com/embed/ybDbU45hyfw";
 
 const navItems: NavItem[] = [
-  { type: "anchor", href: "#stats", label: "Stats" },
+  { type: "anchor", href: "#stats", label: "Estadísticas" },
   { type: "anchor", href: "#seasons", label: "Temporadas" },
   { type: "anchor", href: "#highlights", label: "Highlights" },
   { type: "anchor", href: "#timeline", label: "Carrera" },

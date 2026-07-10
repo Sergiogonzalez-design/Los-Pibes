@@ -13,7 +13,7 @@ const BESOCCER = "https://es.besoccer.com/jugador/partidos/lorenzo-sanchez-10061
 const INSTAGRAM = "https://www.instagram.com/9lorenzosanchez/";
 
 const navItems: NavItem[] = [
-  { type: "anchor", href: "#stats", label: "Stats" },
+  { type: "anchor", href: "#stats", label: "Estadísticas" },
   { type: "anchor", href: "#seasons", label: "Temporadas" },
   { type: "anchor", href: "#timeline", label: "Carrera" },
   { type: "anchor", href: "#contact", label: "Contacto" },
