@@ -27,7 +27,7 @@ export default function TimLanguageSelector() {
         className="absolute inset-0 hidden bg-cover bg-[center_20%] sm:block"
         style={{
           backgroundImage:
-            "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%), url('/Tim Timchenko horizontal 2.png')",
+            "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%), url('/Tim Timchenko horizontal 1.png')",
         }}
         aria-hidden
       />

@@ -164,7 +164,7 @@ export default function TimENPage() {
         />
         <div
           className="absolute inset-0 hidden bg-cover bg-[center_20%] sm:block"
-          style={{ backgroundImage: "url('/Tim Timchenko horizontal 1.png')", backgroundColor: "#0c1117" }}
+          style={{ backgroundImage: "url('/Tim Timchenko horizontal 2.png')", backgroundColor: "#0c1117" }}
           aria-hidden
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
