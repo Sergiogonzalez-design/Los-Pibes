@@ -180,6 +180,19 @@ const exampleCardsData: ExampleCardData[] = [
       desc: "Delantero · CD Tenerife B · UD Almería · Real Madrid Sub 19 — estadísticas, trayectoria y enlaces",
     },
   },
+  {
+    href: "/examples/tim",
+    name: "Tim Timchenko",
+    countries: ["usa"],
+    en: {
+      tag: "USL League One · Ukraine",
+      desc: "Defender · Westchester SC · Iona · 2x MAAC DPOY · MAAC Champion 2025 — stats, timeline, and contact",
+    },
+    es: {
+      tag: "USL League One · Ucrania",
+      desc: "Defensa · Westchester SC · Iona · 2x MAAC DPOY · Campeón MAAC 2025 — estadísticas, trayectoria y contacto",
+    },
+  },
 ];
 
 const countryLabels: Record<ExampleCountrySlug, { en: string; es: string }> = {

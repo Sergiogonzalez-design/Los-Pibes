@@ -14,6 +14,7 @@ import { websitePlayer as rami } from '../rami-content';
 import { websitePlayer as santiago } from '../santiago-content';
 import { websitePlayer as sergio } from '../sergio-content';
 import { websitePlayer as thiago } from '../thiago-content';
+import { websitePlayer as tim } from '../tim-content';
 import type { WebsitePlayerDefinition } from '../types';
 
 export const WEBSITE_PLAYERS_RAW: WebsitePlayerDefinition[] = [
@@ -29,4 +30,5 @@ export const WEBSITE_PLAYERS_RAW: WebsitePlayerDefinition[] = [
   santiago,
   sergio,
   thiago,
+  tim,
 ];
