@@ -6,7 +6,7 @@ export type ExampleCard = {
   countries: string[];
 };
 
-export type ExampleCountrySlug = "spain" | "costa-rica" | "mexico" | "argentina" | "usa";
+export type ExampleCountrySlug = "spain" | "costa-rica" | "mexico" | "argentina" | "usa" | "ukraine";
 
 export type ExampleCountryFilter = {
   slug: ExampleCountrySlug | "all";
@@ -183,7 +183,7 @@ const exampleCardsData: ExampleCardData[] = [
   {
     href: "/examples/tim",
     name: "Tim Timchenko",
-    countries: ["usa"],
+    countries: ["ukraine"],
     en: {
       tag: "USL League One · Ukraine",
       desc: "Defender · Westchester SC · Iona · 2x MAAC DPOY · MAAC Champion 2025 — stats, timeline, and contact",
@@ -201,6 +201,7 @@ const countryLabels: Record<ExampleCountrySlug, { en: string; es: string }> = {
   mexico: { en: "Mexico", es: "México" },
   argentina: { en: "Argentina", es: "Argentina" },
   usa: { en: "USA", es: "EE.UU." },
+  ukraine: { en: "Ukraine", es: "Ucrania" },
 };
 
 const countryOrder: ExampleCountrySlug[] = [
@@ -209,6 +210,7 @@ const countryOrder: ExampleCountrySlug[] = [
   "mexico",
   "argentina",
   "usa",
+  "ukraine",
 ];
 
 export function getExamplesForLocale(locale: "en" | "es"): ExampleCard[] {

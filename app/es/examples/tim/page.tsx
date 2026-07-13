@@ -158,13 +158,13 @@ export default function TimESPage() {
       <section className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
         <div
           className="absolute inset-0 bg-cover bg-[center_30%] sm:hidden"
-          style={{ backgroundImage: "url('/Tim Timchenko vertical 2.png')", backgroundColor: "#0c1117" }}
+          style={{ backgroundImage: "url('/Tim Timchenko vertical 1.png')", backgroundColor: "#0c1117" }}
           role="img"
           aria-label="Tim Timchenko"
         />
         <div
           className="absolute inset-0 hidden bg-cover bg-[center_20%] sm:block"
-          style={{ backgroundImage: "url('/Tim Timchenko horizontal 2.png')", backgroundColor: "#0c1117" }}
+          style={{ backgroundImage: "url('/Tim Timchenko horizontal 1.png')", backgroundColor: "#0c1117" }}
           aria-hidden
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
