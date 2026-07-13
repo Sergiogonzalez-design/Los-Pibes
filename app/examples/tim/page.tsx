@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Tim Timchenko — Select Language",
   description:
-    "Tim Timchenko — Defender · NCAA Division I · USL League One. Select your language.",
+    "Tim Timchenko — Defender · USL League One. Select your language.",
 };
 
 export default function TimLanguageSelector() {
@@ -16,7 +16,7 @@ export default function TimLanguageSelector() {
       style={{ backgroundColor: "#0c1117" }}
     >
       <div
-        className="absolute inset-0 bg-cover bg-[center_25%] sm:hidden"
+        className="absolute inset-0 bg-cover bg-[left_25%] sm:hidden"
         style={{
           backgroundImage:
             "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%), url('/Tim Timchenko vertical 2.png')",
@@ -44,14 +44,14 @@ export default function TimLanguageSelector() {
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 pb-16 text-center">
         <p className="font-body text-xs uppercase tracking-[0.35em] text-primary">
-          Defender · USL League One · NCAA Division I
+          Defender · USL League One
         </p>
         <h1 className="font-heading mt-4 text-5xl font-bold leading-none text-foreground sm:text-7xl">
           <span className="block">Tim</span>
           <span className="block text-gradient-gold">Timchenko</span>
         </h1>
         <p className="font-body mt-3 text-sm text-secondary-foreground">
-          Westchester SC · Iona University · MAAC
+          Westchester SC · Iona University
         </p>
 
         <p className="font-body mt-10 text-sm uppercase tracking-widest text-secondary-foreground/60">
