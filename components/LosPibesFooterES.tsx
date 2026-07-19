@@ -3,10 +3,7 @@ import Link from "next/link";
 
 export default function LosPibesFooterES() {
   return (
-    <footer
-      id="contact"
-      className="border-t border-white/10 bg-black/40 py-12"
-    >
+    <footer className="border-t border-white/10 bg-black/40 py-12">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:flex-row sm:items-start sm:justify-between sm:px-6 lg:px-8">
         <div>
           <CompanyLogo variant="footer" />
@@ -22,7 +19,7 @@ export default function LosPibesFooterES() {
           <ul className="mt-2 flex flex-col gap-3 text-secondary-foreground">
             <li>
               <Link
-                href="/es/contact#request-information"
+                href="/es#contacto"
                 className="text-primary hover:underline"
               >
                 Contáctanos

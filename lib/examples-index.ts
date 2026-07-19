@@ -4,6 +4,8 @@ export type ExampleCard = {
   name: string;
   desc: string;
   countries: string[];
+  image: string;
+  imagePosition?: string;
 };
 
 export type ExampleCountrySlug = "spain" | "costa-rica" | "mexico" | "argentina" | "usa" | "ukraine";
@@ -17,6 +19,8 @@ type ExampleCardData = {
   href: string;
   name: string;
   countries: ExampleCountrySlug[];
+  image: string;
+  imagePosition?: string;
   hidden?: boolean;
   en: { tag: string; desc: string };
   es: { tag: string; desc: string };
@@ -27,6 +31,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/sergio",
     name: "Sergio Gonzalez",
     countries: ["spain"],
+    image: "/Sergio perfil.jpeg",
+    imagePosition: "50% 25%",
     en: {
       tag: "NCAA Division I · Spain",
       desc: "Midfielder · Iona & George Mason · Full profile, stats, and media",
@@ -40,6 +46,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/nacho",
     name: "Nacho Alfaro",
     countries: ["costa-rica"],
+    image: "/Nacho perfil.jpeg",
+    imagePosition: "50% 24%",
     en: {
       tag: "NCAA Division I · Costa Rica",
       desc: "Goalkeeper · Iona & FAU · Costa Rica — stats, timeline, and highlights",
@@ -53,6 +61,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/rami",
     name: "Pablo Ramirez",
     countries: ["spain"],
+    image: "/rami perfil.jpg",
+    imagePosition: "50% 18%",
     en: {
       tag: "Segunda Federación · Spain",
       desc: "Center Back · Fuenlabrada · Getafe academy — stats, timeline, and highlights",
@@ -66,6 +76,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/jaco",
     name: "Jacobo Sanfeliu",
     countries: ["spain"],
+    image: "/Jaco jugando.jpg",
+    imagePosition: "12% 20%",
     en: {
       tag: "NCAA Division I · Spain",
       desc: "Striker · George Mason & SIUE · Barcelona — stats, timeline, and highlights",
@@ -79,6 +91,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/juan",
     name: "Juan Ignacio Morales",
     countries: ["mexico", "argentina"],
+    image: "/Juan jugando.jpeg",
+    imagePosition: "45% center",
     en: {
       tag: "Liga Premier · Mexico · Argentina",
       desc: "Goalkeeper · Cañoneros FC · Mexico City — stats, timeline, and highlights",
@@ -92,6 +106,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/bautista",
     name: "Bautista Rossi Molinas",
     countries: ["argentina"],
+    image: "/Bautista gritando.jpg",
+    imagePosition: "50% 30%",
     en: {
       tag: "NCAA Division I · Argentina",
       desc: "Forward · Iona & Creighton · Buenos Aires — stats, timeline, and highlights",
@@ -105,6 +121,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/thiago",
     name: "Thiago Cagna",
     countries: ["argentina"],
+    image: "/thiago-cagna-hero.png",
+    imagePosition: "50% 20%",
     en: {
       tag: "NCAA Division I · Argentina",
       desc: "Midfielder · Iona · Buenos Aires — stats, timeline, and highlights",
@@ -118,6 +136,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/agostina",
     name: "Agostina Holzheier",
     countries: ["argentina"],
+    image: "/Los pibes foto.jpeg",
+    imagePosition: "50% 30%",
     hidden: true,
     en: {
       tag: "Argentina · Primera",
@@ -132,6 +152,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/ignacio",
     name: "Ignacio Atienzar",
     countries: ["spain"],
+    image: "/Ignacio Atienzar hero.png",
+    imagePosition: "50% 20%",
     en: {
       tag: "RFFM Madrid · Spain",
       desc: "Winger / wingback · Villanueva de la Cañada — stats, timeline, and links",
@@ -145,6 +167,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/santiago",
     name: "Santiago Marín Gutiérrez",
     countries: ["costa-rica"],
+    image: "/santiago marin 2.jpg",
+    imagePosition: "35% 25%",
     en: {
       tag: "NCAA Division I · Costa Rica",
       desc: "Midfielder · CCSU · Creighton · NEC Rookie of the Week 2025 — stats, timeline, and contact",
@@ -158,6 +182,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/jaime",
     name: "Jaime Roman Jr.",
     countries: ["usa"],
+    image: "/Jaime Rider.jpg",
+    imagePosition: "50% 25%",
     en: {
       tag: "NCAA Division I · USA",
       desc: "Defender · Captain · Iona University · All-MAAC Second Team 2025 — stats, timeline, and contact",
@@ -171,6 +197,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/loren",
     name: "Lorenzo Sánchez",
     countries: ["spain"],
+    image: "/loren-hero.jpg",
+    imagePosition: "50% 25%",
     en: {
       tag: "2ª Federación · Spain",
       desc: "Striker · CD Tenerife B · UD Almería · Real Madrid Sub 19 — stats, timeline, and links",
@@ -184,6 +212,8 @@ const exampleCardsData: ExampleCardData[] = [
     href: "/examples/tim",
     name: "Tim Timchenko",
     countries: ["ukraine"],
+    image: "/Tim Timchenko vertical 1.png",
+    imagePosition: "50% 20%",
     en: {
       tag: "USL League One · Ukraine",
       desc: "Defender · Westchester SC · Iona · 2x MAAC DPOY · MAAC Champion 2025 — stats, timeline, and contact",
@@ -220,6 +250,8 @@ export function getExamplesForLocale(locale: "en" | "es"): ExampleCard[] {
     href: card.href,
     name: card.name,
     countries: card.countries,
+    image: card.image,
+    imagePosition: card.imagePosition,
     tag: card[locale].tag,
     desc: card[locale].desc,
   }));

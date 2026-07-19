@@ -1,86 +1,22 @@
 import type { NavItem } from "@/components/SiteHeader";
 
 export const enMarketingNavItems: NavItem[] = [
-  { type: "link", href: "/en/mission", label: "Mission" },
-  { type: "link", href: "/en/values", label: "Values" },
-  {
-    type: "group",
-    label: "Product",
-    links: [
-      { href: "/en/products", label: "Overview" },
-      { href: "/en/products/highlight-video", label: "Highlight Video" },
-      { href: "/en/products/performance-report", label: "Performance Report" },
-      { href: "/en/products/website", label: "Website" },
-    ],
-  },
-  {
-    type: "group",
-    label: "Examples",
-    links: [
-      { href: "/en/examples", label: "All" },
-      { href: "/en/examples#spain", label: "Spain" },
-      { href: "/en/examples#costa-rica", label: "Costa Rica" },
-      { href: "/en/examples#mexico", label: "Mexico" },
-      { href: "/en/examples#argentina", label: "Argentina" },
-    ],
-  },
-  { type: "link", href: "/en/contact", label: "Contact" },
+  { type: "link", href: "/en#product", label: "Product" },
+  { type: "link", href: "/en#examples", label: "Examples" },
+  { type: "link", href: "/en#mission", label: "Mission / Values" },
+  { type: "link", href: "/en#contact", label: "Contact" },
 ];
 
 export const esMarketingNavItems: NavItem[] = [
-  { type: "link", href: "/es/mission", label: "Misión" },
-  { type: "link", href: "/es/values", label: "Valores" },
-  {
-    type: "group",
-    label: "Producto",
-    links: [
-      { href: "/es/products", label: "Resumen" },
-      { href: "/es/products/highlight-video", label: "Video de Highlights" },
-      { href: "/es/products/performance-report", label: "Informe de Rendimiento" },
-      { href: "/es/products/website", label: "Sitio Web" },
-    ],
-  },
-  {
-    type: "group",
-    label: "Ejemplos",
-    links: [
-      { href: "/es/examples", label: "Todos" },
-      { href: "/es/examples#spain", label: "España" },
-      { href: "/es/examples#costa-rica", label: "Costa Rica" },
-      { href: "/es/examples#mexico", label: "México" },
-      { href: "/es/examples#argentina", label: "Argentina" },
-    ],
-  },
-  { type: "link", href: "/es/contact", label: "Contacto" },
+  { type: "link", href: "/es#producto", label: "Producto" },
+  { type: "link", href: "/es#ejemplos", label: "Ejemplos" },
+  { type: "link", href: "/es#mision", label: "Misión / Valores" },
+  { type: "link", href: "/es#contacto", label: "Contacto" },
 ];
 
 export const rootMarketingNavItems: NavItem[] = [
-  { type: "link", href: "/mission", label: "Mision" },
-  { type: "link", href: "/values", label: "Values" },
-  {
-    type: "group",
-    label: "Product",
-    links: [
-      { href: "/products", label: "Overview" },
-      { href: "/products/highlight-video", label: "Highlight Video" },
-      { href: "/products/performance-report", label: "Performance Report" },
-      { href: "/products/website", label: "Website" },
-    ],
-  },
-  {
-    type: "group",
-    label: "Examples",
-    links: [
-      { href: "/examples", label: "All examples" },
-      { href: "/examples/sergio", label: "Sergio Gonzalez" },
-      { href: "/examples/thiago", label: "Thiago Cagna" },
-      { href: "/examples/nacho", label: "Nacho Alfaro" },
-      { href: "/examples/rami", label: "Pablo Ramirez" },
-      { href: "/examples/jaco", label: "Jacobo Sanfeliu" },
-      { href: "/examples/juan", label: "Juan Ignacio Morales" },
-      { href: "/examples/bautista", label: "Bautista Rossi Molinas" },
-      { href: "/examples/ignacio", label: "Ignacio Atienzar" },
-    ],
-  },
-  { type: "link", href: "/contact", label: "Contact" },
+  { type: "link", href: "/en#product", label: "Product" },
+  { type: "link", href: "/en#examples", label: "Examples" },
+  { type: "link", href: "/en#mission", label: "Mission / Values" },
+  { type: "link", href: "/en#contact", label: "Contact" },
 ];
